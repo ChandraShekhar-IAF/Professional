@@ -1,91 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Chandra Shekhar - Operations Excellence Leader | Professional Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandra Shekhar — Operations Excellence Leader | Professional Portfolio</title>
     <meta name="description" content="Chandra Shekhar - Operations Excellence Leader. 20-year IAF veteran, IIMB EGMP graduate. Zero-audit discrepancies, ₹200+ cr assets managed, 25+ systems developed. Based in Bengaluru.">
+    <meta name="robots" content="index, follow">
     <meta property="og:title" content="Chandra Shekhar - Operations Excellence Leader">
     <meta property="og:description" content="20-year IAF veteran transitioning to operations/program roles. IIMB EGMP graduate. Zero-error track record, systems innovator.">
     <meta property="og:type" content="profile">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/c41e3a/ffffff?text=Chandra+Shekhar">
+    <meta property="og:image" content="assets/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chandra Shekhar",
+      "jobTitle": "Operations Excellence Leader",
+      "description": "20-year IAF veteran, IIMB EGMP graduate seeking operations management roles",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Management Bangalore"
+      },
+      "sameAs": ["https://www.linkedin.com/in/chandraiaf/"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
     <style>
-        /* Print Optimization */
-        @media print {
-            * {
-                -webkit-print-color-adjust: exact !important;
-                color-adjust: exact !important;
-            }
-            
-            body {
-                font-size: 11pt;
-                line-height: 1.4;
-                margin: 0;
-                background: white !important;
-            }
-            
-            .no-print {
-                display: none !important;
-            }
-            
-            .page-break {
-                page-break-before: always;
-            }
-            
-            .section {
-                break-inside: avoid;
-                margin-bottom: 20pt;
-            }
-            
-            .header {
-                background: #2c3e50 !important;
-                -webkit-print-color-adjust: exact;
-            }
-            
-            .nav {
-                display: none !important;
-            }
-            
-            h1, h2, h3 {
-                break-after: avoid;
-            }
-            
-            .timeline-item, .achievement-card, .skill-category {
-                break-inside: avoid;
-                margin-bottom: 10pt;
-            }
+        /* CSS Variables */
+        :root {
+            --primary-red: #c41e3a;
+            --primary-dark: #8b1538;
+            --accent-gold: #ffd700;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --shadow-light: 0 4px 15px rgba(0,0,0,0.08);
+            --shadow-medium: 0 8px 25px rgba(0,0,0,0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+            --font-primary: 'Segoe UI', 'Arial', sans-serif;
+            --max-width: 1200px;
         }
 
-        /* Base Styles */
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #2c3e50;
-            background: #f8f9fa;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            left: 6px;
+            top: 7px;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            background: var(--text-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Container */
         .container {
-            max-width: 1000px;
+            max-width: var(--max-width);
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background: var(--bg-white);
             min-height: 100vh;
+            box-shadow: var(--shadow-medium);
+            position: relative;
         }
 
         /* Header Section */
         .header {
-            background: linear-gradient(135deg, #c41e3a 0%, #8b1538 100%);
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-dark) 100%);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .header::before {
@@ -95,13 +123,16 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.03)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
             opacity: 0.1;
+            pointer-events: none;
         }
 
         .header-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .profile-section {
@@ -114,45 +145,52 @@
         }
 
         .profile-image {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #ffd700, #ffb347);
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, var(--accent-gold), #ffb347);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
-            color: #2c3e50;
-            border: 3px solid rgba(255,255,255,0.3);
+            color: var(--text-dark);
+            border: 4px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .profile-info {
+            text-align: left;
+            max-width: 500px;
         }
 
         .profile-info h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
         }
 
-        .profile-info h2 {
-            font-size: 1.3rem;
-            opacity: 0.9;
+        .profile-info .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
             font-weight: 300;
             margin-bottom: 1rem;
         }
 
         .profile-tagline {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin: 1rem auto;
+            font-size: 1.2rem;
+            opacity: 0.9;
             font-style: italic;
+            line-height: 1.5;
         }
 
+        /* Contact Grid */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1rem;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -161,17 +199,59 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background: rgba(255,255,255,0.1);
-            padding: 0.7rem 1rem;
+            gap: 0.7rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.8rem 1.2rem;
             border-radius: 8px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0 0 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            display: block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
             font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
         }
 
         /* Navigation */
         .nav {
             background: #34495e;
-            padding: 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -182,62 +262,88 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            max-width: var(--max-width);
+            margin: 0 auto;
         }
 
         .nav-item {
             padding: 1rem 1.5rem;
             color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             font-weight: 500;
+            border-bottom: 3px solid transparent;
         }
 
-        .nav-item:hover {
+        .nav-item:hover,
+        .nav-item.active {
             background: #2c3e50;
-            color: #ffd700;
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
         }
 
-        /* Sections */
+        /* Main Content */
+        .main-content {
+            padding: 0;
+        }
+
         .section {
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section:not(:last-child) {
             border-bottom: 1px solid #ecf0f1;
         }
 
-        .section h2 {
-            color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 2rem;
+        .section-header {
             text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             position: relative;
             padding-bottom: 1rem;
         }
 
-        .section h2::after {
+        .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #c41e3a, #ffd700);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-gold));
             border-radius: 2px;
         }
 
-        /* Value Proposition Box */
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Value Proposition */
         .value-prop {
             background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border: 2px solid #ffd700;
-            padding: 2rem;
-            border-radius: 12px;
+            border: 2px solid var(--accent-gold);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
             margin: 2rem 0;
             text-align: center;
+            box-shadow: var(--shadow-light);
         }
 
         .value-prop h3 {
-            color: #2c3e50;
-            font-size: 1.4rem;
+            color: var(--text-dark);
+            font-size: 1.5rem;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .value-prop p {
@@ -246,39 +352,38 @@
             color: #34495e;
         }
 
-        /* Stats Grid */
-        .stats-grid {
+        /* Cards Grid */
+        .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
         }
 
-        .stat-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-top: 4px solid #c41e3a;
-            transition: transform 0.3s ease;
+        .card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-red);
         }
 
-        .stat-card:hover {
-            transform: translateY(-2px);
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
         }
 
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #c41e3a;
-            margin-bottom: 0.5rem;
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
         }
 
-        .stat-label {
-            color: #7f8c8d;
-            font-weight: 500;
-            font-size: 0.9rem;
+        .card-content {
+            color: var(--text-light);
+            line-height: 1.6;
         }
 
         /* Timeline */
@@ -291,260 +396,199 @@
             display: flex;
             gap: 2rem;
             margin: 2rem 0;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 4px solid #c41e3a;
+            padding: 2rem;
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            border-left: 4px solid var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
         }
 
         .timeline-date {
-            background: #c41e3a;
+            background: var(--primary-red);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            padding: 0.7rem 1.2rem;
+            border-radius: 8px;
             font-weight: bold;
-            font-size: 0.9rem;
-            min-width: 100px;
+            font-size: 0.95rem;
+            min-width: 120px;
             text-align: center;
             height: fit-content;
+            box-shadow: 0 4px 8px rgba(196, 30, 58, 0.3);
         }
 
         .timeline-content h3 {
-            color: #2c3e50;
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .timeline-subtitle {
-            color: #c41e3a;
+            color: var(--primary-red);
             font-weight: 600;
             margin-bottom: 1rem;
             font-style: italic;
         }
 
         .timeline-content ul {
-            margin-left: 1rem;
-            color: #555;
+            margin-left: 1.2rem;
+            color: var(--text-light);
         }
 
         .timeline-content li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.5;
         }
 
         /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
             margin: 2rem 0;
         }
 
         .skill-category {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-top: 3px solid #c41e3a;
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            border-top: 3px solid var(--primary-red);
         }
 
         .skill-category h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
             font-size: 1.2rem;
             text-align: center;
+            font-weight: 600;
         }
 
         .skill-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0.8rem 0;
-            padding: 0.5rem 0;
+            margin: 1rem 0;
+            padding: 0.7rem 0;
             border-bottom: 1px solid #ecf0f1;
         }
 
         .skill-name {
             font-weight: 500;
-            color: #2c3e50;
+            color: var(--text-dark);
         }
 
         .skill-level {
-            background: linear-gradient(135deg, #c41e3a, #8b1538);
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-dark));
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
             font-weight: bold;
-        }
-
-        /* Achievements Grid */
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .achievement-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 4px solid #ffd700;
-            transition: transform 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateX(3px);
-        }
-
-        .achievement-title {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .achievement-desc {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Education Items */
-        .education-item {
-            background: white;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 4px solid #ffd700;
-        }
-
-        .education-title {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-institution {
-            color: #c41e3a;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-details {
-            color: #7f8c8d;
-            line-height: 1.5;
-        }
-
-        /* Innovation Cards */
-        .innovation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .innovation-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-top: 3px solid #ffd700;
-        }
-
-        .innovation-title {
-            color: #c41e3a;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .innovation-desc {
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .innovation-impact {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        /* Highlight Boxes */
-        .highlight-box {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            border-left: 4px solid #c41e3a;
-        }
-
-        .highlight-box h3 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
         }
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, var(--text-dark) 0%, #34495e 100%);
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
         }
 
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .cta-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
         .cta-button {
-            background: linear-gradient(135deg, #c41e3a, #8b1538);
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-dark));
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             text-decoration: none;
             display: inline-block;
-            margin: 0.5rem;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(196, 30, 58, 0.4);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .section {
-                padding: 2rem 1rem;
-            }
-            
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .profile-info h1 {
-                font-size: 2rem;
-            }
-            
-            .timeline-item {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .timeline-date {
-                align-self: flex-start;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline {
+            opacity: 0.8;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-item strong {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: var(--accent-gold);
+        }
+
+        .footer-disclaimer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.85rem;
+            opacity: 0.7;
+            line-height: 1.4;
         }
 
         /* Print Button */
@@ -552,93 +596,231 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background: #c41e3a;
+            background: var(--primary-red);
             color: white;
             border: none;
             padding: 1rem;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: var(--shadow-medium);
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: var(--transition);
+            font-size: 1.2rem;
         }
 
         .print-btn:hover {
             transform: scale(1.1);
+            background: var(--primary-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info {
+                text-align: center;
+            }
+
+            .profile-info h1 {
+                font-size: 2.2rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .timeline-date {
+                align-self: flex-start;
+                min-width: auto;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .nav-item {
+                text-align: center;
+                padding: 0.8rem 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            body {
+                font-size: 11pt;
+                line-height: 1.4;
+                background: white !important;
+                color: black !important;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: none;
+            }
+
+            .nav, .print-btn, .no-print {
+                display: none !important;
+            }
+
+            .header {
+                background: var(--text-dark) !important;
+                -webkit-print-color-adjust: exact;
+                page-break-after: avoid;
+            }
+
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 20pt;
+            }
+
+            .timeline-item, .card, .skill-category {
+                page-break-inside: avoid;
+                margin-bottom: 10pt;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        /* Focus Styles for Accessibility */
+        :focus-visible {
+            outline: 3px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+
+        /* Animation for scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Chandra Shekhar",
-  "jobTitle": "Operations Excellence Leader",
-  "description": "20-year IAF veteran, IIMB EGMP graduate seeking operations management roles",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity", 
-    "name": "Indian Institute of Management Bangalore"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/chandraiaf/"
-  ],
-  "email": "csiimbveteran@gmail.com",
-  "telephone": "+91-99997-31406",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bengaluru",
-    "addressRegion": "Karnataka",
-    "addressCountry": "IN"
-  }
-}
-</script>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <div class="container">
-    <main id="main-content" role="main">
         <!-- Print Button -->
-        <button class="print-btn no-print" onclick="window.print()" title="Print Portfolio">🖨️</button>
+        <button class="print-btn no-print" onclick="window.print()" title="Print Portfolio" aria-label="Print portfolio">🖨️</button>
 
         <!-- Header Section -->
-        <header class="header">
+        <header class="header" role="banner">
             <div class="header-content">
                 <div class="profile-section">
-                    <div class="profile-image">CS</div>
+                    <div class="profile-image" aria-hidden="true">CS</div>
                     <div class="profile-info">
                         <h1>Chandra Shekhar</h1>
-                        <h2>Operations Excellence Leader | IAF Veteran | IIMB Alumni</h2>
+                        <p class="subtitle">Operations Excellence Leader | Strategic Innovation Specialist | Business Transformation</p>
                         <p class="profile-tagline">Systematic Innovation Within Structure — Creating lasting solutions that enable others to succeed.</p>
                     </div>
                 </div>
-                
-                <div class="contact-grid">
-                    	<div class="contact-item">
-    			<span>📧</span>
-    			<a href="mailto:csiimbveteran@gmail.com" style="color: inherit; text-decoration: none;">csiimbveteran@gmail.com</a>
-		    </div>
-		    <div class="contact-item">
-    			<span>📱</span>
-    			<a href="tel:+919999731406" style="color: inherit; text-decoration: none;">+91-99997-31406</a>
-		    </div>
-		    <div class="contact-item">
-                        <span>🎓</span>
-                        <span>IIM Bangalore EGMP Graduate</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>🛡️</span>
-                        <span>Ex-Serviceman (20 Years IAF)</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>🔗</span>
-                        <span>linkedin.com/in/chandraiaf</span>
-                    </div>
-                </div>
-            </div>
+
+<div class="contact-grid">
+    <div class="contact-item">
+        <span aria-hidden="true">🎓</span>
+        <span>IIM Bangalore Alumni</span>
+    </div>
+    <div class="contact-item">
+        <span aria-hidden="true">🛡️</span>
+        <span>IAF Veteran (20 Years)</span>
+    </div>
+    <div class="contact-item">
+        <span aria-hidden="true">📍</span>
+        <span>Bengaluru, Karnataka</span>
+    </div>
+</div>
+
+                <!-- Key Metrics Section -->
+<div style="margin-top: 3rem; padding: 2.5rem 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; backdrop-filter: blur(15px);">
+    <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.3rem; opacity: 0.95;">Professional Highlights</h3>
+    
+    <!-- Primary Stats -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">20</div>
+            <div style="font-size: 0.95rem; opacity: 0.9;">Years Experience</div>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">₹200+Cr</div>
+            <div style="font-size: 0.95rem; opacity: 0.9;">Assets Managed</div>
+        </div>
+        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">0</div>
+            <div style="font-size: 0.95rem; opacity: 0.9;">Audit Discrepancies</div>
+        </div>
+    </div>
+    
+    <!-- Secondary Stats -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem;">
+        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">25+</div>
+            <div style="font-size: 0.85rem; opacity: 0.8;">Systems Created</div>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">74</div>
+            <div style="font-size: 0.85rem; opacity: 0.8;">EGMP Network</div>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">5.0/5.0</div>
+            <div style="font-size: 0.85rem; opacity: 0.8;">Innovation Score</div>
+        </div>
+    </div>
+</div>
         </header>
 
         <!-- Navigation -->
         <nav class="nav no-print" role="navigation" aria-label="Portfolio sections">
             <div class="nav-container">
-                <a href="#overview" class="nav-item">Executive Summary</a>
+                <a href="#overview" class="nav-item active">Executive Summary</a>
                 <a href="#experience" class="nav-item">Experience</a>
                 <a href="#skills" class="nav-item">Skills</a>
                 <a href="#education" class="nav-item">Education</a>
@@ -648,863 +830,923 @@
             </div>
         </nav>
 
-        <!-- Executive Summary Section -->
-        <section id="overview" class="section">
-            <h2>Executive Summary</h2>
-            
-            <div class="value-prop">
-                <h3>Strategic Value Proposition</h3>
-                <p><strong>The Systematic Innovator:</strong> 20-year distinguished military career transitioning to civilian leadership with proven track record of zero-error operations, exceptional innovation capability (25+ systems developed), and recent executive business education from IIM Bangalore. Unique combination of analytical excellence with structured innovation that transforms operational challenges into sustainable solutions.</p>
-            </div>
+        <!-- Main Content -->
+        <main id="main-content" class="main-content" role="main">
+            <!-- Executive Summary Section -->
+            <section id="overview" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Executive Summary</h2>
+                    <p class="section-subtitle">Strategic value proposition for operations excellence and systematic innovation</p>
+                </div>
 
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">20</div>
-                    <div class="stat-label">Years Military Service</div>
+                <div class="value-prop">
+                    <h3>The Systematic Innovator</h3>
+                    <p><strong>20-year distinguished military career</strong> transitioning to civilian leadership with proven track record of <strong>zero-error operations</strong>, exceptional innovation capability (25+ systems developed), and recent executive business education from <strong>IIM Bangalore</strong>. Unique combination of analytical excellence with structured innovation that transforms operational challenges into sustainable solutions.</p>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">₹200+</div>
-                    <div class="stat-label">Crores Assets Managed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">25+</div>
-                    <div class="stat-label">Systems Developed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10</div>
-                    <div class="stat-label">Strategic Postings</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Audit Discrepancies</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">74</div>
-                    <div class="stat-label">EGMP Network</div>
-                </div>
-            </div>
 
-            <div class="highlight-box">
-                <h3>Current Transition Profile (September 2025)</h3>
-                <p><strong>Age:</strong> 41 years | <strong>Location:</strong> Bengaluru, Karnataka | <strong>Status:</strong> Active job seeker with family stability</p>
-                <p><strong>Recent Achievement:</strong> Executive General Management Programme (EGMP) completion from IIM Bangalore (January 2025)</p>
-                <p><strong>Target Industries:</strong> Manufacturing, Aerospace & Defence, IT Services, Process Excellence Consulting</p>
-                <p><strong>Preferred Roles:</strong> Operations Manager, Program Manager, Process Excellence Leader, Business Operations Consultant</p>
-                <p><strong>Geographic Focus:</strong> Bengaluru and surrounding Karnataka region (family stability priority)</p>
-            </div>
+                <div class="cards-grid">
+                    <div class="card reveal">
+                        <div class="card-title">🎯 Operations Excellence</div>
+                        <div class="card-content">
+                            <strong>Zero-Error Framework:</strong> 20-year track record managing ₹200+ crore assets with perfect compliance. Proven crisis management and international coordination expertise across Russian, American, and French systems.
+                            <br><br>
+                            <strong>Target Roles:</strong> Operations Manager, Program Manager, Quality Assurance Head
+                        </div>
+                    </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 2rem 0;">
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                    <h4 style="color: #c41e3a; margin-bottom: 1rem;">Operations Excellence</h4>
-                    <p style="color: #555; font-size: 0.9rem;">Zero-error track record with ₹200+ crores inventory management across high-stakes military operations</p>
-                </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                    <h4 style="color: #c41e3a; margin-bottom: 1rem;">Innovation Leadership</h4>
-                    <p style="color: #555; font-size: 0.9rem;">25+ systems created and adopted organization-wide, including solutions still used 7 years later</p>
-                </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                    <h4 style="color: #c41e3a; margin-bottom: 1rem;">Crisis Management</h4>
-                    <p style="color: #555; font-size: 0.9rem;">Proven performance in national security operations, COVID-19 multi-office coordination</p>
-                </div>
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center;">
-                    <h4 style="color: #c41e3a; margin-bottom: 1rem;">Executive Education</h4>
-                    <p style="color: #555; font-size: 0.9rem;">Recent IIM Bangalore EGMP with strong business foundation and professional network</p>
-                </div>
-            </div>
-        </section>
+                    <div class="card reveal">
+                        <div class="card-title">💡 Strategic Innovation</div>
+                        <div class="card-content">
+                            <strong>Systems Development:</strong> 25+ systems created with 100% adoption rate. Mail follow-up system still active 7 years later. Focus on preventive rather than corrective solutions.
+                            <br><br>
+                            <strong>Applications:</strong> Process Excellence, Business Transformation, Change Management
+                        </div>
+                    </div>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section page-break">
-            <h2>Professional Experience</h2>
-            
-		<div class="timeline-item">
-                    <div class="timeline-date">2023-Present</div>
-                    <div class="timeline-content">
-                        <h3>Career Transition & Executive Education</h3>
-                        <p class="timeline-subtitle">Strategic Career Development | Bengaluru, Karnataka</p>
-                        <ul>
-                            <li><strong>Executive Education:</strong> Completed EGMP from IIM Bangalore with 4 Grade A, 4 Grade B modules across strategic management, finance, and operations</li>
-                            <li><strong>Skill Development:</strong> Intensive SWAYAM certification program - 9 courses from IIM/IIT institutions with focus on business analytics and innovation</li>
-                            <li><strong>Network Building:</strong> Established professional connections through 74-member EGMP cohort across diverse industries</li>
-                            <li><strong>Market Preparation:</strong> Active job search with focus on operations excellence and program management roles in Bengaluru market</li>
-                            <li><strong>Family Establishment:</strong> Successfully relocated and established family base in Bengaluru's professional ecosystem</li>
-                        </ul>
+                    <div class="card reveal">
+                        <div class="card-title">🎓 Executive Education</div>
+                        <div class="card-content">
+                            <strong>Recent Investment:</strong> IIM Bangalore EGMP completion (January 2025) with 4 Grade A, 4 Grade B modules. ₹12+ lakhs personal investment demonstrating commitment.
+                            <br><br>
+                            <strong>Network Value:</strong> 74-member professional cohort across industries
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-title">⚡ Crisis Leadership</div>
+                        <div class="card-content">
+                            <strong>Validated Performance:</strong> National security operations, COVID-19 multi-office coordination, VIP operations with zero incidents.
+                            <br><br>
+                            <strong>Unique Advantage:</strong> Ground-up military progression provides implementation insight
+                        </div>
                     </div>
                 </div>
 
-		<div class="timeline-item">
-                    <div class="timeline-date">2021-2022</div>
-                    <div class="timeline-content">
-                        <h3>Senior Operations Specialist, Advanced Fighter Aircraft Operations</h3>
-                        <p class="timeline-subtitle">101 Squadron (Rafale Operations) | Air Force Station Hasimara, West Bengal</p>
-                        <ul>
-                            <li><strong>Section Establishment:</strong> Single-handedly established new Ground Equipment Section for advanced fighter aircraft operations</li>
-                            <li><strong>International Coordination:</strong> Direct collaboration with French technical teams during Rafale integration, managing technology transfer protocols</li>
-                            <li><strong>High-Value Management:</strong> ₹200+ crores inventory management with zero audit discrepancies across multiple specialized equipment categories</li>
-                            <li><strong>Team Leadership:</strong> Led team of 20+ technicians across three operational bases with strategic deployment optimization</li>
-                            <li><strong>Innovation Implementation:</strong> Developed predictive maintenance systems and multi-base resource allocation frameworks</li>
-                        </ul>
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Current Transition Profile (September 2025)</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="padding: 1rem; background: white; border-radius: 8px;">
+                            <strong>Age:</strong> 41 years<br>
+                            <strong>Location:</strong> Bengaluru, Karnataka<br>
+                            <strong>Status:</strong> Active job seeker
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 8px;">
+                            <strong>Target Industries:</strong> Manufacturing, Aerospace & Defence, IT Services<br>
+                            <strong>Geographic Focus:</strong> Karnataka region (family stability)
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 8px;">
+                            <strong>Preferred Roles:</strong> Operations Manager, Program Manager, Process Excellence Leader<br>
+                            <strong>Compensation Target:</strong> ₹1.2-2.2 lakhs/month
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">20-year progressive career from ground-level excellence to strategic leadership</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2023-Present</div>
+                        <div class="timeline-content">
+                            <h3>Career Transition & Executive Education</h3>
+                            <p class="timeline-subtitle">Strategic Career Development | Bengaluru, Karnataka</p>
+                            <ul>
+                                <li><strong>Executive Education:</strong> Completed EGMP from IIM Bangalore with 4 Grade A, 4 Grade B modules across strategic management, finance, and operations</li>
+                                <li><strong>Skill Development:</strong> Intensive SWAYAM certification program - 9 courses from IIM/IIT institutions focusing on business analytics and innovation</li>
+                                <li><strong>Network Building:</strong> Established professional connections through 74-member EGMP cohort across diverse industries</li>
+                                <li><strong>Market Preparation:</strong> Active job search with focus on operations excellence and program management roles in Bengaluru market</li>
+                                <li><strong>Family Establishment:</strong> Successfully relocated and established family base in Bengaluru's professional ecosystem</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2021-2022</div>
+                        <div class="timeline-content">
+                            <h3>Senior Operations Specialist, Advanced Fighter Aircraft Operations</h3>
+                            <p class="timeline-subtitle">101 Squadron (Rafale Operations) | Air Force Station Hasimara, West Bengal</p>
+                            <ul>
+                                <li><strong>Section Establishment:</strong> Single-handedly established new Ground Equipment Section for advanced fighter aircraft operations</li>
+                                <li><strong>International Coordination:</strong> Direct collaboration with French technical teams during Rafale integration, managing technology transfer protocols</li>
+                                <li><strong>High-Value Management:</strong> ₹200+ crores inventory management with zero audit discrepancies across multiple specialized equipment categories</li>
+                                <li><strong>Team Leadership:</strong> Led team of 20+ technicians across three operational bases with strategic deployment optimization</li>
+                                <li><strong>Innovation Implementation:</strong> Developed predictive maintenance systems and multi-base resource allocation frameworks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2017-2021</div>
+                        <div class="timeline-content">
+                            <h3>Senior Operations Manager, VIP Operations & Crisis Management</h3>
+                            <p class="timeline-subtitle">3 Wing Air Force Station | Palam, New Delhi</p>
+                            <ul>
+                                <li><strong>VIP Support Operations:</strong> Air India One ground support for Presidential and Prime Ministerial flights with zero security incidents</li>
+                                <li><strong>National Security Operations:</strong> Participated in Operation Bandaar (Balakot Strike, February 2019) providing critical ground support</li>
+                                <li><strong>Crisis Leadership:</strong> COVID-19 pandemic management across 4 offices simultaneously with innovative tracking and accountability systems</li>
+                                <li><strong>System Innovation:</strong> Created equipment monitoring system adopted organization-wide; consumption calculator published on official IAF website</li>
+                                <li><strong>Advanced Technical Systems:</strong> Expertise with Boeing C-17, C-130J, and specialized VIP aircraft support equipment</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2016-2017</div>
+                        <div class="timeline-content">
+                            <h3>Strategic Personnel Operations Specialist</h3>
+                            <p class="timeline-subtitle">Air Force Record Office (AFRO) | New Delhi</p>
+                            <ul>
+                                <li><strong>Strategic Operations:</strong> Personnel management at highest PBOR office level with classified operations coordination</li>
+                                <li><strong>National Crisis Response:</strong> Army Surgical Strike support during Uri attack response (September 2016) - coordinated manpower deployment</li>
+                                <li><strong>Multi-location Management:</strong> Complex logistics coordination across multiple air force stations during high-stakes operations</li>
+                                <li><strong>Personnel Assessment:</strong> Conducted systematic personnel assessment and posting verification processes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2013-2016</div>
+                        <div class="timeline-content">
+                            <h3>Progressive Leadership Development</h3>
+                            <p class="timeline-subtitle">43 Wing Air Force Station | Sulur, Tamil Nadu</p>
+                            <ul>
+                                <li><strong>Executive Support:</strong> Personal Assistant to Air Officer Commanding - managed strategic communications and high-level coordination</li>
+                                <li><strong>Safety Leadership:</strong> Managed Station Aero-Safety operations with Flight Safety Award for exceptional safety protocol contributions</li>
+                                <li><strong>Innovation Legacy:</strong> Developed mail follow-up system later adopted IAF-wide in 2022 (7-year adoption cycle demonstrates lasting value)</li>
+                                <li><strong>Technology Integration:</strong> IMMOLS system implementation and comprehensive user training across multiple departments</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2005-2013</div>
+                        <div class="timeline-content">
+                            <h3>Technical Leadership Development</h3>
+                            <p class="timeline-subtitle">Multiple Strategic Military Postings</p>
+                            <ul>
+                                <li><strong>Desert Operations (Uttarlai, 2010-2013):</strong> Power Supply Unit leadership in extreme conditions maintaining critical radar systems</li>
+                                <li><strong>Multi-Role Excellence (Chandigarh, 2005-2010):</strong> ASV operations, Technical Control Room management, Commanding Officer's Personal Assistant</li>
+                                <li><strong>Operational Participation:</strong> Operation Varuna (Kosi flood relief, 2008) demonstrating versatility across humanitarian and combat operations</li>
+                                <li><strong>Educational Integration:</strong> Completed MBA and BSc IT degrees while maintaining full-time military service excellence</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">2002-2005</div>
+                        <div class="timeline-content">
+                            <h3>Military Foundation & Excellence Recognition</h3>
+                            <p class="timeline-subtitle">Air Force Training School & Technical Training Institutes</p>
+                            <ul>
+                                <li><strong>Leadership Recognition:</strong> Emerged as primary leader among trainees at ATS Belgaum, termed "Oxford of the training centre" by Officer-in-charge</li>
+                                <li><strong>Academic Excellence:</strong> "Best in Ground Service Training" award among 2000 trainees at Workshop Training Institute, Tambaram</li>
+                                <li><strong>Technical Specialization:</strong> Aircraft Support Systems expertise with Diploma in Mechanical Engineering (AICTE recognized)</li>
+                                <li><strong>Foundation Setting:</strong> Established pattern of systematic excellence and innovation that would define entire military career</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Core Competencies & Skills</h2>
+                    <p class="section-subtitle">Validated strengths across operations, leadership, and innovation domains</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid var(--accent-gold);">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Validated Strengths (Psychometric Assessment)</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
+                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">93.33/100</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Systems Thinking</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
+                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">100/100</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Teaching & Training</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
+                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">5.0/5.0</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Innovation Capability</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
+                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">5.0/5.0</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Leadership Orientation</div>
+                        </div>
                     </div>
                 </div>
 
-		<div class="timeline-item">
-                    <div class="timeline-date">2017-2021</div>
-                    <div class="timeline-content">
-                        <h3>Senior Operations Manager, VIP Operations & Crisis Management</h3>
-                        <p class="timeline-subtitle">3 Wing Air Force Station | Palam, New Delhi</p>
-                        <ul>
-                            <li><strong>VIP Support Operations:</strong> Air India One ground support for Presidential and Prime Ministerial flights with zero security incidents</li>
-                            <li><strong>National Security Operations:</strong> Participated in Operation Bandaar (Balakot Strike, February 2019) providing critical ground support</li>
-                            <li><strong>Crisis Leadership:</strong> COVID-19 pandemic management across 4 offices simultaneously with innovative tracking and accountability systems</li>
-                            <li><strong>System Innovation:</strong> Created equipment monitoring system adopted organization-wide; consumption calculator published on official IAF website</li>
-                            <li><strong>Advanced Technical Systems:</strong> Expertise with Boeing C-17, C-130J, and specialized VIP aircraft support equipment</li>
-                        </ul>
+                <div class="skills-grid">
+                    <div class="skill-category reveal">
+                        <h3>Business Operations Excellence</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Operations Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Financial Management</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Supply Chain Operations</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Quality Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Compliance & Risk Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3>Strategic Leadership & Management</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Strategic Planning</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Team Leadership</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Crisis Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Stakeholder Management</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Innovation Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3>Technical & Analytical Capabilities</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Business Analytics</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Process Documentation</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">System Development</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Data Analysis & Forecasting</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Digital Transformation</span>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h3>Military-to-Corporate Translation</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">International Coordination</span>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Multi-cultural Team Management</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Training & Development</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Security & Compliance Protocols</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">High-Stakes Decision Making</span>
+                            <span class="skill-level">Expert</span>
+                        </div>
                     </div>
                 </div>
 
-		<div class="timeline-item">
-                    <div class="timeline-date">2016-2017</div>
-                    <div class="timeline-content">
-                        <h3>Strategic Personnel Operations Specialist</h3>
-                        <p class="timeline-subtitle">Air Force Record Office (AFRO) | New Delhi</p>
-                        <ul>
-                            <li><strong>Strategic Operations:</strong> Personnel management at highest PBOR office level with classified operations coordination</li>
-                            <li><strong>National Crisis Response:</strong> Army Surgical Strike support during Uri attack response (September 2016) - coordinated manpower deployment</li>
-                            <li><strong>Multi-location Management:</strong> Complex logistics coordination across multiple air force stations during high-stakes operations</li>
-                            <li><strong>Personnel Assessment:</strong> Conducted systematic personnel assessment and posting verification processes</li>
-                        </ul>
+                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Technical Systems Expertise</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Multi-Fleet Systems</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Russian, American, French aircraft support systems</span>
+                        </div>
+                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>ERP Integration</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">IMMOLS, E-Office systems implementation</span>
+                        </div>
+                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Advanced Analytics</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Excel automation, database connectivity</span>
+                        </div>
+                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Quality Assurance</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Zero-error methodologies, audit compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Education & Professional Development</h2>
+                    <p class="section-subtitle">Continuous learning journey from technical expertise to executive leadership</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Executive General Management Programme (EGMP 68)</div>
+                        <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Indian Institute of Management, Bangalore</div>
+                        <div class="card-content">
+                            <strong>Duration:</strong> March 2024 - January 2025<br>
+                            <strong>Investment:</strong> ₹12+ lakhs personal commitment<br>
+                            <strong>Academic Performance:</strong> 4 Grade A, 4 Grade B modules<br>
+                            <strong>Cohort Network:</strong> 74 industry professionals across sectors<br>
+                            <strong>Key Competencies:</strong> Strategic Management, Corporate Finance, Operations Management, Information Systems Management
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-title">Master of Computer Applications (MCA)</div>
+                        <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Punjab Technical University, Jalandhar</div>
+                        <div class="card-content">
+                            <strong>Duration:</strong> 2011-2013<br>
+                            <strong>Strategic Focus:</strong> Advanced technical skills for senior military leadership transition<br>
+                            <strong>Integration Achievement:</strong> Completed while serving at Uttarlai desert posting<br>
+                            <strong>Technical Foundation:</strong> Programming, database management, system design
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card-title">Master of Business Administration (MBA)</div>
+                        <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Sikkim Manipal University, Gangtok</div>
+                        <div class="card-content">
+                            <strong>Duration:</strong> 2005-2008<br>
+                            <strong>Specialization:</strong> Technology Management<br>
+                            <strong>Exceptional Achievement:</strong> Completed concurrently with full-time military service<br>
+                            <strong>Key Areas:</strong> Strategic Technology Management, ERP Systems, Project Management
+                        </div>
                     </div>
                 </div>
 
-		<div class="timeline-item">
-                    <div class="timeline-date">2013-2016</div>
-                    <div class="timeline-content">
-                        <h3>Progressive Leadership Development</h3>
-                        <p class="timeline-subtitle">43 Wing Air Force Station | Sulur, Tamil Nadu</p>
-                        <ul>
-                            <li><strong>Executive Support:</strong> Personal Assistant to Air Officer Commanding - managed strategic communications and high-level coordination</li>
-                            <li><strong>Safety Leadership:</strong> Managed Station Aero-Safety operations with Flight Safety Award for exceptional safety protocol contributions</li>
-                            <li><strong>Innovation Legacy:</strong> Developed mail follow-up system later adopted IAF-wide in 2022 (7-year adoption cycle demonstrates lasting value)</li>
-                            <li><strong>Technology Integration:</strong> IMMOLS system implementation and comprehensive user training across multiple departments</li>
-                            <li><strong>Knowledge Transfer:</strong> Created comprehensive Personal Assistant compendium for institutional knowledge preservation</li>
-                        </ul>
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
+                    <h3 style="margin-bottom: 1.5rem;">Recent Professional Certifications (2023-2025)</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">IIM Bangalore Excellence</h4>
+                            <ul style="margin-left: 1.2rem; color: var(--text-light); line-height: 1.6;">
+                                <li>Financial Accounting & Analysis</li>
+                                <li>New Age Business Models</li>
+                                <li>Foundation of Digital Business</li>
+                                <li>People Management for Entrepreneurs</li>
+                                <li>Advanced Corporate Strategy</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">IIT System Certifications</h4>
+                            <ul style="margin-left: 1.2rem; color: var(--text-light); line-height: 1.6;">
+                                <li>Design, Technology & Innovation (IIT Bombay)</li>
+                                <li>Business Analytics (IIT Kharagpur)</li>
+                                <li>Innovation & Entrepreneurship (IIT Roorkee)</li>
+                                <li>Strategic Management Applications</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Strategic Development</h4>
+                            <ul style="margin-left: 1.2rem; color: var(--text-light); line-height: 1.6;">
+                                <li>Business Negotiations (IIFT New Delhi)</li>
+                                <li>Operations Excellence Methodologies</li>
+                                <li>AI Strategy Implementation Workshops</li>
+                                <li>Digital Transformation Leadership</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Key Achievements & Recognition</h2>
+                    <p class="section-subtitle">Demonstrated excellence across operational, leadership, and innovation domains</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Zero Audit Discrepancies</div>
+                        <div class="card-content">Maintained perfect compliance record across 20-year military career with ₹200+ crores inventory management responsibility. Demonstrates systematic excellence and attention to detail critical for quality-sensitive industries.</div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Best in Ground Service Training</div>
+                        <div class="card-content">Selected among 2000 trainees at Workshop Training Institute, Tambaram - demonstrating early excellence pattern that continued throughout career. Foundation for systematic approach to learning and development.</div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Flight Safety Award</div>
+                        <div class="card-content">Recognized for exceptional contributions to aircraft safety protocols and zero-incident operational management (2015). Highlights crisis prevention mindset and safety leadership capabilities.</div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">National Security Operations</div>
+                        <div class="card-content">Participated in Operation Varuna (2008), Army Surgical Strike support (2016), Operation Bandaar (2019). Proven performance under extreme pressure with national-level stakes and visibility.</div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">VIP Operations Excellence</div>
+                        <div class="card-content">Air India One support for Presidential and Prime Ministerial flights with zero security or operational incidents. Demonstrates capability to handle highest-stakes operations with perfect execution.</div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">International Coordination Success</div>
+                        <div class="card-content">Successful coordination with French technical teams during Rafale aircraft integration and technology transfer. Proves ability to work across cultural and technical boundaries at advanced levels.</div>
                     </div>
                 </div>
 
-		<div class="timeline-item">
-                    <div class="timeline-date">2005-2013</div>
-                    <div class="timeline-content">
-                        <h3>Technical Leadership Development</h3>
-                        <p class="timeline-subtitle">Multiple Strategic Military Postings</p>
-                        <ul>
-                            <li><strong>Desert Operations (Uttarlai, 2010-2013):</strong> Power Supply Unit leadership in extreme conditions maintaining critical radar systems</li>
-                            <li><strong>Multi-Role Excellence (Chandigarh, 2005-2010):</strong> ASV operations, Technical Control Room management, Commanding Officer's Personal Assistant</li>
-                            <li><strong>Operational Participation:</strong> Operation Varuna (Kosi flood relief, 2008) demonstrating versatility across humanitarian and combat operations</li>
-                            <li><strong>Educational Integration:</strong> Completed MBA and BSc IT degrees while maintaining full-time military service excellence</li>
-                        </ul>
+                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Unique Military-to-Corporate Competitive Advantages</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">PBOR Perspective Value</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Ground-level operational expertise combined with strategic thinking - understands implementation realities</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Zero-Error Operational Mindset</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Critical advantage for quality-sensitive industries and high-stakes business operations</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Crisis Performance Validation</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Proven excellence under extreme pressure with measurable results during national security operations</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">International Standards Experience</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Multi-cultural coordination and global operational framework experience across American, French, Russian systems</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Innovation Section -->
+            <section id="innovation" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Innovation & Systems Development Portfolio</h2>
+                    <p class="section-subtitle">Systematic innovation within structure - preventive solutions with lasting impact</p>
+                </div>
+
+                <div class="value-prop">
+                    <h3>Innovation Philosophy: "Systematic Innovation Within Structure"</h3>
+                    <p>Created <strong>25+ comprehensive business systems</strong> focusing on preventive rather than corrective problem-solving. Each system designed with 5-10 year operational lifecycle, emphasizing sustainable improvements that compound over time. Proven track record of organization-wide adoption with lasting impact.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Mail Follow-up System (2015)</div>
+                        <div class="card-content">
+                            Comprehensive communication tracking and accountability system for organizational efficiency management.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Long-term Impact:</strong> Adopted IAF-wide in 2022 (7-year adoption cycle)<br>
+                                <strong>Integration:</strong> Incorporated into E-Office ERP system<br>
+                                <strong>Validation:</strong> Demonstrates sustainable system design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Consumption Calculator & Resource Optimization (2019)</div>
+                        <div class="card-content">
+                            Advanced forecasting and resource management system for operational cost optimization.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Organization Adoption:</strong> Used by ASV sections organization-wide<br>
+                                <strong>Official Recognition:</strong> Published on IAF website as standard reference<br>
+                                <strong>Quantified Impact:</strong> 70% reduction in stockouts, 25% decrease in excess inventory
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Real-time Equipment Monitoring System (2020)</div>
+                        <div class="card-content">
+                            COVID-19 crisis response system for multi-office coordination and accountability tracking.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Crisis Application:</strong> Enabled management of 4 offices simultaneously<br>
+                                <strong>Executive Usage:</strong> Daily utilization by Chief Engineering Officer<br>
+                                <strong>Scalability:</strong> Adapted for post-COVID operational efficiency
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Strategic Deployment Optimization System (2022)</div>
+                        <div class="card-content">
+                            Advanced resource allocation framework for multi-base military operations coordination.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Operational Scope:</strong> Simultaneous operations across 3 operational bases<br>
+                                <strong>Efficiency Gain:</strong> 40% improvement in resource utilization<br>
+                                <strong>Critical Application:</strong> Essential for modern fighter aircraft operations
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Component Lifecycle Management System (2022)</div>
+                        <div class="card-content">
+                            Comprehensive tracking and predictive maintenance framework for high-value aerospace components.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Lifecycle Extension:</strong> 65% improvement in component lifespan<br>
+                                <strong>Financial Benefit:</strong> Enhanced budget forecasting and cost reduction<br>
+                                <strong>Safety Enhancement:</strong> Predictive maintenance reducing critical failures
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">2002-2005</div>
-                    <div class="timeline-content">
-                        <h3>Military Foundation & Excellence Recognition</h3>
-                        <p class="timeline-subtitle">Air Force Training School & Technical Training Institutes</p>
-                        <ul>
-                            <li><strong>Leadership Recognition:</strong> Emerged as primary leader among trainees at ATS Belgaum, termed "Oxford of the training centre" by Officer-in-charge</li>
-                            <li><strong>Academic Excellence:</strong> "Best in Ground Service Training" award among 2000 trainees at Workshop Training Institute, Tambaram</li>
-                            <li><strong>Technical Specialization:</strong> Aircraft Support Systems expertise with Diploma in Mechanical Engineering (AICTE recognized)</li>
-                            <li><strong>Foundation Setting:</strong> Established pattern of systematic excellence and innovation that would define entire military career</li>
-                        </ul>
+                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Innovation Impact Summary</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">25+</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Systems Developed</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">100%</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Organization Adoption Rate</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">7 Years</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Longest System Usage</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">Multi-Sector</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Application Potential</div>
+                        </div>
                     </div>
                 </div>
-        </section>
+            </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section page-break">
-            <h2>Core Competencies & Skills</h2>
-            
-            <div class="highlight-box">
-                <h3>Validated Strengths (Psychometric Assessment)</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-                        <div style="font-size: 1.8rem; color: #c41e3a; font-weight: bold;">93.33/100</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Systems Thinking</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-                        <div style="font-size: 1.8rem; color: #c41e3a; font-weight: bold;">100/100</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Teaching & Training</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-                        <div style="font-size: 1.8rem; color: #c41e3a; font-weight: bold;">5.0/5.0</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Innovation Capability</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: white; border-radius: 8px;">
-                        <div style="font-size: 1.8rem; color: #c41e3a; font-weight: bold;">5.0/5.0</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Leadership Orientation</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Business Operations Excellence</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Operations Management</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Financial Management</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Supply Chain Operations</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Quality Management</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Compliance & Risk Management</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
+            <!-- Career Strategy Section -->
+            <section id="strategy" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Strategic Career Direction & Market Positioning</h2>
+                    <p class="section-subtitle">Dual-layer career framework leveraging proven foundation while building future capabilities</p>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Strategic Leadership & Management</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Strategic Planning</span>
-                        <span class="skill-level">Advanced</span>
+                <div class="value-prop">
+                    <h3>Dual-Layer Career Framework: Proven Foundation + Future Growth</h3>
+                    <p><strong>Layer 1 (Immediate):</strong> Operations Excellence & Process Optimization roles leveraging 20-year proven track record<br>
+                    <strong>Layer 2 (Growth):</strong> AI Implementation, Strategic Operations, and C-Suite Advisory positions building on systematic innovation capabilities</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card reveal">
+                        <div class="card-title">Layer 1: Immediate Market Entry (0-18 months)</div>
+                        <div class="card-content">
+                            <strong>Target Roles:</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; color: var(--text-light);">
+                                <li>Operations Manager (Manufacturing/Aerospace)</li>
+                                <li>Program Manager (Defence/Large Projects)</li>
+                                <li>Process Excellence Manager</li>
+                                <li>Business Operations Consultant</li>
+                            </ul>
+                            <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <strong>Compensation Target:</strong> ₹1.2-2.2 lakhs/month<br>
+                                <strong>Geographic Focus:</strong> Bengaluru and Karnataka region<br>
+                                <strong>Timeline:</strong> 6-month employment window
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Team Leadership</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Crisis Management</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Stakeholder Management</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Innovation Management</span>
-                        <span class="skill-level">Expert</span>
+
+                    <div class="card reveal">
+                        <div class="card-title">Layer 2: Growth Trajectory (18+ months)</div>
+                        <div class="card-content">
+                            <strong>Target Roles:</strong>
+                            <ul style="margin: 0.5rem 0 0 1rem; color: var(--text-light);">
+                                <li>AI Implementation Specialist (Business Focus)</li>
+                                <li>Chief of Staff / Strategic Operations</li>
+                                <li>Executive Advisory & Consulting</li>
+                                <li>Digital Transformation Lead</li>
+                            </ul>
+                            <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                                <strong>Compensation Target:</strong> ₹3-4 lakhs/month<br>
+                                <strong>Focus:</strong> Strategic operations and C-suite advisory<br>
+                                <strong>Approach:</strong> Building on systematic innovation track record
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Technical & Analytical Capabilities</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Business Analytics</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Process Documentation</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">System Development</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Data Analysis & Forecasting</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Digital Transformation</span>
-                        <span class="skill-level">Intermediate</span>
-                    </div>
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
+                    <h3 style="margin-bottom: 1.5rem;">Unique Value Proposition: "The Systematic Innovator"</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-dark);">Combining <strong>20-year zero-error operational excellence</strong> with <strong>recent executive business education</strong> and <strong>proven systems innovation capability</strong>. Brings military discipline and precision to civilian business challenges while maintaining collaborative leadership approach developed through ground-up military progression.</p>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Specialized Military-Corporate Translation</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">International Coordination</span>
-                        <span class="skill-level">Advanced</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Multi-cultural Team Management</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Training & Development</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Security & Compliance Protocols</span>
-                        <span class="skill-level">Expert</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">High-Stakes Decision Making</span>
-                        <span class="skill-level">Expert</span>
+                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Competitive Advantages & Market Differentiation</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <strong style="color: var(--primary-red);">Self-Investment in Excellence</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Personal commitment through self-funded executive education</span>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <strong style="color: var(--primary-red);">Operational Foundation</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">20-year track record with crisis performance validation</span>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <strong style="color: var(--primary-red);">Practical Innovation</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Ground-up implementation experience with proven sustainability</span>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <strong style="color: var(--primary-red);">Systematic Excellence</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Military precision with collaborative business leadership</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin: 2rem 0;">
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; text-align: center;">Technical Systems Expertise</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Multi-Fleet Systems</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Russian, American, French aircraft support systems</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>ERP Integration</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">IMMOLS, E-Office systems implementation</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Advanced Analytics</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Excel automation, database connectivity</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Quality Assurance</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Zero-error methodologies, audit compliance</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="section page-break">
-            <h2>Education & Professional Development</h2>
-            
-            <div class="education-item">
-                <div class="education-title">Executive General Management Programme (EGMP 68)</div>
-                <div class="education-institution">Indian Institute of Management, Bangalore</div>
-                <div class="education-details">
-                    <strong>Duration:</strong> March 2024 - January 2025 | <strong>Investment:</strong> ₹12+ lakhs personal commitment<br>
-                    <strong>Academic Performance:</strong> 4 Grade A, 4 Grade B modules demonstrating consistent excellence<br>
-                    <strong>Cohort Network:</strong> 74 industry professionals across manufacturing, consulting, technology, and finance sectors<br>
-                    <strong>Key Competencies:</strong> Strategic Management, Corporate Finance, Operations Management, Information Systems Management, Marketing Management, Organizational Behavior<br>
-                    <strong>Capstone Achievement:</strong> Systematic business thinking integration with military operational excellence
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-title">Master of Computer Applications (MCA)</div>
-                <div class="education-institution">Punjab Technical University, Jalandhar</div>
-                <div class="education-details">
-                    <strong>Duration:</strong> 2011-2013 | <strong>Strategic Focus:</strong> Advanced technical skills for senior military leadership transition<br>
-                    <strong>Integration Achievement:</strong> Completed while serving at Uttarlai desert posting with power supply unit responsibilities<br>
-                    <strong>Technical Foundation:</strong> Advanced programming, database management, system design, and network management
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-title">Master of Business Administration (MBA)</div>
-                <div class="education-institution">Sikkim Manipal University, Gangtok</div>
-                <div class="education-details">
-                    <strong>Duration:</strong> 2005-2008 | <strong>Specialization:</strong> Technology Management and Strategic Operations<br>
-                    <strong>Exceptional Achievement:</strong> Completed concurrently with full-time military service at 25 Squadron, Chandigarh<br>
-                    <strong>Key Areas:</strong> Strategic Technology Management, ERP Systems, Project Management, Infrastructure Development, Leadership & Change Management
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-title">Bachelor of Science in Information Technology</div>
-                <div class="education-institution">Punjab Technical University, Jalandhar</div>
-                <div class="education-details">
-                    <strong>Duration:</strong> 2006-2008 | <strong>Performance:</strong> 70% (First Class) | <strong>Mode:</strong> Lateral entry based on technical diploma<br>
-                    <strong>Triple Achievement:</strong> Concurrent completion with MBA and military service demonstrating exceptional time management<br>
-                    <strong>Technical Competencies:</strong> Programming (C++, Java, VB), Database Management, Web Technologies, System Architecture
-                </div>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Recent Professional Certifications & Continuous Learning (2023-2025)</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-                    <div>
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">IIM Bangalore Excellence</h4>
-                        <ul style="margin-left: 1rem; color: #555; font-size: 0.9rem;">
-                            <li>Financial Accounting & Analysis</li>
-                            <li>New Age Business Models</li>
-                            <li>Foundation of Digital Business</li>
-                            <li>People Management for Entrepreneurs</li>
-                            <li>Advanced Corporate Strategy</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">IIT System Certifications</h4>
-                        <ul style="margin-left: 1rem; color: #555; font-size: 0.9rem;">
-                            <li>Design, Technology & Innovation (IIT Bombay)</li>
-                            <li>Business Analytics (IIT Kharagpur)</li>
-                            <li>Innovation & Entrepreneurship (IIT Roorkee)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">Strategic Development</h4>
-                        <ul style="margin-left: 1rem; color: #555; font-size: 0.9rem;">
-			    <li>Strategic Management (EGMP Grade A)</li>
-                            <li>Business Negotiations (IIFT New Delhi)</li>
-                            <li>Operations Excellence Methodologies</li>
-                            <li>AI Strategy Implementation Workshops</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin: 2rem 0;">
-                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Military Technical Excellence</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Best in Ground Service Training</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Selected among 2000 trainees (2004)</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Trade Proficiency Certificate</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Air-conditioning & Refrigeration Systems</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Multi-System Expertise</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">International equipment standards</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Safety Certifications</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Aerospace Safety Award recipient</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Achievements Section -->
-        <section id="achievements" class="section page-break">
-            <h2>Key Achievements & Recognition</h2>
-            
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-title">Zero Audit Discrepancies</div>
-                    <div class="achievement-desc">Maintained perfect compliance record across 20-year military career with ₹200+ crores inventory management responsibility</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">Best in Ground Service Training</div>
-                    <div class="achievement-desc">Selected among 2000 trainees at Workshop Training Institute, Tambaram - demonstrating early excellence pattern</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">Flight Safety Award</div>
-                    <div class="achievement-desc">Recognized for exceptional contributions to aircraft safety protocols and zero-incident operational management (2015)</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">National Security Operations</div>
-                    <div class="achievement-desc">Participated in Operation Varuna (2008), Army Surgical Strike support (2016), Operation Bandaar (2019)</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">VIP Operations Excellence</div>
-                    <div class="achievement-desc">Air India One support for Presidential and Prime Ministerial flights with zero security or operational incidents</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">International Coordination Success</div>
-                    <div class="achievement-desc">Successful coordination with French technical teams during Rafale aircraft integration and technology transfer</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">COVID-19 Crisis Leadership</div>
-                    <div class="achievement-desc">Managed 4 offices simultaneously during pandemic with innovative tracking systems and zero operational disruption</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">Progressive Military Advancement</div>
-                    <div class="achievement-desc">Ground-up promotion from Aircraftsmen to Sergeant through merit, competence, and consistent performance excellence</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">Multi-generational Education</div>
-                    <div class="achievement-desc">Successfully completed multiple degrees while maintaining full-time military service - demonstrating exceptional time management</div>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-title">Family Leadership &amp; Social Responsibility</div>
-                    <div class="achievement-desc">Successfully arranged sister's marriage (2015) with extensive network evaluation and long-term relationship success</div>
-                </div>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Unique Military-to-Corporate Competitive Advantages</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
-                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">PBOR Perspective Value</h4>
-                        <p style="color: #555; font-size: 0.9rem;">Ground-level operational expertise combined with strategic thinking - understands implementation realities</p>
-                    </div>
-                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">Zero-Error Operational Mindset</h4>
-                        <p style="color: #555; font-size: 0.9rem;">Critical advantage for quality-sensitive industries and high-stakes business operations</p>
-                    </div>
-                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">Crisis Performance Validation</h4>
-                        <p style="color: #555; font-size: 0.9rem;">Proven excellence under extreme pressure with measurable results during national security operations</p>
-                    </div>
-                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #c41e3a; margin-bottom: 0.5rem;">International Standards Experience</h4>
-                        <p style="color: #555; font-size: 0.9rem;">Multi-cultural coordination and global operational framework experience across American, French, Russian systems</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Innovation Section -->
-        <section id="innovation" class="section page-break">
-            <h2>Innovation & Systems Development Portfolio</h2>
-            
-            <div class="value-prop">
-                <h3>Innovation Philosophy: "Systematic Innovation Within Structure"</h3>
-                <p>Created 25+ comprehensive business systems focusing on <strong>preventive rather than corrective</strong> problem-solving. Each system designed with 5-10 year operational lifecycle, emphasizing sustainable improvements that compound over time. Proven track record of organization-wide adoption with lasting impact.</p>
-            </div>
-
-            <div class="innovation-grid">
-                <div class="innovation-card">
-                    <div class="innovation-title">Mail Follow-up System (2015)</div>
-                    <div class="innovation-desc">Comprehensive communication tracking and accountability system for organizational efficiency management.</div>
-                    <div class="innovation-impact">
-                        <strong>Long-term Impact:</strong> Adopted IAF-wide in 2022 (7-year adoption cycle)<br>
-                        <strong>Integration:</strong> Incorporated into E-Office ERP system across entire Indian Air Force<br>
-                        <strong>Validation:</strong> Demonstrates sustainable system design and organizational value
-                    </div>
-                </div>
-
-                <div class="innovation-card">
-                    <div class="innovation-title">Consumption Calculator & Resource Optimization (2019)</div>
-                    <div class="innovation-desc">Advanced forecasting and resource management system for operational cost optimization.</div>
-                    <div class="innovation-impact">
-                        <strong>Organization Adoption:</strong> Used by ASV sections organization-wide<br>
-                        <strong>Official Recognition:</strong> Published on IAF website as standard reference<br>
-                        <strong>Quantified Impact:</strong> 70% reduction in stockouts, 25% decrease in excess inventory
-                    </div>
-                </div>
-
-                <div class="innovation-card">
-                    <div class="innovation-title">Real-time Equipment Monitoring System (2020)</div>
-                    <div class="innovation-desc">COVID-19 crisis response system for multi-office coordination and accountability tracking.</div>
-                    <div class="innovation-impact">
-                        <strong>Crisis Application:</strong> Enabled management of 4 offices simultaneously<br>
-                        <strong>Executive Usage:</strong> Daily utilization by Chief Engineering Officer for critical decisions<br>
-                        <strong>Scalability:</strong> Adapted for post-COVID operational efficiency
-                    </div>
-                </div>
-
-                <div class="innovation-card">
-                    <div class="innovation-title">Strategic Deployment Optimization System (2022)</div>
-                    <div class="innovation-desc">Advanced resource allocation framework for multi-base military operations coordination.</div>
-                    <div class="innovation-impact">
-                        <strong>Operational Scope:</strong> Simultaneous operations across 3 operational bases<br>
-                        <strong>Efficiency Gain:</strong> 40% improvement in resource utilization<br>
-                        <strong>Critical Application:</strong> Essential for modern fighter aircraft operations
-                    </div>
-                </div>
-
-                <div class="innovation-card">
-                    <div class="innovation-title">IMMOLS Integration & Procurement Enhancement (2014)</div>
-                    <div class="innovation-desc">Photographic documentation system innovation for procurement accuracy and inventory management.</div>
-                    <div class="innovation-impact">
-                        <strong>System Integration:</strong> Incorporated into Integrated Material Management Online System<br>
-                        <strong>Process Improvement:</strong> Enhanced procurement accuracy and reduced errors<br>
-                        <strong>Knowledge Transfer:</strong> Training protocols for cross-functional implementation
-                    </div>
-                </div>
-
-                <div class="innovation-card">
-                    <div class="innovation-title">Component Lifecycle Management System (2022)</div>
-                    <div class="innovation-desc">Comprehensive tracking and predictive maintenance framework for high-value aerospace components.</div>
-                    <div class="innovation-impact">
-                        <strong>Lifecycle Extension:</strong> 65% improvement in component lifespan<br>
-                        <strong>Financial Benefit:</strong> Enhanced budget forecasting and cost reduction<br>
-                        <strong>Safety Enhancement:</strong> Predictive maintenance reducing critical failures
-                    </div>
-                </div>
-            </div>
-
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin: 2rem 0;">
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; text-align: center;">Innovation Impact Summary</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <div style="font-size: 1.5rem; color: #c41e3a; font-weight: bold;">25+</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Systems Developed</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <div style="font-size: 1.5rem; color: #c41e3a; font-weight: bold;">100%</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Organization Adoption Rate</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <div style="font-size: 1.5rem; color: #c41e3a; font-weight: bold;">7 Years</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Longest System Usage</div>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <div style="font-size: 1.5rem; color: #c41e3a; font-weight: bold;">Multi-Sector</div>
-                        <div style="color: #7f8c8d; font-size: 0.9rem;">Application Potential</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Career Strategy Section -->
-        <section id="strategy" class="section page-break">
-            <h2>Strategic Career Direction & Market Positioning</h2>
-            
-            <div class="value-prop">
-                <h3>Dual-Layer Career Framework: Proven Foundation + Future Growth</h3>
-                <p><strong>Layer 1 (Immediate):</strong> Operations Excellence & Process Optimization roles leveraging 20-year proven track record<br>
-                <strong>Layer 2 (Growth):</strong> AI Implementation, Strategic Operations, and C-Suite Advisory positions building on systematic innovation capabilities</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 4px solid #c41e3a;">
-                    <h3 style="color: #c41e3a; margin-bottom: 1rem;">Geographic & Market Strategy</h3>
-                    <ul style="color: #555; margin-left: 1rem;">
-                        <li><strong>Primary Focus:</strong> Bengaluru and Karnataka region</li>
-                        <li><strong>Network Leverage:</strong> 74-member EGMP cohort connections</li>
-                        <li><strong>Military Network:</strong> Ex-servicemen in defence/aerospace</li>
-                        <li><strong>Family Stability:</strong> Established base for long-term growth</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="highlight-box">
-                <h3>Unique Value Proposition: "The Systematic Innovator"</h3>
-                <p style="font-size: 1.1rem; line-height: 1.7;">Combining <strong>20-year zero-error operational excellence</strong> with <strong>recent executive business education</strong> and <strong>proven systems innovation capability</strong>. Brings military discipline and precision to civilian business challenges while maintaining collaborative leadership approach developed through ground-up military progression.</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                    <h4 style="color: #2c3e50; margin-bottom: 1rem;">Immediate Value (0-18 months)</h4>
-                    <ul style="color: #555; margin-left: 1rem; font-size: 0.95rem;">
-                        <li>Operations excellence with proven zero-error track record</li>
-                        <li>Crisis management and multi-site coordination expertise</li>
-                        <li>Process optimization and system development capabilities</li>
-                        <li>Team leadership with international coordination experience</li>
-                        <li>Quality management and compliance expertise</li>
-                    </ul>
-                </div>
-                
-                <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                    <h4 style="color: #2c3e50; margin-bottom: 1rem;">Growth Trajectory (18+ months)</h4>
-                    <ul style="color: #555; margin-left: 1rem; font-size: 0.95rem;">
-                        <li>AI implementation specialist for business operations</li>
-                        <li>Strategic operations and C-suite advisory roles</li>
-                        <li>Independent consulting practice development</li>
-                        <li>Thought leadership in military-civilian transition</li>
-                        <li>Executive-level crisis management consulting</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin: 2rem 0;">
-                <h3 style="color: #2c3e50; margin-bottom: 1rem; text-align: center;">Unique Professional Advantages</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Self-Investment in Excellence</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Personal commitment through self-funded executive education</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Operational Foundation</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">20-year track record with crisis performance validation</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Practical Innovation</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Ground-up implementation experience with proven system sustainability</span>
-                    </div>
-                    <div style="text-align: center; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                        <strong>Systematic Excellence</strong><br>
-                        <span style="color: #7f8c8d; font-size: 0.9rem;">Combining military precision with collaborative business leadership</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <!-- Call to Action Section -->
         <div class="cta-section">
-            <h2 style="margin-bottom: 1rem; color: white;">Transform Your Operations Excellence Today</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+            <h2 class="cta-title">Transform Your Operations Excellence Today</h2>
+            <p class="cta-description">
                 Ready to bring 20 years of zero-error operations, proven innovation capability, and executive business education 
                 to drive systematic excellence in your organization.
             </p>
-            <div style="margin-bottom: 2rem;">
+            
+            <div class="cta-buttons">
                 <a href="mailto:csiimbveteran@gmail.com" class="cta-button">Email: csiimbveteran@gmail.com</a>
-                <a href="tel:+919999731406" class="cta-button">Call: +91-99997-31406</a>
                 <a href="https://www.linkedin.com/in/chandraiaf/" target="_blank" rel="noopener noreferrer" class="cta-button">LinkedIn Profile</a>
             </div>
             
             <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; margin-top: 2rem;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; opacity: 0.8;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; opacity: 0.9;">
                     <div style="text-align: center;">
                         <strong>Available For</strong><br>
-                        Immediate opportunities
+                        <span style="font-size: 0.9rem;">Immediate opportunities</span>
                     </div>
                     <div style="text-align: center;">
                         <strong>Target Roles</strong><br>
-                        Operations | Program | Process Excellence
+                        <span style="font-size: 0.9rem;">Operations | Program | Process Excellence</span>
                     </div>
                     <div style="text-align: center;">
                         <strong>Location</strong><br>
-                        Bengaluru, Karnataka
+                        <span style="font-size: 0.9rem;">Bengaluru, Karnataka</span>
                     </div>
                     <div style="text-align: center;">
                         <strong>Growth Mindset</strong><br>
-                        Continuous learning & innovation
+                        <span style="font-size: 0.9rem;">Continuous learning & innovation</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer style="background: #2c3e50; color: white; padding: 2rem; text-align: center;">
-            <div style="margin-bottom: 1rem;">
-                <h3 style="color: #ffd700; margin-bottom: 0.5rem;">Chandra Shekhar</h3>
-                <p style="opacity: 0.8; font-style: italic;">"Systematic Excellence in Service of Others"</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; opacity: 0.7; font-size: 0.9rem;">
-                <div>
-                    <strong>Experience</strong><br>
-                    20 Years IAF Veteran
+        <footer class="footer">
+            <div class="footer-content">
+                <h3 class="footer-title">Chandra Shekhar</h3>
+                <p class="footer-tagline">"Systematic Excellence in Service of Others"</p>
+                
+                <div class="footer-grid">
+                    <div class="footer-item">
+                        <strong>Experience</strong>
+                        <span>20 Years IAF Veteran</span>
+                    </div>
+                    <div class="footer-item">
+                        <strong>Education</strong>
+                        <span>IIM Bangalore Alumni</span>
+                    </div>
+                    <div class="footer-item">
+                        <strong>Specialization</strong>
+                        <span>Operations Excellence</span>
+                    </div>
+                    <div class="footer-item">
+                        <strong>Innovation</strong>
+                        <span>25+ Systems Developed</span>
+                    </div>
+                    <div class="footer-item">
+                        <strong>Track Record</strong>
+                        <span>Zero Audit Discrepancies</span>
+                    </div>
+                    <div class="footer-item">
+                        <strong>Network</strong>
+                        <span>74-Member EGMP Cohort</span>
+                    </div>
                 </div>
-                <div>
-                    <strong>Education</strong><br>
-                    IIM Bangalore Alumni
+                
+                <div class="footer-disclaimer">
+                    This portfolio demonstrates proven capabilities and authentic achievements. All dates, statistics, and accomplishments are verifiable through official military records and educational transcripts. Portfolio designed for professional evaluation and hiring consideration.
                 </div>
-                <div>
-                    <strong>Specialization</strong><br>
-                    Operations Excellence
-                </div>
-                <div>
-                    <strong>Innovation</strong><br>
-                    25+ Systems Developed
-                </div>
-            </div>
-            <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.8rem; opacity: 0.6;">
-                This portfolio demonstrates proven capabilities and authentic achievements. All dates, statistics, and accomplishments are verifiable through official military records and educational transcripts.
             </div>
         </footer>
     </div>
 
+    <!-- JavaScript for Enhanced Functionality -->
     <script>
-        // Smooth scrolling for navigation
-        document.addEventListener('DOMContentLoaded', function() {
+        (function() {
+            'use strict';
+
+            // Smooth scrolling for navigation with active state management
             const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.section');
+
+            // Navigation click handling
             navItems.forEach(item => {
                 item.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
                     const targetSection = document.getElementById(targetId);
+                    
                     if (targetSection) {
+                        // Update active nav item
+                        navItems.forEach(nav => nav.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Smooth scroll to section
                         targetSection.scrollIntoView({ 
                             behavior: 'smooth',
                             block: 'start'
                         });
+                        
+                        // Update browser history
+                        history.pushState(null, null, '#' + targetId);
                     }
                 });
             });
 
-            // Add intersection observer for nav highlighting
-            const sections = document.querySelectorAll('.section');
+            // Intersection Observer for active navigation highlighting
             const observerOptions = {
                 root: null,
                 rootMargin: '-50px 0px -50px 0px',
                 threshold: 0.3
             };
 
-            const observer = new IntersectionObserver((entries) => {
+            const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Remove active class from all nav items
-                        navItems.forEach(nav => nav.classList.remove('active'));
-                        // Add active class to corresponding nav item
-                        const correspondingNav = document.querySelector(`[href="#${entry.target.id}"]`);
-                        if (correspondingNav) {
-                            correspondingNav.classList.add('active');
-                        }
+                        const sectionId = entry.target.getAttribute('id');
+                        navItems.forEach(nav => {
+                            nav.classList.toggle('active', nav.getAttribute('href') === '#' + sectionId);
+                        });
                     }
                 });
             }, observerOptions);
 
             sections.forEach(section => {
-                observer.observe(section);
+                sectionObserver.observe(section);
             });
 
-            // Add animation on scroll
-            const animateOnScroll = new IntersectionObserver((entries) => {
+            // Reveal animation on scroll
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('active');
                     }
                 });
             }, { threshold: 0.1 });
 
-            // Animate cards and achievements
-            const animateElements = document.querySelectorAll('.stat-card, .achievement-card, .skill-category, .education-item, .innovation-card');
-            animateElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'all 0.6s ease';
-                animateOnScroll.observe(element);
+            revealElements.forEach(element => {
+                revealObserver.observe(element);
             });
-        });
 
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-                e.preventDefault();
-                const sections = ['overview', 'experience', 'skills', 'education', 'achievements', 'innovation', 'strategy'];
-                const currentSection = document.querySelector('.nav-item.active');
-                if (currentSection) {
-                    const currentHref = currentSection.getAttribute('href').substring(1);
-                    const currentIndex = sections.indexOf(currentHref);
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const sectionIds = ['overview', 'experience', 'skills', 'education', 'achievements', 'innovation', 'strategy'];
+                    const currentActive = document.querySelector('.nav-item.active');
                     
-                    let nextIndex;
-                    if (e.key === 'ArrowDown') {
-                        nextIndex = (currentIndex + 1) % sections.length;
-                    } else {
-                        nextIndex = (currentIndex - 1 + sections.length) % sections.length;
+                    if (currentActive) {
+                        const currentHref = currentActive.getAttribute('href').substring(1);
+                        const currentIndex = sectionIds.indexOf(currentHref);
+                        
+                        let nextIndex;
+                        if (e.key === 'ArrowDown') {
+                            nextIndex = (currentIndex + 1) % sectionIds.length;
+                        } else {
+                            nextIndex = (currentIndex - 1 + sectionIds.length) % sectionIds.length;
+                        }
+                        
+                        const nextSection = document.getElementById(sectionIds[nextIndex]);
+                        if (nextSection) {
+                            nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
                     }
-                    
-                    const nextSection = document.getElementById(sections[nextIndex]);
-                    if (nextSection) {
-                        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+
+            // Contact obfuscation protection (basic)
+            const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+            emailLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Basic bot protection - could be enhanced
+                    const now = Date.now();
+                    if (!window.lastEmailClick || now - window.lastEmailClick > 1000) {
+                        window.lastEmailClick = now;
+                        return true;
                     }
+                    e.preventDefault();
+                    return false;
+                });
+            });
+
+            // Print optimization
+            window.addEventListener('beforeprint', function() {
+                // Ensure all reveal elements are visible for printing
+                revealElements.forEach(el => el.classList.add('active'));
+                
+                // Expand any collapsed content
+                const collapsedElements = document.querySelectorAll('[aria-expanded="false"]');
+                collapsedElements.forEach(el => el.setAttribute('aria-expanded', 'true'));
+            });
+
+            // Performance optimization: Lazy load non-critical images
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                                imageObserver.unobserve(img);
+                            }
+                        }
+                    });
+                });
+
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+
+            // Analytics integration placeholder
+            function trackEvent(category, action, label) {
+                // Placeholder for analytics tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', action, {
+                        event_category: category,
+                        event_label: label
+                    });
                 }
             }
-        });
 
-        // Print optimization
-        window.addEventListener('beforeprint', function() {
-            // Ensure all sections are visible for printing
-            const hiddenElements = document.querySelectorAll('.hidden');
-            hiddenElements.forEach(el => el.classList.remove('hidden'));
-        });
+            // Track important interactions
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    trackEvent('Portfolio', 'CTA Click', this.textContent.trim());
+                });
+            });
 
-        // Add print styles dynamically
-        const printStyles = `
-            @media print {
-                .section { 
-                    break-inside: avoid; 
-                    page-break-inside: avoid; 
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    trackEvent('Portfolio', 'Navigation', this.textContent.trim());
+                });
+            });
+
+            // Initialize on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Set initial active navigation based on URL hash
+                const hash = window.location.hash;
+                if (hash) {
+                    const targetNav = document.querySelector(`a[href="${hash}"]`);
+                    if (targetNav) {
+                        navItems.forEach(nav => nav.classList.remove('active'));
+                        targetNav.classList.add('active');
+                    }
                 }
-                .timeline-item, .achievement-card, .skill-category, .education-item { 
-                    break-inside: avoid; 
-                }
-                .nav, .print-btn { 
-                    display: none !important; 
-                }
-                body { 
-                    font-size: 10pt; 
-                    line-height: 1.3; 
-                }
-                .section h2 { 
-                    page-break-after: avoid; 
-                }
-            }
-        `;
-        
-        const styleSheet = document.createElement('style');
-        styleSheet.textContent = printStyles;
-        document.head.appendChild(styleSheet);
-    </script>
-</main>
-</div>
+                
+                // Trigger initial reveal for elements in viewport
+                revealElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('active');
+                    }
+                });
+            });
+
+            // Error handling for contact links
+            window.addEventListener('error', function(e) {
+                // Basic error logging
+                console.error('Portfolio error:', e.error);
+            });
+
+        })();
+</script>
 </body>
 </html>
