@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandra Shekhar - Operations Excellence Leader</title>
+    <meta name="description" content="Operations Excellence Leader with 20-year IAF track record, IIM Bangalore education, and proven systems innovation capabilities">
+    <meta name="keywords" content="operations manager, program manager, process excellence, military veteran, systems innovation, crisis management">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chandra Shekhar",
+      "jobTitle": "Operations Excellence Leader",
+      "alumniOf": "IIM Bangalore",
+      "email": "csiimbveteran@gmail.com",
+      "telephone": "+91-99997-31406",
+      "sameAs": ["https://www.linkedin.com/in/chandraiaf/"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-red: #c41e3a;
+            --navy: #2c3e50;
+            --accent-gold: #ffd700;
+            --soft-bg: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--soft-bg);
+        }
+
+        /* Header Section */
+        .hero-header {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8b1538 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: var(--navy);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            padding: 1rem 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255,255,255,0.1);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Portfolio Sections */
+        .portfolio-section {
+            display: none;
+            padding: 3rem 2rem;
+        }
+
+        .portfolio-section.active {
+            display: block;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Quick Overview Cards */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .overview-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .card-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .card-link:hover {
+            background: #8b1538;
+            transform: translateY(-2px);
+        }
+
+        /* Resume Section */
+        .resume-options {
+            background: var(--soft-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .resume-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resume-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .resume-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .resume-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-btn {
+            background: var(--navy);
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            background: #34495e;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--navy);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: var(--accent-gold);
+            color: var(--text-dark);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-header {
+                padding: 3rem 1rem;
+            }
+            
+            .portfolio-section {
+                padding: 2rem 1rem;
+            }
+            
+            .nav-item {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero-header,
+            .main-nav,
+            .contact-section {
+                display: none;
+            }
+            
+            .portfolio-section {
+                display: block !important;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <div class="hero-content">
+            <h1 class="hero-title">Chandra Shekhar</h1>
+            <p class="hero-subtitle">Operations Excellence Leader | Ex-IAF Veteran | IIM Bangalore Alumni</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">20</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">₹200+Cr</span>
+                    <span class="stat-label">Assets Managed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Systems Created</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Audit Discrepancies</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#overview" class="nav-item active" data-section="overview">Overview</a>
+            <a href="#operations" class="nav-item" data-section="operations">Operations Excellence</a>
+            <a href="#innovation" class="nav-item" data-section="innovation">Strategic Innovation</a>
+            <a href="#leadership" class="nav-item" data-section="leadership">Executive Leadership</a>
+            <a href="#resume" class="nav-item" data-section="resume">Resume & Documents</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Overview Section -->
+        <section id="overview" class="portfolio-section active">
+            <div class="section-header">
+                <h2 class="section-title">Professional Portfolio Overview</h2>
+                <p class="section-subtitle">Systematic Innovation Within Structure — Creating sustainable solutions that enable others to succeed</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Operations Excellence</h3>
+                    <p class="card-description">Zero-Error Operations Framework with 20-year track record managing ₹200+ crore assets. Proven crisis management and international coordination expertise.</p>
+                    <a href="#operations" class="card-link" data-section="operations">Explore Framework</a>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-icon">💡</div>
+                    <h3 class="card-title">Strategic Innovation</h3>
+                    <p class="card-description">25+ systems created with 100% adoption rate. Mail follow-up system still active 7 years later. Systematic approach to sustainable innovation.</p>
+                    <a href="#innovation" class="card-link" data-section="innovation">View Portfolio</a>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Executive Leadership</h3>
+                    <p class="card-description">IIM Bangalore EGMP graduate ready for strategic operations and AI implementation roles. Future-focused capability development.</p>
+                    <a href="#leadership" class="card-link" data-section="leadership">Leadership Vision</a>
+                </div>
+            </div>
+
+            <div class="resume-options">
+                <h3 class="resume-title">Ready-to-Download Professional Materials</h3>
+                <div class="resume-grid">
+                    <div class="resume-card">
+                        <h3>Master Resume</h3>
+                        <p>Comprehensive overview suitable for general applications and recruiter review</p>
+                        <a href="resume/master-template.html" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                    
+                    <div class="resume-card">
+                        <h3>Operations Manager</h3>
+                        <p>Manufacturing and aerospace focus with process excellence emphasis</p>
+                        <a href="resume/operations-manager.html" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                    
+                    <div class="resume-card">
+                        <h3>Program Manager</h3>
+                        <p>Large-scale project coordination and stakeholder management focus</p>
+                        <a href="resume/program-manager.html" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+
+                    <div class="resume-card">
+                        <h3>Process Consultant</h3>
+                        <p>Business transformation and systematic improvement specialization</p>
+                        <a href="resume/process-consultant.html" class="download-btn" target="_blank">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operations Excellence Section -->
+        <section id="operations" class="portfolio-section">
+            <div class="loading">Loading Operations Excellence content...</div>
+        </section>
+
+        <!-- Strategic Innovation Section -->
+        <section id="innovation" class="portfolio-section">
+            <div class="loading">Loading Strategic Innovation content...</div>
+        </section>
+
+        <!-- Executive Leadership Section -->
+        <section id="leadership" class="portfolio-section">
+            <div class="loading">Loading Executive Leadership content...</div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="portfolio-section">
+            <div class="section-header">
+                <h2 class="section-title">Professional Documents</h2>
+                <p class="section-subtitle">Role-specific resume templates optimized for ATS and recruiter review</p>
+            </div>
+
+            <div class="resume-options">
+                <div class="resume-grid">
+                    <div class="resume-card">
+                        <h3>Master Resume</h3>
+                        <p>Universal template covering all competencies - ideal for general applications, LinkedIn Easy Apply, and recruiter databases</p>
+                        <a href="resume/master-template.html" class="download-btn" target="_blank">View & Download</a>
+                    </div>
+                    
+                    <div class="resume-card">
+                        <h3>Operations Manager</h3>
+                        <p>Manufacturing, aerospace, and defense sector focus. Emphasizes zero-error operations and process excellence.</p>
+                        <a href="resume/operations-manager.html" class="download-btn" target="_blank">View & Download</a>
+                    </div>
+                    
+                    <div class="resume-card">
+                        <h3>Program Manager</h3>
+                        <p>Large-scale project coordination, stakeholder management, and international program delivery emphasis.</p>
+                        <a href="resume/program-manager.html" class="download-btn" target="_blank">View & Download</a>
+                    </div>
+
+                    <div class="resume-card">
+                        <h3>Process Excellence Consultant</h3>
+                        <p>Business transformation, systematic improvement, and change management specialization.</p>
+                        <a href="resume/process-consultant.html" class="download-btn" target="_blank">View & Download</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Resume Customization Service</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Need a tailored resume for a specific opportunity? I provide 15-minute custom optimization service for priority applications.</p>
+                <a href="mailto:csiimbveteran@gmail.com?subject=Custom%20Resume%20Request" class="card-link">Request Custom Resume</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="contact-title">Ready to Transform Your Operations?</h2>
+        <p class="contact-subtitle">Let's discuss how systematic innovation can drive measurable improvements in your organization</p>
+        
+        <div class="contact-buttons">
+            <a href="mailto:csiimbveteran@gmail.com" class="contact-btn">📧 Email</a>
+            <a href="tel:+919999731406" class="contact-btn">📱 Call</a>
+            <a href="https://www.linkedin.com/in/chandraiaf/" class="contact-btn" target="_blank">🔗 LinkedIn</a>
+        </div>
+        
+        <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+            <strong>Available for immediate opportunities in Bengaluru | 15 days notice period</strong>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.portfolio-section');
+            
+            // Content loading mapping
+            const contentMap = {
+                'operations': 'operations-excellence/',
+                'innovation': 'strategic-innovation/', 
+                'leadership': 'executive-leadership/'
+            };
+            
+            function setActiveNav(activeItem) {
+                navItems.forEach(nav => {
+                    nav.classList.remove('active');
+                    nav.removeAttribute('aria-current');
+                });
+                if (activeItem) {
+                    activeItem.classList.add('active');
+                    activeItem.setAttribute('aria-current', 'page');
+                }
+            }
+            
+            function showSection(sectionName) {
+                // Hide all sections
+                sections.forEach(section => section.classList.remove('active'));
+                
+                // Show selected section
+                const section = document.getElementById(sectionName);
+                if (section) {
+                    section.classList.add('active');
+                    
+                    // Dynamic content loading simulation
+                    if (contentMap[sectionName] && section.querySelector('.loading')) {
+                        loadSectionContent(sectionName, section);
+                    }
+                    
+                    // Update URL hash without scrolling
+                    if (history && history.pushState) {
+                        history.pushState(null, '', '#' + sectionName);
+                    } else {
+                        location.hash = sectionName;
+                    }
+                    
+                    // Set focus for screen readers
+                    section.setAttribute('tabindex', '-1');
+                    section.focus();
+                }
+            }
+            
+            navItems.forEach(item => {
+                // Make keyboard accessible
+                item.setAttribute('tabindex', '0');
+                
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetSection = this.getAttribute('data-section');
+                    setActiveNav(this);
+                    showSection(targetSection);
+                });
+                
+                // Keyboard navigation
+                item.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+            
+            // Card link navigation
+            document.querySelectorAll('.card-link[data-section]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetSection = this.getAttribute('data-section');
+                    const navItem = document.querySelector(`[data-section="${targetSection}"]`);
+                    if (navItem) {
+                        navItem.click();
+                    }
+                });
+            });
+            
+            function loadSectionContent(sectionName, sectionElement) {
+                // Simulate loading - in production, this would fetch from individual HTML files
+                setTimeout(() => {
+                    const loadingElement = sectionElement.querySelector('.loading');
+                    if (loadingElement) {
+                        loadingElement.innerHTML = `
+                            <div class="section-header">
+                                <h2 class="section-title">${getSectionTitle(sectionName)}</h2>
+                                <p class="section-subtitle">Detailed content will be loaded from individual portfolio sections</p>
+                            </div>
+                            <div style="text-align: center; padding: 3rem;">
+                                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">
+                                    This section will display the full ${sectionName.replace('-', ' ')} portfolio content.
+                                </p>
+                                <a href="${contentMap[sectionName]}index.html" class="card-link" target="_blank" rel="noopener noreferrer">
+                                    View Full ${getSectionTitle(sectionName)} Portfolio
+                                </a>
+                            </div>
+                        `;
+                    }
+                }, 500);
+            }
+            
+            function getSectionTitle(sectionName) {
+                const titles = {
+                    'operations': 'Operations Excellence',
+                    'innovation': 'Strategic Innovation',
+                    'leadership': 'Executive Leadership'
+                };
+                return titles[sectionName] || sectionName;
+            }
+            
+            // Handle browser back/forward
+            window.addEventListener('popstate', function() {
+                const current = window.location.hash ? window.location.hash.substring(1) : 'overview';
+                const navItem = document.querySelector(`[data-section="${current}"]`);
+                if (navItem) {
+                    setActiveNav(navItem);
+                    showSection(current);
+                }
+            });
+            
+            // Honor URL hash on page load
+            if (window.location.hash) {
+                const hashSection = window.location.hash.substring(1);
+                const navItem = document.querySelector(`[data-section="${hashSection}"]`);
+                if (navItem) {
+                    setActiveNav(navItem);
+                    showSection(hashSection);
+                }
+            }
+            
+            // Analytics tracking (placeholder)
+            function trackInteraction(action, element) {
+                console.log(`Portfolio Interaction: ${action} - ${element}`);
+                // Add your analytics tracking code here
+            }
+            
+            // Track navigation
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    trackInteraction('Navigation', item.getAttribute('data-section'));
+                });
+            });
+            
+            // Track downloads
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    trackInteraction('Download', btn.textContent.trim());
+                });
+            });
+        });
+    </script>
+</body>
+</html>
