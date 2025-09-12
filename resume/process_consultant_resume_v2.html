@@ -369,6 +369,31 @@
                 align-items: flex-start;
             }
         }
+        @media print {
+    /* existing print styles... */
+    
+    a[href*="mailto:"]:after, a[href*="tel:"]:after {
+        content: "";
+    }
+
+    a[href*="linkedin"]:after {
+        content: " (LinkedIn Profile)";
+        font-size: 9pt;
+        color: #000;
+    }
+
+    a[href*="github"]:after, a[href*="portfolio"]:after {
+        content: " (Portfolio)";
+        font-size: 9pt;
+        color: #000;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #000;
+    }
+}
     </style>
 </head>
 <body>
