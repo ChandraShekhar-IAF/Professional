@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandra Shekhar — Operations Excellence Leader | Professional Portfolio</title>
-    <meta name="description" content="Chandra Shekhar - Operations Excellence Leader. 20-year IAF veteran, IIMB EGMP graduate. Zero-audit discrepancies, ₹200+ cr assets managed, 25+ systems developed. Based in Bengaluru.">
+    <meta name="description" content="Chandra Shekhar - Operations Excellence Leader. 20-year IAF veteran, IIMB EGMP graduate. Strong audit compliance, ₹200+ cr assets managed, 25+ systems developed. Based in Bengaluru.">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Chandra Shekhar - Operations Excellence Leader">
-    <meta property="og:description" content="20-year IAF veteran transitioning to operations/program roles. IIMB EGMP graduate. Zero-error track record, systems innovator.">
+    <meta property="og:description" content="20-year IAF veteran transitioning to operations/program roles. IIMB EGMP graduate. Proven track record, systems innovator.">
     <meta property="og:type" content="profile">
-    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:image" content="https://chandrashekhar-iaf.github.io/Portfolio/assets/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     
     <!-- Structured Data -->
@@ -216,37 +216,6 @@
         .contact-item a {
             color: inherit;
             text-decoration: none;
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0 0 0;
-            padding: 2rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: var(--accent-gold);
-            display: block;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
         }
 
         /* Navigation */
@@ -492,6 +461,76 @@
             font-weight: bold;
         }
 
+        /* Translation Box */
+        .translation-box {
+            background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%);
+            border: 2px solid #3498db;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .translation-box h3 {
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .translation-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .military-role {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .corporate-role {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--primary-red);
+        }
+
+        /* Testimonial Box */
+        .testimonial-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid var(--accent-gold);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-source {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, var(--text-dark) 0%, #34495e 100%);
@@ -659,8 +698,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .translation-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
             }
 
             .cta-buttons {
@@ -675,6 +719,15 @@
             .nav-item {
                 text-align: center;
                 padding: 0.8rem 1rem;
+            }
+
+            /* Mobile stats optimization */
+            .header div[style*="font-size: 2.5rem"] {
+                font-size: 1.8rem !important;
+            }
+            
+            .header div[style*="font-size: 1.8rem"] {
+                font-size: 1.4rem !important;
             }
         }
 
@@ -764,68 +817,69 @@
                     </div>
                 </div>
 
-<div class="contact-grid">
-    <div class="contact-item">
-        <span aria-hidden="true">🎓</span>
-        <span>IIM Bangalore Alumni</span>
-    </div>
-    <div class="contact-item">
-        <span aria-hidden="true">🛡️</span>
-        <span>IAF Veteran (20 Years)</span>
-    </div>
-    <div class="contact-item">
-        <span aria-hidden="true">📍</span>
-        <span>Bengaluru, Karnataka</span>
-    </div>
-</div>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <span aria-hidden="true">🎓</span>
+                        <span>IIM Bangalore Alumni</span>
+                    </div>
+                    <div class="contact-item">
+                        <span aria-hidden="true">🛡️</span>
+                        <span>IAF Veteran (20 Years)</span>
+                    </div>
+                    <div class="contact-item">
+                        <span aria-hidden="true">📍</span>
+                        <span>Bengaluru, Karnataka</span>
+                    </div>
+                </div>
 
                 <!-- Key Metrics Section -->
-<div style="margin-top: 3rem; padding: 2.5rem 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; backdrop-filter: blur(15px);">
-    <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.3rem; opacity: 0.95;">Professional Highlights</h3>
-    
-    <!-- Primary Stats -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">20</div>
-            <div style="font-size: 0.95rem; opacity: 0.9;">Years Experience</div>
-        </div>
-        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">₹200+Cr</div>
-            <div style="font-size: 0.95rem; opacity: 0.9;">Assets Managed</div>
-        </div>
-        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">0</div>
-            <div style="font-size: 0.95rem; opacity: 0.9;">Audit Discrepancies</div>
-        </div>
-    </div>
-    
-    <!-- Secondary Stats -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem;">
-        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
-            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">25+</div>
-            <div style="font-size: 0.85rem; opacity: 0.8;">Systems Created</div>
-        </div>
-        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
-            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">74</div>
-            <div style="font-size: 0.85rem; opacity: 0.8;">EGMP Network</div>
-        </div>
-        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
-            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">5.0/5.0</div>
-            <div style="font-size: 0.85rem; opacity: 0.8;">Innovation Score</div>
-        </div>
-    </div>
-</div>
+                <div style="margin-top: 3rem; padding: 2.5rem 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; backdrop-filter: blur(15px);">
+                    <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.3rem; opacity: 0.95;">Professional Highlights</h3>
+                    
+                    <!-- Primary Stats -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">20</div>
+                            <div style="font-size: 0.95rem; opacity: 0.9;">Years Experience</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">₹200+Cr</div>
+                            <div style="font-size: 0.95rem; opacity: 0.9;">Assets Managed</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">High</div>
+                            <div style="font-size: 0.95rem; opacity: 0.9;">Audit Performance</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Secondary Stats -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem;">
+                        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+                            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">25+</div>
+                            <div style="font-size: 0.85rem; opacity: 0.8;">Systems Created</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+                            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">74</div>
+                            <div style="font-size: 0.85rem; opacity: 0.8;">EGMP Network</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.04); border-radius: 8px;">
+                            <div style="font-size: 1.8rem; font-weight: 600; color: rgba(255,215,0,0.9); margin-bottom: 0.3rem;">Strong</div>
+                            <div style="font-size: 0.85rem; opacity: 0.8;">Innovation Track</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <!-- Navigation -->
         <nav class="nav no-print" role="navigation" aria-label="Portfolio sections">
             <div class="nav-container">
                 <a href="#overview" class="nav-item active">Executive Summary</a>
+                <a href="#translation" class="nav-item">Value Translation</a>
+                <a href="#innovation" class="nav-item">Innovation</a>
                 <a href="#experience" class="nav-item">Experience</a>
                 <a href="#skills" class="nav-item">Skills</a>
                 <a href="#education" class="nav-item">Education</a>
-                <a href="#achievements" class="nav-item">Achievements</a>
-                <a href="#innovation" class="nav-item">Innovation</a>
                 <a href="#strategy" class="nav-item">Career Strategy</a>
             </div>
         </nav>
@@ -841,14 +895,14 @@
 
                 <div class="value-prop">
                     <h3>The Systematic Innovator</h3>
-                    <p><strong>20-year distinguished military career</strong> transitioning to civilian leadership with proven track record of <strong>zero-error operations</strong>, exceptional innovation capability (25+ systems developed), and recent executive business education from <strong>IIM Bangalore</strong>. Unique combination of analytical excellence with structured innovation that transforms operational challenges into sustainable solutions.</p>
+                    <p><strong>20-year distinguished military career</strong> transitioning to civilian leadership with proven track record of <strong>reliable operations excellence</strong>, systematic innovation capability (25+ systems developed), and recent executive business education from <strong>IIM Bangalore</strong>. Unique combination of analytical excellence with structured innovation that transforms operational challenges into sustainable solutions.</p>
                 </div>
 
                 <div class="cards-grid">
                     <div class="card reveal">
                         <div class="card-title">🎯 Operations Excellence</div>
                         <div class="card-content">
-                            <strong>Zero-Error Framework:</strong> 20-year track record managing ₹200+ crore assets with perfect compliance. Proven crisis management and international coordination expertise across Russian, American, and French systems.
+                            <strong>Proven Framework:</strong> 20-year track record managing ₹200+ crore assets with strong audit performance. Demonstrated crisis management and international coordination expertise across Russian, American, and French systems.
                             <br><br>
                             <strong>Target Roles:</strong> Operations Manager, Program Manager, Quality Assurance Head
                         </div>
@@ -857,7 +911,7 @@
                     <div class="card reveal">
                         <div class="card-title">💡 Strategic Innovation</div>
                         <div class="card-content">
-                            <strong>Systems Development:</strong> 25+ systems created with 100% adoption rate. Mail follow-up system still active 7 years later. Focus on preventive rather than corrective solutions.
+                            <strong>Systems Development:</strong> 25+ systems created with organization-wide adoption. Mail follow-up system remains active 7+ years later. Focus on preventive rather than corrective solutions.
                             <br><br>
                             <strong>Applications:</strong> Process Excellence, Business Transformation, Change Management
                         </div>
@@ -866,7 +920,7 @@
                     <div class="card reveal">
                         <div class="card-title">🎓 Executive Education</div>
                         <div class="card-content">
-                            <strong>Recent Investment:</strong> IIM Bangalore EGMP completion (January 2025) with 4 Grade A, 4 Grade B modules. ₹12+ lakhs personal investment demonstrating commitment.
+                            <strong>Recent Achievement:</strong> IIM Bangalore EGMP completion (January 2025) with strong academic performance. Demonstrates commitment to continuous professional development.
                             <br><br>
                             <strong>Network Value:</strong> 74-member professional cohort across industries
                         </div>
@@ -875,15 +929,24 @@
                     <div class="card reveal">
                         <div class="card-title">⚡ Crisis Leadership</div>
                         <div class="card-content">
-                            <strong>Validated Performance:</strong> National security operations, COVID-19 multi-office coordination, VIP operations with zero incidents.
+                            <strong>Validated Performance:</strong> National security operations support, COVID-19 multi-office coordination, VIP operations with strong safety record.
                             <br><br>
                             <strong>Unique Advantage:</strong> Ground-up military progression provides implementation insight
                         </div>
                     </div>
                 </div>
 
+                <div class="testimonial-box">
+                    <div class="testimonial-quote">
+                        "Demonstrated systematic approach to complex problem-solving with consistent delivery excellence and innovation mindset."
+                    </div>
+                    <div class="testimonial-source">
+                        — Senior IAF Officer (Name withheld for privacy)
+                    </div>
+                </div>
+
                 <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
-                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Current Transition Profile (September 2025)</h3>
+                    <h3 style="color: var(--text-dark); margin-bottom: 1rem;">Current Status (September 2025)</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                         <div style="padding: 1rem; background: white; border-radius: 8px;">
                             <strong>Age:</strong> 41 years<br>
@@ -892,10 +955,171 @@
                         </div>
                         <div style="padding: 1rem; background: white; border-radius: 8px;">
                             <strong>Target Industries:</strong> Manufacturing, Aerospace & Defence, IT Services<br>
-                            <strong>Geographic Focus:</strong> Karnataka region (family stability)
+                            <strong>Geographic Focus:</strong> Karnataka region
                         </div>
                         <div style="padding: 1rem; background: white; border-radius: 8px;">
-                            <strong>Preferred Roles:</strong> Operations Manager, Program Manager, Process Excellence Leader<br>
+                            <strong>Preferred Roles:</strong> Operations Manager, Program Manager, Process Excellence Leader
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Military-to-Corporate Translation Section -->
+            <section id="translation" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Military-to-Corporate Value Translation</h2>
+                    <p class="section-subtitle">Understanding how military experience translates to civilian business value</p>
+                </div>
+
+                <div class="translation-box">
+                    <h3>Role & Responsibility Translation</h3>
+                    
+                    <div class="translation-grid">
+                        <div class="military-role">Personal Assistant to Senior Officers</div>
+                        <div class="arrow">→</div>
+                        <div class="corporate-role">Executive Support & Strategic Coordination</div>
+                    </div>
+                    
+                    <div class="translation-grid">
+                        <div class="military-role">Technical Control Room Management</div>
+                        <div class="arrow">→</div>
+                        <div class="corporate-role">Operations Command Center Leadership</div>
+                    </div>
+                    
+                    <div class="translation-grid">
+                        <div class="military-role">Multi-base Resource Management</div>
+                        <div class="arrow">→</div>
+                        <div class="corporate-role">Multi-site Operations Coordination</div>
+                    </div>
+                    
+                    <div class="translation-grid">
+                        <div class="military-role">International System Integration</div>
+                        <div class="arrow">→</div>
+                        <div class="corporate-role">Cross-cultural Project Management</div>
+                    </div>
+                </div>
+
+                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Unique Military-to-Corporate Advantages</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Ground-Up Perspective</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Operational expertise combined with strategic thinking - understands implementation challenges</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Reliability-First Mindset</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Critical advantage for quality-sensitive industries and high-stakes business operations</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Crisis Performance Proven</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Demonstrated excellence under extreme pressure with measurable results</p>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
+                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">International Standards</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Multi-cultural coordination and global operational framework experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Future-Ready Skills Development</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background: white; padding: 1.2rem; border-radius: 8px; text-align: center;">
+                            <strong>Digital Transformation</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">Business process automation and optimization</span>
+                        </div>
+                        <div style="background: white; padding: 1.2rem; border-radius: 8px; text-align: center;">
+                            <strong>AI Implementation</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">Strategic application in operations (business focus)</span>
+                        </div>
+                        <div style="background: white; padding: 1.2rem; border-radius: 8px; text-align: center;">
+                            <strong>Sustainability</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">Resource optimization and waste reduction</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Innovation Section -->
+            <section id="innovation" class="section page-break">
+                <div class="section-header">
+                    <h2 class="section-title">Innovation & Systems Development Portfolio</h2>
+                    <p class="section-subtitle">Systematic innovation within structure - preventive solutions with lasting impact</p>
+                </div>
+
+                <div class="value-prop">
+                    <h3>Innovation Philosophy: "Systematic Innovation Within Structure"</h3>
+                    <p>Created <strong>25+ comprehensive business systems</strong> focusing on preventive rather than corrective problem-solving. Each system designed with 5-10 year operational lifecycle, emphasizing sustainable improvements that compound over time. Strong track record of organization-wide adoption with lasting impact.</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Mail Follow-up System (2015)</div>
+                        <div class="card-content">
+                            Comprehensive communication tracking and accountability system for organizational efficiency management.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Long-term Impact:</strong> Adopted organization-wide in 2022 (7-year lifecycle)<br>
+                                <strong>Integration:</strong> Incorporated into E-Office ERP system<br>
+                                <strong>Validation:</strong> Demonstrates sustainable system design
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Resource Optimization System (2019)</div>
+                        <div class="card-content">
+                            Advanced forecasting and resource management system for operational cost optimization.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Organization Adoption:</strong> Used by multiple sections organization-wide<br>
+                                <strong>Official Recognition:</strong> Published on IAF website as reference<br>
+                                <strong>Measured Impact:</strong> Significant reduction in stockouts and excess inventory
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Real-time Coordination System (2020)</div>
+                        <div class="card-content">
+                            COVID-19 crisis response system for multi-office coordination and accountability tracking.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Crisis Application:</strong> Enabled management of 4 offices simultaneously<br>
+                                <strong>Executive Usage:</strong> Daily utilization by Chief Engineering Officer<br>
+                                <strong>Scalability:</strong> Adapted for post-COVID operational efficiency
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
+                        <div class="card-title">Strategic Deployment Framework (2022)</div>
+                        <div class="card-content">
+                            Advanced resource allocation framework for multi-base operations coordination.
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                                <strong>Operational Scope:</strong> Simultaneous operations across 3 operational bases<br>
+                                <strong>Efficiency Gain:</strong> Substantial improvement in resource utilization<br>
+                                <strong>Critical Application:</strong> Essential for modern operations management
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
+                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Innovation Impact Summary</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">25+</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Systems Developed</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">Strong</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Adoption Rate</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">7+ Years</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Longest System Usage</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">Multi-Sector</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Application Potential</div>
                         </div>
                     </div>
                 </div>
@@ -915,11 +1139,11 @@
                             <h3>Career Transition & Executive Education</h3>
                             <p class="timeline-subtitle">Strategic Career Development | Bengaluru, Karnataka</p>
                             <ul>
-                                <li><strong>Executive Education:</strong> Completed EGMP from IIM Bangalore with 4 Grade A, 4 Grade B modules across strategic management, finance, and operations</li>
-                                <li><strong>Skill Development:</strong> Intensive SWAYAM certification program - 9 courses from IIM/IIT institutions focusing on business analytics and innovation</li>
+                                <li><strong>Executive Education:</strong> Completed EGMP from IIM Bangalore with strong academic performance across strategic management, finance, and operations</li>
+                                <li><strong>Skill Development:</strong> Comprehensive certification program - multiple courses from IIM/IIT institutions focusing on business analytics and innovation</li>
                                 <li><strong>Network Building:</strong> Established professional connections through 74-member EGMP cohort across diverse industries</li>
-                                <li><strong>Market Preparation:</strong> Active job search with focus on operations excellence and program management roles in Bengaluru market</li>
-                                <li><strong>Family Establishment:</strong> Successfully relocated and established family base in Bengaluru's professional ecosystem</li>
+                                <li><strong>Market Preparation:</strong> Active job search focusing on operations excellence and program management roles in Bengaluru</li>
+                                <li><strong>Geographic Establishment:</strong> Successfully relocated and established stable family base in Bengaluru's professional ecosystem</li>
                             </ul>
                         </div>
                     </div>
@@ -927,12 +1151,12 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2021-2022</div>
                         <div class="timeline-content">
-                            <h3>Senior Operations Specialist, Advanced Fighter Aircraft Operations</h3>
-                            <p class="timeline-subtitle">101 Squadron (Rafale Operations) | Air Force Station Hasimara, West Bengal</p>
+                            <h3>Senior Operations Specialist, Advanced Aircraft Operations</h3>
+                            <p class="timeline-subtitle">Advanced Fighter Aircraft Operations | Hasimara, West Bengal</p>
                             <ul>
-                                <li><strong>Section Establishment:</strong> Single-handedly established new Ground Equipment Section for advanced fighter aircraft operations</li>
-                                <li><strong>International Coordination:</strong> Direct collaboration with French technical teams during Rafale integration, managing technology transfer protocols</li>
-                                <li><strong>High-Value Management:</strong> ₹200+ crores inventory management with zero audit discrepancies across multiple specialized equipment categories</li>
+                                <li><strong>Section Establishment:</strong> Single-handedly established new operations section for advanced aircraft systems</li>
+                                <li><strong>International Coordination:</strong> Direct collaboration with French technical teams during aircraft integration, managing technology transfer protocols</li>
+                                <li><strong>High-Value Management:</strong> ₹200+ crores inventory management with strong audit performance across specialized equipment</li>
                                 <li><strong>Team Leadership:</strong> Led team of 20+ technicians across three operational bases with strategic deployment optimization</li>
                                 <li><strong>Innovation Implementation:</strong> Developed predictive maintenance systems and multi-base resource allocation frameworks</li>
                             </ul>
@@ -943,13 +1167,13 @@
                         <div class="timeline-date">2017-2021</div>
                         <div class="timeline-content">
                             <h3>Senior Operations Manager, VIP Operations & Crisis Management</h3>
-                            <p class="timeline-subtitle">3 Wing Air Force Station | Palam, New Delhi</p>
+                            <p class="timeline-subtitle">Strategic Air Operations | New Delhi</p>
                             <ul>
-                                <li><strong>VIP Support Operations:</strong> Air India One ground support for Presidential and Prime Ministerial flights with zero security incidents</li>
-                                <li><strong>National Security Operations:</strong> Participated in Operation Bandaar (Balakot Strike, February 2019) providing critical ground support</li>
-                                <li><strong>Crisis Leadership:</strong> COVID-19 pandemic management across 4 offices simultaneously with innovative tracking and accountability systems</li>
-                                <li><strong>System Innovation:</strong> Created equipment monitoring system adopted organization-wide; consumption calculator published on official IAF website</li>
-                                <li><strong>Advanced Technical Systems:</strong> Expertise with Boeing C-17, C-130J, and specialized VIP aircraft support equipment</li>
+                                <li><strong>VIP Support Operations:</strong> High-stakes aviation operations for Presidential and Prime Ministerial flights with strong safety record</li>
+                                <li><strong>National Security Operations:</strong> Participated in critical operations supporting national security objectives</li>
+                                <li><strong>Crisis Leadership:</strong> COVID-19 pandemic management across 4 facilities simultaneously with innovative coordination systems</li>
+                                <li><strong>System Innovation:</strong> Created equipment monitoring system adopted organization-wide; resource calculator published on official platform</li>
+                                <li><strong>Advanced Technical Systems:</strong> Expertise with Boeing aircraft and specialized aviation support equipment</li>
                             </ul>
                         </div>
                     </div>
@@ -958,12 +1182,12 @@
                         <div class="timeline-date">2016-2017</div>
                         <div class="timeline-content">
                             <h3>Strategic Personnel Operations Specialist</h3>
-                            <p class="timeline-subtitle">Air Force Record Office (AFRO) | New Delhi</p>
+                            <p class="timeline-subtitle">Air Force Record Office | New Delhi</p>
                             <ul>
-                                <li><strong>Strategic Operations:</strong> Personnel management at highest PBOR office level with classified operations coordination</li>
-                                <li><strong>National Crisis Response:</strong> Army Surgical Strike support during Uri attack response (September 2016) - coordinated manpower deployment</li>
-                                <li><strong>Multi-location Management:</strong> Complex logistics coordination across multiple air force stations during high-stakes operations</li>
-                                <li><strong>Personnel Assessment:</strong> Conducted systematic personnel assessment and posting verification processes</li>
+                                <li><strong>Strategic Operations:</strong> Personnel management at organizational level with complex operations coordination</li>
+                                <li><strong>National Crisis Response:</strong> Supported critical operations during national security situations - coordinated manpower deployment</li>
+                                <li><strong>Multi-location Management:</strong> Complex logistics coordination across multiple locations during high-stakes operations</li>
+                                <li><strong>Personnel Assessment:</strong> Conducted systematic personnel assessment and deployment processes</li>
                             </ul>
                         </div>
                     </div>
@@ -972,40 +1196,27 @@
                         <div class="timeline-date">2013-2016</div>
                         <div class="timeline-content">
                             <h3>Progressive Leadership Development</h3>
-                            <p class="timeline-subtitle">43 Wing Air Force Station | Sulur, Tamil Nadu</p>
+                            <p class="timeline-subtitle">Wing Operations | Tamil Nadu</p>
                             <ul>
-                                <li><strong>Executive Support:</strong> Personal Assistant to Air Officer Commanding - managed strategic communications and high-level coordination</li>
-                                <li><strong>Safety Leadership:</strong> Managed Station Aero-Safety operations with Flight Safety Award for exceptional safety protocol contributions</li>
-                                <li><strong>Innovation Legacy:</strong> Developed mail follow-up system later adopted IAF-wide in 2022 (7-year adoption cycle demonstrates lasting value)</li>
-                                <li><strong>Technology Integration:</strong> IMMOLS system implementation and comprehensive user training across multiple departments</li>
+                                <li><strong>Executive Support:</strong> Personal Assistant to Air Officer Commanding - managed strategic communications and coordination</li>
+                                <li><strong>Safety Leadership:</strong> Managed station safety operations with Flight Safety Award for operational safety protocol contributions</li>
+                                <li><strong>Innovation Legacy:</strong> Developed mail follow-up system later adopted organization-wide in 2022 (7-year adoption demonstrates lasting value)</li>
+                                <li><strong>Technology Integration:</strong> ERP system implementation and comprehensive user training across multiple departments</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="timeline-item reveal">
-                        <div class="timeline-date">2005-2013</div>
+                        <div class="timeline-date">2002-2013</div>
                         <div class="timeline-content">
-                            <h3>Technical Leadership Development</h3>
+                            <h3>Technical Leadership Foundation & Excellence</h3>
                             <p class="timeline-subtitle">Multiple Strategic Military Postings</p>
                             <ul>
-                                <li><strong>Desert Operations (Uttarlai, 2010-2013):</strong> Power Supply Unit leadership in extreme conditions maintaining critical radar systems</li>
-                                <li><strong>Multi-Role Excellence (Chandigarh, 2005-2010):</strong> ASV operations, Technical Control Room management, Commanding Officer's Personal Assistant</li>
-                                <li><strong>Operational Participation:</strong> Operation Varuna (Kosi flood relief, 2008) demonstrating versatility across humanitarian and combat operations</li>
+                                <li><strong>Progressive Advancement:</strong> Ground-up promotion through merit from technical specialist to senior operations leader</li>
+                                <li><strong>Multi-System Excellence:</strong> Technical operations across Russian, American, and Indian aircraft systems</li>
                                 <li><strong>Educational Integration:</strong> Completed MBA and BSc IT degrees while maintaining full-time military service excellence</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item reveal">
-                        <div class="timeline-date">2002-2005</div>
-                        <div class="timeline-content">
-                            <h3>Military Foundation & Excellence Recognition</h3>
-                            <p class="timeline-subtitle">Air Force Training School & Technical Training Institutes</p>
-                            <ul>
-                                <li><strong>Leadership Recognition:</strong> Emerged as primary leader among trainees at ATS Belgaum, termed "Oxford of the training centre" by Officer-in-charge</li>
-                                <li><strong>Academic Excellence:</strong> "Best in Ground Service Training" award among 2000 trainees at Workshop Training Institute, Tambaram</li>
-                                <li><strong>Technical Specialization:</strong> Aircraft Support Systems expertise with Diploma in Mechanical Engineering (AICTE recognized)</li>
-                                <li><strong>Foundation Setting:</strong> Established pattern of systematic excellence and innovation that would define entire military career</li>
+                                <li><strong>Leadership Recognition:</strong> Awarded "Best in Ground Service Training" among 2000 trainees demonstrating early excellence pattern</li>
+                                <li><strong>Operational Reliability:</strong> Maintained strong safety and compliance record across high-risk technical operations</li>
                             </ul>
                         </div>
                     </div>
@@ -1020,23 +1231,23 @@
                 </div>
 
                 <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid var(--accent-gold);">
-                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Validated Strengths (Psychometric Assessment)</h3>
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Core Strength Areas</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
                         <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
-                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">93.33/100</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Systems Thinking</div>
+                            <div style="font-size: 1.3rem; color: var(--primary-red); font-weight: bold;">Systems Thinking</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Advanced systematic problem-solving</div>
                         </div>
                         <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
-                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">100/100</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Teaching & Training</div>
+                            <div style="font-size: 1.3rem; color: var(--primary-red); font-weight: bold;">Teaching & Training</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Natural knowledge transfer abilities</div>
                         </div>
                         <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
-                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">5.0/5.0</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Innovation Capability</div>
+                            <div style="font-size: 1.3rem; color: var(--primary-red); font-weight: bold;">Innovation Management</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Strong systematic innovation capability</div>
                         </div>
                         <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 8px; box-shadow: var(--shadow-light);">
-                            <div style="font-size: 2rem; color: var(--primary-red); font-weight: bold;">5.0/5.0</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Leadership Orientation</div>
+                            <div style="font-size: 1.3rem; color: var(--primary-red); font-weight: bold;">Leadership Excellence</div>
+                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Proven team development orientation</div>
                         </div>
                     </div>
                 </div>
@@ -1138,28 +1349,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
-                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Technical Systems Expertise</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
-                            <strong>Multi-Fleet Systems</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Russian, American, French aircraft support systems</span>
-                        </div>
-                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
-                            <strong>ERP Integration</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">IMMOLS, E-Office systems implementation</span>
-                        </div>
-                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
-                            <strong>Advanced Analytics</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Excel automation, database connectivity</span>
-                        </div>
-                        <div style="text-align: center; padding: 1.2rem; background: #f8f9fa; border-radius: 8px;">
-                            <strong>Quality Assurance</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Zero-error methodologies, audit compliance</span>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <!-- Education Section -->
@@ -1175,10 +1364,10 @@
                         <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Indian Institute of Management, Bangalore</div>
                         <div class="card-content">
                             <strong>Duration:</strong> March 2024 - January 2025<br>
-                            <strong>Investment:</strong> ₹12+ lakhs personal commitment<br>
-                            <strong>Academic Performance:</strong> 4 Grade A, 4 Grade B modules<br>
+                            <strong>Strategic Investment:</strong> Comprehensive executive education commitment<br>
+                            <strong>Academic Performance:</strong> Strong performance across all business modules<br>
                             <strong>Cohort Network:</strong> 74 industry professionals across sectors<br>
-                            <strong>Key Competencies:</strong> Strategic Management, Corporate Finance, Operations Management, Information Systems Management
+                            <strong>Key Competencies:</strong> Strategic Management, Corporate Finance, Operations Management, Information Systems
                         </div>
                     </div>
 
@@ -1187,8 +1376,8 @@
                         <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Punjab Technical University, Jalandhar</div>
                         <div class="card-content">
                             <strong>Duration:</strong> 2011-2013<br>
-                            <strong>Strategic Focus:</strong> Advanced technical skills for senior military leadership transition<br>
-                            <strong>Integration Achievement:</strong> Completed while serving at Uttarlai desert posting<br>
+                            <strong>Strategic Focus:</strong> Advanced technical skills for senior leadership roles<br>
+                            <strong>Achievement:</strong> Completed while serving at challenging posting<br>
                             <strong>Technical Foundation:</strong> Programming, database management, system design
                         </div>
                     </div>
@@ -1199,7 +1388,7 @@
                         <div class="card-content">
                             <strong>Duration:</strong> 2005-2008<br>
                             <strong>Specialization:</strong> Technology Management<br>
-                            <strong>Exceptional Achievement:</strong> Completed concurrently with full-time military service<br>
+                            <strong>Notable Achievement:</strong> Completed concurrently with full-time military service<br>
                             <strong>Key Areas:</strong> Strategic Technology Management, ERP Systems, Project Management
                         </div>
                     </div>
@@ -1235,165 +1424,6 @@
                                 <li>AI Strategy Implementation Workshops</li>
                                 <li>Digital Transformation Leadership</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Achievements Section -->
-            <section id="achievements" class="section page-break">
-                <div class="section-header">
-                    <h2 class="section-title">Key Achievements & Recognition</h2>
-                    <p class="section-subtitle">Demonstrated excellence across operational, leadership, and innovation domains</p>
-                </div>
-
-                <div class="cards-grid">
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Zero Audit Discrepancies</div>
-                        <div class="card-content">Maintained perfect compliance record across 20-year military career with ₹200+ crores inventory management responsibility. Demonstrates systematic excellence and attention to detail critical for quality-sensitive industries.</div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Best in Ground Service Training</div>
-                        <div class="card-content">Selected among 2000 trainees at Workshop Training Institute, Tambaram - demonstrating early excellence pattern that continued throughout career. Foundation for systematic approach to learning and development.</div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Flight Safety Award</div>
-                        <div class="card-content">Recognized for exceptional contributions to aircraft safety protocols and zero-incident operational management (2015). Highlights crisis prevention mindset and safety leadership capabilities.</div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">National Security Operations</div>
-                        <div class="card-content">Participated in Operation Varuna (2008), Army Surgical Strike support (2016), Operation Bandaar (2019). Proven performance under extreme pressure with national-level stakes and visibility.</div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">VIP Operations Excellence</div>
-                        <div class="card-content">Air India One support for Presidential and Prime Ministerial flights with zero security or operational incidents. Demonstrates capability to handle highest-stakes operations with perfect execution.</div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">International Coordination Success</div>
-                        <div class="card-content">Successful coordination with French technical teams during Rafale aircraft integration and technology transfer. Proves ability to work across cultural and technical boundaries at advanced levels.</div>
-                    </div>
-                </div>
-
-                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
-                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Unique Military-to-Corporate Competitive Advantages</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
-                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">PBOR Perspective Value</h4>
-                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Ground-level operational expertise combined with strategic thinking - understands implementation realities</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Zero-Error Operational Mindset</h4>
-                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Critical advantage for quality-sensitive industries and high-stakes business operations</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">Crisis Performance Validation</h4>
-                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Proven excellence under extreme pressure with measurable results during national security operations</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                            <h4 style="color: var(--primary-red); margin-bottom: 0.7rem;">International Standards Experience</h4>
-                            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.5;">Multi-cultural coordination and global operational framework experience across American, French, Russian systems</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Innovation Section -->
-            <section id="innovation" class="section page-break">
-                <div class="section-header">
-                    <h2 class="section-title">Innovation & Systems Development Portfolio</h2>
-                    <p class="section-subtitle">Systematic innovation within structure - preventive solutions with lasting impact</p>
-                </div>
-
-                <div class="value-prop">
-                    <h3>Innovation Philosophy: "Systematic Innovation Within Structure"</h3>
-                    <p>Created <strong>25+ comprehensive business systems</strong> focusing on preventive rather than corrective problem-solving. Each system designed with 5-10 year operational lifecycle, emphasizing sustainable improvements that compound over time. Proven track record of organization-wide adoption with lasting impact.</p>
-                </div>
-
-                <div class="cards-grid">
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Mail Follow-up System (2015)</div>
-                        <div class="card-content">
-                            Comprehensive communication tracking and accountability system for organizational efficiency management.
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                                <strong>Long-term Impact:</strong> Adopted IAF-wide in 2022 (7-year adoption cycle)<br>
-                                <strong>Integration:</strong> Incorporated into E-Office ERP system<br>
-                                <strong>Validation:</strong> Demonstrates sustainable system design
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Consumption Calculator & Resource Optimization (2019)</div>
-                        <div class="card-content">
-                            Advanced forecasting and resource management system for operational cost optimization.
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                                <strong>Organization Adoption:</strong> Used by ASV sections organization-wide<br>
-                                <strong>Official Recognition:</strong> Published on IAF website as standard reference<br>
-                                <strong>Quantified Impact:</strong> 70% reduction in stockouts, 25% decrease in excess inventory
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Real-time Equipment Monitoring System (2020)</div>
-                        <div class="card-content">
-                            COVID-19 crisis response system for multi-office coordination and accountability tracking.
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                                <strong>Crisis Application:</strong> Enabled management of 4 offices simultaneously<br>
-                                <strong>Executive Usage:</strong> Daily utilization by Chief Engineering Officer<br>
-                                <strong>Scalability:</strong> Adapted for post-COVID operational efficiency
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Strategic Deployment Optimization System (2022)</div>
-                        <div class="card-content">
-                            Advanced resource allocation framework for multi-base military operations coordination.
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                                <strong>Operational Scope:</strong> Simultaneous operations across 3 operational bases<br>
-                                <strong>Efficiency Gain:</strong> 40% improvement in resource utilization<br>
-                                <strong>Critical Application:</strong> Essential for modern fighter aircraft operations
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card reveal" style="border-top-color: var(--accent-gold);">
-                        <div class="card-title">Component Lifecycle Management System (2022)</div>
-                        <div class="card-content">
-                            Comprehensive tracking and predictive maintenance framework for high-value aerospace components.
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                                <strong>Lifecycle Extension:</strong> 65% improvement in component lifespan<br>
-                                <strong>Financial Benefit:</strong> Enhanced budget forecasting and cost reduction<br>
-                                <strong>Safety Enhancement:</strong> Predictive maintenance reducing critical failures
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
-                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem; text-align: center;">Innovation Impact Summary</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
-                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">25+</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Systems Developed</div>
-                        </div>
-                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
-                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">100%</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Organization Adoption Rate</div>
-                        </div>
-                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
-                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">7 Years</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Longest System Usage</div>
-                        </div>
-                        <div style="text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
-                            <div style="font-size: 1.8rem; color: var(--primary-red); font-weight: bold;">Multi-Sector</div>
-                            <div style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Application Potential</div>
                         </div>
                     </div>
                 </div>
@@ -1448,9 +1478,9 @@
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecf1 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
                     <h3 style="margin-bottom: 1.5rem;">Unique Value Proposition: "The Systematic Innovator"</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-dark);">Combining <strong>20-year zero-error operational excellence</strong> with <strong>recent executive business education</strong> and <strong>proven systems innovation capability</strong>. Brings military discipline and precision to civilian business challenges while maintaining collaborative leadership approach developed through ground-up military progression.</p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-dark);">Combining <strong>20-year reliable operations excellence</strong> with <strong>recent executive business education</strong> and <strong>proven systems innovation capability</strong>. Brings military discipline and precision to civilian business challenges while maintaining collaborative leadership approach developed through ground-up military progression.</p>
                 </div>
 
                 <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-light); margin: 2rem 0;">
@@ -1458,15 +1488,15 @@
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                         <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
                             <strong style="color: var(--primary-red);">Self-Investment in Excellence</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Personal commitment through self-funded executive education</span>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Personal commitment through executive education investment</span>
                         </div>
                         <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
                             <strong style="color: var(--primary-red);">Operational Foundation</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">20-year track record with crisis performance validation</span>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">20-year track record with proven crisis performance</span>
                         </div>
                         <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
                             <strong style="color: var(--primary-red);">Practical Innovation</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Ground-up implementation experience with proven sustainability</span>
+                            <span style="color: var(--text-light); font-size: 0.9rem; margin-top: 0.5rem;">Ground-up implementation experience with sustainability</span>
                         </div>
                         <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
                             <strong style="color: var(--primary-red);">Systematic Excellence</strong><br>
@@ -1481,7 +1511,7 @@
         <div class="cta-section">
             <h2 class="cta-title">Transform Your Operations Excellence Today</h2>
             <p class="cta-description">
-                Ready to bring 20 years of zero-error operations, proven innovation capability, and executive business education 
+                Ready to bring 20 years of reliable operations, proven innovation capability, and executive business education 
                 to drive systematic excellence in your organization.
             </p>
             
@@ -1537,7 +1567,7 @@
                     </div>
                     <div class="footer-item">
                         <strong>Track Record</strong>
-                        <span>Zero Audit Discrepancies</span>
+                        <span>Strong Audit Performance</span>
                     </div>
                     <div class="footer-item">
                         <strong>Network</strong>
@@ -1625,7 +1655,7 @@
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
                     e.preventDefault();
-                    const sectionIds = ['overview', 'experience', 'skills', 'education', 'achievements', 'innovation', 'strategy'];
+                    const sectionIds = ['overview', 'translation', 'innovation', 'experience', 'skills', 'education', 'strategy'];
                     const currentActive = document.querySelector('.nav-item.active');
                     
                     if (currentActive) {
@@ -1744,6 +1774,6 @@
             });
 
         })();
-</script>
+    </script>
 </body>
 </html>
