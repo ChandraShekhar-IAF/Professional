@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandra Shekhar - Process Consultant</title>
+    <meta name="author" content="Chandra Shekhar">
+    <meta name="description" content="Chandra Shekhar - Operations Excellence Leader transitioning to Process Consulting. 20+ years military service, IIM Bangalore EGMP graduate, systematic innovation specialist.">
+    <title>Chandra Shekhar - Operations Excellence Leader | Process Optimization Specialist</title>
     <style>
         /* CSS Reset and Variables */
         * {
@@ -21,16 +23,21 @@
             --bg-light: #f8f9fa;
         }
 
-        /* Base Styles */
+        /* Base Styles - A4 Optimized */
         body {
-            font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
             font-size: 11pt;
             line-height: 1.4;
             color: var(--text-dark);
             background: white;
-            max-width: 8.5in;
+            max-width: 8.27in; /* A4 width */
             margin: 0 auto;
             padding: 0.5in;
+        }
+
+        @page {
+            size: A4;
+            margin: 0.5in;
         }
 
         /* Print Header - ATS Friendly */
@@ -44,13 +51,14 @@
             padding-bottom: 0.5rem;
         }
 
-        /* Print Styles */
+        /* Consolidated Print Styles */
         @media print {
             body {
                 margin: 0;
                 padding: 0.5in;
                 color: black;
                 background: white;
+                font-family: Arial, sans-serif !important;
             }
             
             .print-header {
@@ -66,22 +74,20 @@
                 text-decoration: none;
             }
 
-            a[href*="mailto:"]:after, a[href*="tel:"]:after {
-                content: "";
-            }
-
+            /* Only targeted link annotations */
             a[href*="linkedin"]:after {
                 content: " (LinkedIn Profile)";
                 font-size: 9pt;
                 color: #000;
             }
 
-            a[href*="github"]:after {
+            a[href*="github"]:after, a[href*="portfolio"]:after {
                 content: " (Portfolio)";
                 font-size: 9pt;
                 color: #000;
             }
 
+            /* Prevent page breaks within sections */
             .job, .project, .education-item {
                 page-break-inside: avoid;
                 break-inside: avoid;
@@ -90,10 +96,16 @@
             .section {
                 break-after: avoid;
             }
-        }
 
-        @page {
-            margin: 0.5in;
+            /* Ensure bullets show in print */
+            .achievements {
+                list-style-position: inside;
+                padding-left: 0.6rem;
+            }
+
+            .achievements li::marker {
+                color: black;
+            }
         }
 
         /* Header Section */
@@ -112,7 +124,7 @@
             letter-spacing: 1pt;
         }
 
-        .role-target {
+        .value-proposition {
             font-size: 11pt;
             color: var(--accent-red);
             margin-bottom: 4pt;
@@ -154,6 +166,21 @@
             text-decoration: none;
         }
 
+        /* ATS Keywords Block */
+        .ats-keywords {
+            font-size: 10pt;
+            color: var(--text-light);
+            line-height: 1.2;
+            margin-bottom: 16pt;
+            padding: 8pt;
+            background: var(--bg-light);
+            border-radius: 4px;
+        }
+
+        .ats-keywords strong {
+            color: var(--text-dark);
+        }
+
         /* Section Styles */
         .section {
             margin-bottom: 16pt;
@@ -176,19 +203,6 @@
             line-height: 1.5;
             text-align: justify;
             margin-bottom: 8pt;
-        }
-
-        /* Keywords Block */
-        .keywords {
-            font-size: 10pt;
-            color: var(--text-light);
-            line-height: 1.3;
-            border-top: 1px solid #eee;
-            padding-top: 6pt;
-        }
-
-        .keywords strong {
-            color: var(--text-dark);
         }
 
         /* Skills Section */
@@ -215,7 +229,7 @@
             line-height: 1.3;
         }
 
-        /* Experience Section */
+        /* Experience Section - Flexbox for education dates */
         .job {
             margin-bottom: 16pt;
             page-break-inside: avoid;
@@ -253,7 +267,7 @@
             margin-bottom: 6pt;
         }
 
-        /* Achievements - Improved for ATS */
+        /* Achievements - Improved for ATS and Print */
         .achievements {
             list-style: disc outside;
             padding-left: 1.1rem;
@@ -273,9 +287,17 @@
             font-weight: 700;
         }
 
-        /* Education Section */
+        /* Education Section - Flexbox layout */
         .education-item {
             margin-bottom: 12pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .education-content {
+            flex: 1;
         }
 
         .degree {
@@ -293,13 +315,16 @@
         .education-date {
             font-size: 10pt;
             color: var(--text-light);
-            float: right;
+            font-weight: bold;
+            min-width: 120px;
+            text-align: right;
         }
 
         .education-details {
             font-size: 10pt;
             margin-top: 4pt;
             line-height: 1.3;
+            width: 100%;
         }
 
         /* Projects Section */
@@ -368,63 +393,52 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .education-item {
+                flex-direction: column;
+            }
+
+            .education-date {
+                text-align: left;
+                margin-bottom: 4pt;
+            }
         }
-        @media print {
-    /* existing print styles... */
-    
-    a[href*="mailto:"]:after, a[href*="tel:"]:after {
-        content: "";
-    }
-
-    a[href*="linkedin"]:after {
-        content: " (LinkedIn Profile)";
-        font-size: 9pt;
-        color: #000;
-    }
-
-    a[href*="github"]:after, a[href*="portfolio"]:after {
-        content: " (Portfolio)";
-        font-size: 9pt;
-        color: #000;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-        font-size: 9pt;
-        color: #000;
-    }
-}
     </style>
 </head>
 <body>
     <!-- Print Header for ATS -->
     <div class="print-header">
-        CHANDRA SHEKHAR — Process Consultant | csiimbveteran@gmail.com | +91 99997 31406
+        CHANDRA SHEKHAR — Operations Excellence Leader | csiimbveteran@gmail.com | +91 99997 31406
     </div>
 
     <!-- Download Link -->
     <div style="text-align:right; margin-top:8px; margin-bottom:6px;">
-        <a href="#" onclick="window.print(); return false;" class="download-link" aria-label="Print/Download as PDF">🖨️ Print/Download PDF</a>
+        <a href="#" onclick="handlePrint(); return false;" class="download-link" aria-label="Print/Download as PDF">Print/Download PDF</a>
     </div>
     
     <!-- Header Section -->
     <header class="header">
         <h1 class="name">CHANDRA SHEKHAR</h1>
-        <div class="role-target">Process Consultant | Process Optimization • Change Management • Systems Design</div>
-        <div class="title">Business Transformation & Systematic Innovation Specialist</div>
+        <div class="value-proposition">Operations Excellence Leader | Process Optimization • Change Management • Systems Innovation</div>
+        <div class="title">Military-to-Civilian Process Specialist | IIM Bangalore Graduate</div>
         <div class="contact-info">
             <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> | 
             <a href="tel:+919999731406">+91 99997 31406</a> | 
-            Bengaluru, India • Available for consulting/permanent roles<br>
+            Bengaluru, India • Open to consulting & permanent roles<br>
             <a href="https://www.linkedin.com/in/chandraiaf" target="_blank" rel="noopener noreferrer">linkedin.com/in/chandraiaf</a> | 
-            Former Government Security Clearance Holder
+            Previously held Government Security Clearance (inactive)
         </div>
     </header>
 
     <!-- Portfolio Link Callout -->
     <div class="portfolio-callout">
         <strong>📁 Complete Portfolio:</strong> 
-        <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/" class="portfolio-link" target="_blank">View comprehensive portfolio with case studies and detailed achievements</a>
+        <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/" class="portfolio-link" target="_blank">View Military-to-Civilian Process Excellence Case Studies</a>
+    </div>
+
+    <!-- ATS Keywords Block -->
+    <div class="ats-keywords">
+        <strong>Core Competencies:</strong> Operations Excellence • Process Reengineering • Change Management • Digital Transformation • Business Process Improvement • SOP Development • Vendor Optimization • Program Management • Crisis Leadership • Military-to-Civilian Transition
     </div>
 
     <main id="main-content" role="main">
@@ -432,11 +446,8 @@
         <section class="section" aria-labelledby="summary-title">
             <h2 id="summary-title" class="section-title">Professional Summary</h2>
             <p class="summary">
-                Process consultant with <strong>20+ years delivering business transformation</strong> across defense and civilian sectors. <strong>IIM Bangalore EGMP graduate</strong> with proven track record of systematic innovation delivering measurable ROI across <span class="metric">₹200+ crore operational portfolios (2017–2022)</span>. Specializes in process reengineering, change management, and systematic innovation with validated results across 25+ implemented systems.
+                Operations excellence leader with <strong>20+ years military service</strong> and <strong>recent IIM Bangalore executive education</strong> transitioning to business process leadership. Proven systematic innovator with <strong>25+ implemented systems</strong> and track record managing <strong>multi-crore operational programs</strong> with perfect compliance record. Specializes in process optimization, crisis management, and sustainable system design with validated long-term adoption across defense and civilian applications.
             </p>
-            <div class="keywords">
-                <strong>Core Keywords:</strong> Lean Six Sigma • Process Reengineering • Change Management • Digital Transformation • Process Architecture • Crisis Management • Stakeholder Management • Business Continuity • KPI Design • System Integration
-            </div>
         </section>
 
         <!-- Core Competencies -->
@@ -446,7 +457,7 @@
                 <div class="skill-category">
                     <div class="skill-category-title">PROCESS OPTIMIZATION</div>
                     <div class="skill-list">
-                        Business Process Reengineering • Lean Six Sigma Methodology • Process Mapping & Documentation • Workflow Optimization • Continuous Improvement • Performance Metrics Design
+                        Business Process Improvement • Process Mapping & Documentation • Workflow Optimization • Continuous Improvement • Performance Metrics Design • Standard Operating Procedures
                     </div>
                 </div>
                 <div class="skill-category">
@@ -462,9 +473,9 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <div class="skill-category-title">CONSULTING & ANALYSIS</div>
+                    <div class="skill-category-title">OPERATIONS EXCELLENCE</div>
                     <div class="skill-list">
-                        Business Analysis & Assessment • Requirements Engineering • ROI Analysis & Reporting • Risk Assessment • Strategic Planning • Implementation Management
+                        Operations Management • Quality Management • Risk Assessment • Crisis Management • Multi-site Coordination • International Collaboration • Vendor Management
                     </div>
                 </div>
             </div>
@@ -477,68 +488,72 @@
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Independent Process Consultant & Business Transformation Specialist</div>
-                        <div class="job-company">IIM Bangalore Executive Program Graduate</div>
+                        <div class="job-title">Process Excellence Specialist — Career Development</div>
+                        <div class="job-company">IIM Bangalore EGMP Graduate</div>
                     </div>
                     <div class="job-date">Jan 2023 – Present</div>
                 </div>
-                <div class="job-location">Bengaluru, Karnataka (Established Consulting Practice)</div>
+                <div class="job-location">Bengaluru, Karnataka (Professional Development Phase)</div>
                 <ul class="achievements">
-                    <li><strong>Improved organizational efficiency by 65%</strong> across 3 pilot units through standardized process re-engineering and real-time monitoring systems</li>
-                    <li>Completed intensive <strong>Executive General Management Program (EGMP) at IIM Bangalore</strong> achieving Grade A performance in Strategic Management and Business Process Re-engineering</li>
-                    <li>Conducted business process assessments for <span class="metric">8+ organizations</span> identifying transformation opportunities worth <span class="metric">₹1.2+ crore in efficiency gains</span></li>
-                    <li>Built professional network of <span class="metric">74+ transformation specialists</span> across consulting, manufacturing, and technology sectors through EGMP program</li>
+                    <li>Completed intensive <strong>Executive General Management Program (EGMP) at IIM Bangalore</strong> achieving Grade A performance in Strategic Management and Business Process Architecture</li>
+                    <li>Conducted organizational assessments identifying <strong>substantial efficiency opportunities</strong> through systematic process analysis and optimization methodologies</li>
+                    <li>Mentored <span class="metric">8+ ex-servicemen</span> in successful corporate transitions through systematic career development and process excellence approaches</li>
+                    <li>Built professional network of <span class="metric">74+ transformation specialists</span> across consulting, manufacturing, and technology sectors through EGMP program collaboration</li>
+                    <li>Developed business process optimization frameworks integrating <strong>military precision with modern operational excellence</strong> methodologies</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Senior Process Innovation Specialist</div>
+                        <div class="job-title">Senior Operations Manager & Innovation Specialist</div>
                         <div class="job-company">Indian Air Force</div>
                     </div>
                     <div class="job-date">Feb 2021 – Dec 2022</div>
                 </div>
                 <div class="job-location">Air Force Station Hasimara, West Bengal</div>
                 <ul class="achievements">
-                    <li><strong>Delivered zero implementation failures</strong> while managing process optimization worth <span class="metric">₹200+ crore</span> through systematic transformation methodology</li>
-                    <li><strong>Led international technology integration</strong> with French partners ensuring complete knowledge transfer and local process capability development</li>
-                    <li><strong>Reduced process failures by 70%</strong> through innovative process improvement methodologies implemented across 3 operational units</li>
-                    <li>Managed cross-functional transformation teams of <span class="metric">20+ process specialists</span> across three geographic locations with strategic change management protocols</li>
+                    <li><strong>Maintained perfect operational compliance</strong> while managing process optimization across <span class="metric">multi-crore asset portfolios</span> through systematic transformation methodology</li>
+                    <li><strong>Led international technology integration</strong> with French technical teams ensuring complete knowledge transfer and local process capability development</li>
+                    <li><strong>Reduced critical process failures by 70%</strong> (measured through incident tracking system) through innovative process improvement methodologies implemented across 3 operational units</li>
+                    <li>Managed cross-functional transformation teams of <span class="metric">20+ specialists</span> across three geographic locations with strategic change management protocols and training programs</li>
+                    <li>Developed predictive maintenance systems extending equipment lifecycle and <strong>preventing costly emergency interventions</strong> through systematic monitoring</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Process Optimization Manager</div>
+                        <div class="job-title">Operations Excellence Manager & Crisis Leadership</div>
                         <div class="job-company">Indian Air Force</div>
                     </div>
                     <div class="job-date">Apr 2017 – Feb 2021</div>
                 </div>
                 <div class="job-location">3 Wing Air Force Station, Palam, New Delhi</div>
                 <ul class="achievements">
-                    <li><strong>Maintained 100% operational continuity during COVID-19</strong> across 4 facilities through comprehensive business continuity transformation and crisis management protocols</li>
-                    <li><strong>Reduced emergency process costs by 60%</strong> through predictive process planning and systematic vendor optimization</li>
-                    <li>Developed real-time process monitoring system adopted organization-wide reducing process waste by <span class="metric">25%</span> and improving delivery predictability</li>
-                    <li>Managed high-stakes VIP operations with <span class="metric">zero process failures</span> demonstrating crisis management and process excellence capabilities</li>
+                    <li><strong>Maintained 100% operational continuity during COVID-19 crisis</strong> across 4 facilities through comprehensive business continuity transformation and adaptive management protocols</li>
+                    <li><strong>Reduced emergency procurement costs by 60%</strong> (compared to historical baseline) through predictive planning and systematic vendor optimization methodologies</li>
+                    <li>Developed real-time process monitoring system <strong>adopted organization-wide</strong> reducing process waste and improving delivery predictability across operational units</li>
+                    <li>Managed high-stakes VIP operations with <span class="metric">zero operational failures</span> demonstrating crisis management and process excellence under extreme pressure conditions</li>
+                    <li>Created consumption forecasting calculator <strong>published on official platform</strong> for organization-wide adoption and resource optimization</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Business Process Analyst & Strategic Systems Developer</div>
+                        <div class="job-title">Business Process Analyst & Systems Developer</div>
                         <div class="job-company">Indian Air Force</div>
                     </div>
                     <div class="job-date">Apr 2013 – Apr 2017</div>
                 </div>
                 <div class="job-location">Multiple Strategic Locations across India</div>
                 <ul class="achievements">
-                    <li>Designed organization-wide communication system <strong>validated across 7-year lifecycle</strong> and adopted organization-wide in 2022 demonstrating sustainable process design</li>
-                    <li><strong>Awarded Process Excellence Award</strong> for exceptional contributions to organizational efficiency and maintaining zero-incident implementation record</li>
-                    <li><strong>Reduced inter-departmental delays by 60%</strong> through systematic organizational communication protocols and coordination efficiency improvements</li>
-                    <li>Led technical process training for <span class="metric">100+ personnel</span> achieving <span class="metric">95% certification success rate</span> with comprehensive knowledge transfer</li>
+                    <li>Designed organization-wide communication system with <strong>7-year lifecycle validation</strong> - adopted organization-wide in 2022 demonstrating sustainable process design principles</li>
+                    <li><strong>Awarded Process Excellence Recognition</strong> for exceptional contributions to organizational efficiency and maintaining zero-incident implementation record across complex operations</li>
+                    <li><strong>Reduced inter-departmental delays by 60%</strong> (measured through workflow tracking) through systematic communication protocols and coordination efficiency improvements</li>
+                    <li>Led process training programs for <span class="metric">100+ personnel</span> achieving <span class="metric">95% certification success rate</span> with comprehensive knowledge transfer and competency validation</li>
+                    <li>Implemented enterprise resource planning (ERP) systems across multiple departments with <strong>comprehensive user training and change management</strong> protocols</li>
                 </ul>
             </div>
         </section>
@@ -548,10 +563,10 @@
             <h2 id="projects-title" class="section-title">Key Transformation Projects</h2>
             
             <div class="project">
-                <div class="project-title">Zero-Error Process Framework Implementation</div>
-                <div class="project-details">2017-2022 | Multi-facility deployment | ₹200+ crore portfolio optimization</div>
+                <div class="project-title">Zero-Error Operations Framework Implementation</div>
+                <div class="project-details">2017-2022 | Multi-facility deployment | Multi-crore portfolio optimization</div>
                 <div class="project-description">
-                    Designed comprehensive zero-error framework achieving perfect process compliance through systematic optimization, predictive planning, and real-time monitoring systems. Framework adopted organization-wide with sustained adoption and measurable efficiency gains.
+                    Designed comprehensive zero-error framework achieving perfect operational compliance through systematic optimization, predictive planning, and real-time monitoring systems. Framework validated through sustained adoption and measurable efficiency gains across organizational units.
                 </div>
             </div>
 
@@ -559,15 +574,15 @@
                 <div class="project-title">Crisis Business Continuity Transformation</div>
                 <div class="project-details">2020-2021 | COVID-19 response | 4 operational locations</div>
                 <div class="project-description">
-                    Maintained 100% operational continuity during pandemic through innovative process redesign and adaptive organizational structures. Created crisis transformation templates adopted as standard business continuity framework.
+                    Maintained 100% operational continuity during pandemic through innovative process redesign, remote coordination systems, and adaptive organizational structures. Created crisis transformation templates adopted as standard business continuity framework.
                 </div>
             </div>
 
             <div class="project">
                 <div class="project-title">Systematic Innovation Framework Development</div>
-                <div class="project-details">2013-2022 | 25+ systems | 100% organizational adoption</div>
+                <div class="project-details">2013-2022 | 25+ systems implemented | Sustained organizational adoption</div>
                 <div class="project-description">
-                    Developed sustainable innovation methodology creating 25+ operational systems with demonstrated 7-year lifecycle validation. Framework addresses communication optimization, resource management, and process efficiency with measurable ROI.
+                    Developed sustainable innovation methodology creating 25+ operational systems with demonstrated multi-year lifecycle validation. Framework addresses communication optimization, resource management, and process efficiency with measurable organizational benefit.
                 </div>
             </div>
         </section>
@@ -577,31 +592,37 @@
             <h2 id="education-title" class="section-title">Education & Professional Development</h2>
             
             <div class="education-item">
+                <div class="education-content">
+                    <div class="degree">Executive General Management Program (EGMP)</div>
+                    <div class="school">Indian Institute of Management Bangalore</div>
+                    <div class="education-details">
+                        <strong>Academic Excellence:</strong> Grade A in Strategic Management, Business Process Architecture, Information Systems<br>
+                        <strong>Process Focus:</strong> Advanced business transformation methodologies, process optimization, change management frameworks
+                    </div>
+                </div>
                 <div class="education-date">Mar 2024 – Jan 2025</div>
-                <div class="degree">Executive General Management Program (EGMP)</div>
-                <div class="school">Indian Institute of Management Bangalore</div>
-                <div class="education-details">
-                    <strong>Academic Excellence:</strong> Grade A in Strategic Management, Business Process Re-engineering, Information Systems<br>
-                    <strong>Consulting Focus:</strong> Advanced business transformation methodologies, process optimization, digital transformation
-                </div>
             </div>
 
             <div class="education-item">
+                <div class="education-content">
+                    <div class="degree">Master of Computer Applications (MCA)</div>
+                    <div class="school">Punjab Technical University, Jalandhar</div>
+                    <div class="education-details">
+                        Technical foundation in business systems analysis, database management, technology-enabled process optimization
+                    </div>
+                </div>
                 <div class="education-date">2011 – 2013</div>
-                <div class="degree">Master of Computer Applications (MCA)</div>
-                <div class="school">Punjab Technical University, Jalandhar</div>
-                <div class="education-details">
-                    Technical foundation in business systems analysis, database management, technology-enabled process optimization
-                </div>
             </div>
 
             <div class="education-item">
-                <div class="education-date">2005 – 2008</div>
-                <div class="degree">Master of Business Administration (MBA) — Technology Management</div>
-                <div class="school">Sikkim Manipal University (Distance Education)</div>
-                <div class="education-details">
-                    Strategic business foundation with technology management specialization for business-technology integration
+                <div class="education-content">
+                    <div class="degree">Master of Business Administration (MBA) — Technology Management</div>
+                    <div class="school">Sikkim Manipal University</div>
+                    <div class="education-details">
+                        Strategic business foundation with technology management specialization for business-technology integration and process excellence
+                    </div>
                 </div>
+                <div class="education-date">2005 – 2008</div>
             </div>
         </section>
 
@@ -610,27 +631,27 @@
             <h2 id="certifications-title" class="section-title">Professional Recognition & Qualifications</h2>
             
             <div class="certifications-list">
-                <strong>Process Excellence Recognition:</strong> Process Excellence Award for transformation delivery • Perfect process compliance record across 20+ years • Zero process audit discrepancies • Multiple process innovation awards<br><br>
-                <strong>Professional Qualifications:</strong> Former Government Security Clearance (cleared for process operations) • International process collaboration experience • Change management and transformation expertise • Advanced business process leadership development
+                <strong>Process Excellence Recognition:</strong> Military Process Excellence Award for transformation delivery • Perfect operational compliance record across 20+ years • Zero process audit discrepancies • Multiple innovation and process improvement recognitions<br><br>
+                <strong>Professional Qualifications:</strong> Previously held Government Security Clearance (inactive) • International process collaboration experience with French, American, and Russian technical teams • Change management and transformation expertise • Advanced business process leadership development programs
             </div>
         </section>
 
-        <!-- Service Offerings -->
-        <section class="section" aria-labelledby="services-title">
-            <h2 id="services-title" class="section-title">Consulting Services & Expertise</h2>
+        <!-- Value Proposition -->
+        <section class="section" aria-labelledby="value-title">
+            <h2 id="value-title" class="section-title">Process Excellence Capabilities</h2>
             
             <div style="font-size: 10pt; line-height: 1.4;">
-                <strong>Process Assessment & Transformation:</strong> Comprehensive organizational evaluation, gap analysis, ROI assessment, implementation roadmaps<br>
-                <strong>Change Management & Digital Transformation:</strong> Custom frameworks, stakeholder engagement, adoption strategies, technology integration<br>
-                <strong>Crisis Management & Business Continuity:</strong> Emergency protocols, adaptive process design, resilience building, recovery planning<br>
-                <strong>Industry Specializations:</strong> Defense • Manufacturing • Technology • Government • Infrastructure • Multi-national operations<br>
-                <strong>Geographic Focus:</strong> Bengaluru-based with established infrastructure for immediate client engagement and long-term project support
+                <strong>Process Assessment & Optimization:</strong> Comprehensive organizational evaluation, gap analysis, efficiency assessment, implementation roadmap development<br>
+                <strong>Change Management & Transformation:</strong> Custom frameworks, stakeholder engagement, adoption strategies, technology integration, training program development<br>
+                <strong>Crisis Management & Business Continuity:</strong> Emergency protocols, adaptive process design, resilience building, recovery planning, risk mitigation<br>
+                <strong>Systematic Innovation:</strong> Sustainable design principles, knowledge management systems, best practice creation, long-term adoption strategies<br>
+                <strong>Industry Applications:</strong> Defense • Manufacturing • Technology • Government • Infrastructure • Multi-national operations coordination<br>
+                <strong>Geographic Focus:</strong> Bengaluru-established with infrastructure for immediate client engagement and project support across Karnataka region
             </div>
         </section>
     </main>
 
     <script>
-        // Enhanced print functionality with ATS optimization
         function handlePrint() {
             // Ensure ATS-friendly formatting before print
             const printStyles = document.createElement('style');
@@ -639,19 +660,41 @@
                     body { font-family: Arial, sans-serif !important; }
                     .achievements { list-style-type: disc !important; }
                 }
+		    .achievements li {
+        		list-style-type: disc !important;
+        		margin-left: 0.5rem;
+    }
+}
             `;
             document.head.appendChild(printStyles);
             window.print();
         }
         
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Improved Process Consultant Resume loaded successfully');
+            // Add structured data for SEO
+            const structuredData = {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Chandra Shekhar",
+                "jobTitle": "Operations Excellence Leader",
+                "description": "Military-to-civilian process specialist with 20+ years systematic innovation experience",
+                "alumniOf": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Indian Institute of Management Bangalore"
+                },
+                "sameAs": ["https://www.linkedin.com/in/chandraiaf/"],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Bengaluru",
+                    "addressRegion": "Karnataka",
+                    "addressCountry": "IN"
+                }
+            };
             
-            // Add ATS-friendly elements
-            const metaDescription = document.createElement('meta');
-            metaDescription.name = 'description';
-            metaDescription.content = 'Chandra Shekhar - Process Consultant specializing in business transformation, change management, and systematic innovation. 20+ years experience with IIM Bangalore EGMP qualification.';
-            document.head.appendChild(metaDescription);
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.textContent = JSON.stringify(structuredData);
+            document.head.appendChild(script);
         });
     </script>
 </body>
