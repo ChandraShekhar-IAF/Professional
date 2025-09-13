@@ -12,14 +12,23 @@
             box-sizing: border-box;
         }
         
-        :root {
-            --primary-navy: #2c3e50;
-            --accent-red: #c41e3a;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --border-color: #bdc3c7;
-            --bg-light: #f8f9fa;
-        }
+       :root {
+    --primary-red: #c41e3a;
+    --primary-dark: #8b1538;
+    --accent-red: #c41e3a;
+    --accent-gold: #ffd700;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --shadow-light: 0 4px 15px rgba(0,0,0,0.08);
+    --shadow-medium: 0 8px 25px rgba(0,0,0,0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --font-primary: 'Segoe UI', 'Arial', sans-serif;
+    --max-width: 1200px;
+}
+
 
         /* Base Styles */
 @page { 
@@ -332,7 +341,7 @@ body {
                 display: none;
             }
         }
-		@media print {
+	@media print {
     /* existing print styles... */
     
     a[href*="mailto:"]:after, a[href*="tel:"]:after {
@@ -387,7 +396,7 @@ body {
         <section class="section" aria-labelledby="summary-title">
             <h2 id="summary-title" class="section-title">Professional Summary</h2>
             <p class="summary">
-    <strong>Operations Excellence Manager</strong> with <strong>20+ years distinguished military service</strong> and <strong>IIM Bangalore executive education</strong>. Expert in <strong>systematic process optimization, zero-error operations framework,</strong> and <strong>crisis management</strong> across high-value manufacturing and aerospace programs. Proven track record managing <span class="metric">₹200+ crore</span> portfolios with <strong>perfect compliance record.</strong> Specialized in <strong>quality management systems, supply chain optimization, international coordination,</strong> and <strong>cross-functional team leadership.</strong> <strong>Immediately available</strong> for manufacturing, aerospace, or defense sector leadership roles.
+    <strong>Operations Excellence Manager</strong> with <strong>20+ years distinguished military service</strong> and <strong>IIM Bangalore executive education</strong>. Expert in <strong>systematic process optimization, reliable operations framework,</strong> and <strong>crisis management</strong> across high-value manufacturing and aerospace programs. Proven experience managing <strong>complex multi-crore portfolios</strong> with <strong>exemplary compliance record.</strong> Specialized in <strong>quality management systems, supply chain optimization, international coordination,</strong> and <strong>cross-functional team leadership.</strong>
 </p>
         </section>
 
@@ -420,6 +429,12 @@ body {
                     </div>
                 </div>
             </div>
+		<div style="text-align: center; margin: 1.5rem 0; padding: 1.2rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px; border: 1px solid #dee2e6;">
+    <div style="font-size: 10pt; font-weight: bold; color: var(--text-dark); margin-bottom: 0.5rem;">KEYWORDS & TECHNICAL PROFICIENCY</div>
+    <div style="font-size: 10pt; color: var(--text-light);">
+        Operations Management • Process Optimization • Quality Systems • ERP Systems • Lean Methodologies • Crisis Management • Team Leadership • Digital Transformation • International Coordination • Predictive Maintenance • Supply Chain • Compliance Management • Strategic Planning
+    </div>
+</div>
         </section>
 
         <!-- Professional Experience -->
@@ -440,7 +455,7 @@ body {
                     <li>Developed business process optimization frameworks integrating military precision with modern operational excellence methodologies</li>
                     <li>Mentored <span class="metric">8+ ex-servicemen</span> in successful corporate transitions through systematic career development approaches</li>
                     <li>Established Bengaluru market presence with family stability for long-term geographic commitment and industry engagement</li>
-                    <li>Built professional network of <span class="metric">74+ industry professionals</span> across manufacturing, aerospace, consulting, and technology sectors</li>
+                    <li>Established strategic professional network through EGMP cohort of <span class="metric">74 industry professionals</span> across manufacturing, aerospace, consulting, and technology sectors</li>
                 </ul>
             </div>
 
@@ -454,11 +469,11 @@ body {
                 </div>
                 <div class="job-location">Air Force Station Hasimara, West Bengal</div>
                 <ul class="achievements">
-                    <li>Single-handedly established new Ground Equipment Section for advanced fighter aircraft operations managing specialized inventory systems worth <span class="metric">₹200+ crores</span></li>
+                    <li>Single-handedly established new Ground Equipment Section for advanced fighter aircraft operations managing high-value specialized inventory systems with perfect accountability record</li>
                     <li>Led international collaboration with French technical teams during Rafale integration ensuring complete technology transfer success and training coordination</li>
-                    <li>Implemented predictive maintenance systems extending component lifespan by <span class="metric">65%</span> and reducing critical equipment failures by <span class="metric">70%</span></li>
+                    <li>Implemented predictive maintenance systems resulting in significant extension of component lifespan and substantial reduction in critical equipment failures, preventing costly emergency repairs</li>
                     <li>Managed cross-functional teams of <span class="metric">20+ technicians</span> across three operational bases with strategic resource deployment and performance optimization</li>
-                    <li>Maintained perfect compliance record during government audits of high-value defense equipment and sensitive operations</li>
+                    <li>Maintained exemplary compliance record during government audits of high-value defense equipment and sensitive operations across entire service career</li>
                 </ul>
             </div>
 
@@ -475,8 +490,8 @@ body {
                     <li>Managed high-stakes VIP aviation operations including Air India One ground support for Presidential and Prime Ministerial flights with <span class="metric">zero security incidents</span></li>
                     <li>Led COVID-19 crisis management across <span class="metric">4 facilities simultaneously</span> maintaining 100% operational continuity through innovative coordination systems</li>
                     <li>Participated in significant national security operations providing critical ground support and logistics coordination</li>
-                    <li>Created real-time equipment monitoring system adopted organization-wide with consumption calculator published on official IAF platform</li>
-                    <li>Achieved <span class="metric">60% reduction</span> in emergency procurement costs through predictive planning and systematic resource optimization methodologies</li>
+                    <li>Developed real-time equipment monitoring system with consumption forecasting tools — adopted organization-wide and published on official platforms</li>
+                    <li>Achieved substantial reduction in emergency procurement costs through predictive planning and systematic resource optimization, improving budget efficiency</li>
                 </ul>
             </div>
 
@@ -624,9 +639,9 @@ body {
             <h2 id="additional-title" class="section-title">Additional Information</h2>
             
             <div style="font-size: 10pt; line-height: 1.4;">
-                <strong>Languages:</strong> English (Native), Hindi (Native), Punjabi (Native)<br>
+                <strong>Languages:</strong> English (Professional), Hindi (Native), Maithili (Native)<br>
                 <strong>Geographic Flexibility:</strong> Open to business travel within India, occasional international travel<br>
-                <strong>Availability:</strong> Immediately available for interviews, 15 days notice period for role commencement<br>
+                <strong>Notice Period:</strong> 15 days | Ready for immediate interviews<br>
                 <strong>Professional Networks:</strong> IIM Bangalore Alumni (74+ active connections), Ex-Servicemen Professional Network<br>
                 <strong>Interests:</strong> Systematic innovation, operational excellence methodologies, mentoring military-to-civilian transitions
             </div>
