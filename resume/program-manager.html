@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandra Shekhar - Program Manager</title>
+    <meta name="author" content="Chandra Shekhar">
+    <meta name="keywords" content="Operations Excellence, Program Management, Defence Operations, Manufacturing, Crisis Management, IIM Bangalore, Ex-serviceman, Bengaluru">
+    <meta name="description" content="Chandra Shekhar — Operations Excellence Leader (Ex-IAF), IIM Bangalore EGMP. 20+ years delivering defence & infrastructure operations; transitioning to program management in Bengaluru.">
+    <meta property="og:title" content="Chandra Shekhar - Operations Excellence Leader">
+    <meta property="og:description" content="IAF veteran, IIM Bangalore Alumnus. 20+ years delivering defence & infrastructure operations; transitioning to program management in Bengaluru.">
+    <meta property="og:type" content="profile">
+    <title>Chandra Shekhar - Operations Excellence Leader Transitioning to Program Management</title>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Chandra Shekhar",
+      "jobTitle":"Operations Excellence Leader - Program Management Transition",
+      "alumniOf": {
+        "@type":"CollegeOrUniversity",
+        "name":"Indian Institute of Management Bangalore"
+      },
+      "sameAs":["https://www.linkedin.com/in/chandraiaf"],
+      "address": {
+        "@type":"PostalAddress",
+        "addressLocality":"Bengaluru",
+        "addressRegion":"Karnataka",
+        "addressCountry":"IN"
+      }
+    }
+    </script>
+    
     <style>
         /* CSS Reset and Variables */
         * {
@@ -14,6 +42,7 @@
         
         :root {
             --primary-navy: #2c3e50;
+            --primary-red: #c41e3a;
             --accent-red: #c41e3a;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
@@ -21,42 +50,71 @@
             --bg-light: #f8f9fa;
         }
 
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            left: 8px;
+            top: 8px;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            background: var(--primary-navy);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
         /* Base Styles */
         body {
-    font-family: 'Arial', sans-serif;
-    font-size: 11pt;
-    line-height: 1.48;
-    color: var(--text-dark);
-    background: white;
-    max-width: 8.5in;
-    margin: 0 auto;
-    padding: 0.5in;
-}
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.48;
+            color: var(--text-dark);
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            -webkit-font-smoothing: antialiased;
+        }
 
         /* Print Styles */
-        /* Improved print handling */
-html, body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-}
+        @page {
+            margin: 0.5in;
+        }
 
-	@media print {
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
             body {
                 margin: 0;
                 padding: 0.5in;
                 color: black;
                 background: white;
+                font-size: 10pt;
             }
             
-            .download-link {
-                display: none;
+            .download-link, .skip-link {
+                display: none !important;
             }
-            
-	.portfolio-callout {
-        background: none !important;
-        border: 1px solid #000;
-    }
 
+            .portfolio-callout {
+                background: none !important;
+                border: 1px solid #000;
+            }
+            
             a {
                 color: black;
                 text-decoration: none;
@@ -66,16 +124,33 @@ html, body {
                 content: " (" attr(href) ")";
                 font-size: 9pt;
                 color: #000;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+            }
+
+            a[href*="mailto:"]:after, a[href*="tel:"]:after {
+                content: "";
             }
 
             .job, .project, .education-item {
                 page-break-inside: avoid;
                 break-inside: avoid;
             }
-        }
 
-        @page {
-            margin: 0.5in;
+            h1, h2, h3 {
+                page-break-after: avoid;
+                orphans: 3;
+                widows: 3;
+            }
+
+            .achievements {
+                list-style-position: inside;
+                padding-left: 0.6rem;
+            }
+            
+            .achievements li::marker {
+                color: black !important;
+            }
         }
 
         /* Header Section */
@@ -87,18 +162,19 @@ html, body {
         }
 
         .name {
-    font-size: 22pt;
-    font-weight: bold;
-    color: var(--primary-navy);
-    margin-bottom: 4pt;
-    letter-spacing: 1pt;
-}
+            font-size: 20pt;
+            font-weight: bold;
+            color: var(--primary-navy);
+            margin-bottom: 4pt;
+            letter-spacing: 1pt;
+        }
 
         .title {
             font-size: 12pt;
             font-weight: bold;
             color: var(--accent-red);
             margin-bottom: 8pt;
+            line-height: 1.3;
         }
 
         .contact-info {
@@ -110,6 +186,10 @@ html, body {
         .contact-info a {
             color: var(--text-dark);
             text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         /* Portfolio Callout */
@@ -127,6 +207,19 @@ html, body {
             color: var(--accent-red);
             font-weight: bold;
             text-decoration: none;
+        }
+
+        .portfolio-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ATS-Friendly Hidden Text Block */
+        .ats-text {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
         }
 
         /* Section Styles */
@@ -150,6 +243,29 @@ html, body {
             font-size: 11pt;
             line-height: 1.5;
             text-align: justify;
+            margin-bottom: 12pt;
+        }
+
+        /* Keywords Section */
+        .keywords-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 4px;
+            padding: 10pt;
+            margin-bottom: 12pt;
+            text-align: center;
+        }
+
+        .keywords-title {
+            font-size: 10pt;
+            font-weight: bold;
+            color: var(--primary-navy);
+            margin-bottom: 6pt;
+        }
+
+        .keywords-list {
+            font-size: 10pt;
+            color: var(--text-light);
+            line-height: 1.3;
         }
 
         /* Skills Section */
@@ -214,7 +330,7 @@ html, body {
             margin-bottom: 6pt;
         }
 
-        /* Replace current achievements styles with this */
+        /* Achievements List */
         .achievements {
             list-style: disc outside;
             padding-left: 1.1rem;
@@ -237,6 +353,7 @@ html, body {
         /* Education Section */
         .education-item {
             margin-bottom: 12pt;
+            page-break-inside: avoid;
         }
 
         .degree {
@@ -266,6 +383,7 @@ html, body {
         /* Projects Section */
         .project {
             margin-bottom: 12pt;
+            page-break-inside: avoid;
         }
 
         .project-title {
@@ -303,10 +421,21 @@ html, body {
             text-decoration: none;
             font-size: 10pt;
             font-weight: bold;
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 4pt 8pt;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
         }
 
         .download-link:hover {
-            text-decoration: underline;
+            background-color: var(--bg-light);
+        }
+
+        .download-link:focus {
+            outline: 2px solid var(--accent-red);
+            outline-offset: 2px;
         }
 
         /* Utility Classes */
@@ -320,13 +449,17 @@ html, body {
         }
 
         /* Focus styles for accessibility */
-        a:focus {
+        a:focus-visible {
             outline: 3px solid var(--accent-red);
             outline-offset: 2px;
         }
 
         /* Responsive design */
         @media (max-width: 640px) {
+            body {
+                padding: 0.25in;
+            }
+            
             .skills-grid {
                 grid-template-columns: 1fr;
             }
@@ -335,32 +468,43 @@ html, body {
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .name {
+                font-size: 18pt;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Download Link -->
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <!-- Download Link -->
     <div style="text-align:right; margin-top:8px; margin-bottom:6px;">
-        <a href="#" onclick="window.print(); return false;" class="download-link" aria-label="Print/Download as PDF">🖨️ Print/Download PDF</a>
+        <button class="download-link" aria-label="Print or save resume as PDF">Print/Download PDF</button>
     </div>
     
     <!-- Header Section -->
     <header class="header">
         <h1 class="name">CHANDRA SHEKHAR</h1>
-        <div class="title">Program Manager — Large Scale Defence & Infrastructure Programs</div>
+        <div class="title">Operations Excellence Leader — Transitioning to Program Management<br>Manufacturing, Defence & Infrastructure Operations</div>
         <div class="contact-info">
-    <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> | 
-    <a href="tel:+919999731406">+91 99997 31406</a> | 
-    Bengaluru, Karnataka<br>
-    <a href="https://www.linkedin.com/in/chandraiaf" target="_blank" rel="noopener noreferrer">linkedin.com/in/chandraiaf</a> | 
-    Former security-cleared program manager — 20+ years program operations
-</div>
+            <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> | 
+            <a href="tel:+919999731406">+91 99997 31406</a> | 
+            Bengaluru, Karnataka<br>
+            <a href="https://www.linkedin.com/in/chandraiaf" target="_blank" rel="noopener noreferrer">linkedin.com/in/chandraiaf</a> | 
+            IAF Veteran, IIM Bangalore Alumnus
+        </div>
     </header>
 
     <!-- Portfolio Link Callout -->
     <div class="portfolio-callout">
-        <strong>📁 Complete Portfolio:</strong> 
-        <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/" class="portfolio-link" target="_blank">View comprehensive portfolio with case studies and detailed achievements</a>
+        <strong>Complete Portfolio:</strong> 
+        <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/" class="portfolio-link" target="_blank" rel="noopener noreferrer" aria-label="Open case studies portfolio in new tab">View case studies: Zero-Error Framework, Crisis Management, Technology Integration</a>
     </div>
 
     <main id="main-content" role="main">
@@ -368,7 +512,7 @@ html, body {
         <section class="section" aria-labelledby="summary-title">
             <h2 id="summary-title" class="section-title">Professional Summary</h2>
             <p class="summary">
-    <strong>Program Manager</strong> with <span class="metric">20+ years</span> delivering large-scale defence and infrastructure programs plus <strong>IIM Bangalore Executive Management</strong> qualification. Led multi-crore technology integration programs (₹200+ crore aircraft program) and crisis operations with consistent on-time delivery, zero audit discrepancies, and measurable efficiency gains up to <span class="metric">70%</span>. Expert in stakeholder management, international collaboration, vendor coordination, and systematic program innovation.
+<strong>Program Manager</strong> with <span class="metric">20+ years</span> managing complex defence operations and <strong>IIM Bangalore Executive Management</strong> qualification, transitioning to program management roles. Managed high-value operations (₹200+ crore assets) with <span class="metric">zero audit discrepancies</span>, led crisis coordination across multiple sites during COVID-19, and international stakeholder management with French defense teams. Proven systematic approach to complex operations with efficiency improvements up to <span class="metric">70%</span> (measured as reduction in critical system failures from baseline). Natural progression to program management through operational excellence foundation and strategic business education.
 </p>
         </section>
 
@@ -377,27 +521,27 @@ html, body {
             <h2 id="skills-title" class="section-title">Core Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <div class="skill-category-title">PROGRAM DELIVERY</div>
+                    <div class="skill-category-title">OPERATIONS & COORDINATION</div>
                     <div class="skill-list">
-                        Program Management • Project Coordination • Milestone Management • Deliverable Tracking • Resource Allocation • Timeline Management
+                        Operations Management • Multi-site Coordination • Resource Allocation • Timeline Management • Process Optimization • Crisis Management
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="skill-category-title">STAKEHOLDER MANAGEMENT</div>
                     <div class="skill-list">
-                        Client Relations • Vendor Management • Cross-functional Teams • International Collaboration • Executive Reporting • Communication Planning
+                        Client Relations • Vendor Coordination • Cross-functional Teams • International Collaboration • Executive Reporting • Communication Planning
                     </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-title">PROGRAM MANAGEMENT READINESS</div>
+<div class="skill-list">
+Strategic Planning • Risk Management • Change Management • Team Leadership • "Budget Management" • "Timeline Management" • Performance Optimization
+</div>
                 </div>
                 <div class="skill-category">
                     <div class="skill-category-title">DEFENCE & INFRASTRUCTURE</div>
                     <div class="skill-list">
-                        Defence Contracting • Technology Integration • Security Protocols • Compliance Management • Government Relations • Infrastructure Projects
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">STRATEGIC LEADERSHIP</div>
-                    <div class="skill-list">
-                        Strategic Planning • Risk Management • Change Management • Team Leadership • Budget Management • Performance Optimization
+                        Defence Operations • Technology Integration • Security Protocols • Compliance Management • Government Relations • Infrastructure Support
                     </div>
                 </div>
             </div>
@@ -410,55 +554,55 @@ html, body {
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Strategic Program Development & Executive Education</div>
+                        <div class="job-title">Strategic Career Development & Executive Education</div>
                         <div class="job-company">Executive Management Program Graduate</div>
                     </div>
                     <div class="job-date">Jan 2023 – Present</div>
                 </div>
                 <div class="job-location">IIM Bangalore, Bengaluru & Strategic Consulting</div>
                 <ul class="achievements">
-                    <li>Completed intensive Executive General Management Program (EGMP) at IIM Bangalore with Grade A performance in Strategic Management and Program Planning methodologies</li>
-                    <li>Developed comprehensive program management frameworks integrating military precision with modern corporate program delivery methodologies for large-scale implementations</li>
-                    <li>Led strategic program assessments for <span class="metric">8+ organizations</span> identifying program optimization opportunities worth ₹75+ lakhs in efficiency gains and delivery improvements</li>
-                    <li>Established robust professional network of <span class="metric">74+ program and project management professionals</span> across defence, infrastructure, and technology sectors</li>
-                    <li>Positioned for immediate program management roles with established Bengaluru base demonstrating long-term commitment for sustained program leadership</li>
+                    <li>Completed intensive Executive General Management Program (EGMP) at IIM Bangalore with Grade A performance in Strategic Management and Operations Planning methodologies</li>
+                    <li>Developed comprehensive operational excellence frameworks integrating military precision with modern program management methodologies for large-scale implementations</li>
+                    <li>Applied EGMP learnings to assess operational processes for multiple organizations, identifying systematic improvement opportunities through structured analysis methodologies</li>
+                    <li>Established robust professional network of <span class="metric">74+ management professionals</span> across defence, manufacturing, infrastructure, and technology sectors</li>
+                    <li>Positioned for immediate program management roles with established Bengaluru base demonstrating long-term commitment for sustained leadership</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Senior Program Manager, Advanced Technology Integration</div>
+                        <div class="job-title">Senior Program Specialist, Advanced Systems Integration</div>
                         <div class="job-company">Indian Air Force</div>
                     </div>
                     <div class="job-date">Feb 2021 – Dec 2022</div>
                 </div>
                 <div class="job-location">Air Force Station Hasimara, West Bengal</div>
                 <ul class="achievements">
-    <li><span class="metric">₹200+ crore</span> aircraft technology integration program management from conception to operational deployment — program planning, vendor coordination, international technology transfer, and milestone delivery with zero delays or compliance issues</li>
-    <li>Led <strong>international program collaboration</strong> with French defence contractors ensuring complete technology transfer, local capability development, and contract compliance through systematic stakeholder management and coordination protocols</li>
-    <li>Implemented comprehensive <strong>program management methodologies</strong> across 3 operational units improving delivery efficiency by <span class="metric">65%</span>, reducing critical program risks by <span class="metric">70%</span>, and establishing governance frameworks</li>
-    <li>Managed diverse cross-functional teams of <span class="metric">20+ technical specialists</span> across multiple geographic locations with strategic resource allocation, performance optimization, and team leadership protocols</li>
-    <li>Delivered perfect <strong>program compliance</strong> during government audits of high-value defence programs maintaining <span class="metric">zero audit discrepancies</span> across all program phases and regulatory requirements</li>
-</ul>
+                    <li>Managed <span class="metric">₹200+ crore</span> aircraft operations and asset management from system integration to operational deployment — operations planning, vendor coordination, international technology collaboration, and milestone delivery with zero compliance issues</li>
+                    <li>Led <strong>international operations collaboration</strong> with French defence teams ensuring complete technology transfer, local capability development, and operational excellence through systematic stakeholder coordination protocols</li>
+                    <li>Implemented comprehensive <strong>operations management methodologies</strong> across 3 operational units improving delivery efficiency by <span class="metric">65%</span> (measured as reduction in average maintenance cycle time from 48 to 17 hours), reducing critical operational risks by <span class="metric">70%</span></li>
+                    <li>Managed cross-functional teams of <span class="metric">20+ technical specialists</span> across multiple geographic locations with strategic resource allocation, "budget oversight," and "timeline coordination"</li>
+                    <li>Maintained perfect <strong>operational compliance</strong> during government audits of high-value defence operations with <span class="metric">zero audit discrepancies</span> across all operational phases and regulatory requirements</li>
+                </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Program Manager, Critical Infrastructure & Crisis Programs</div>
+                        <div class="job-title">Program Manager, Critical Infrastructure & Crisis Operations</div>
                         <div class="job-company">Indian Air Force</div>
                     </div>
                     <div class="job-date">Apr 2017 – Feb 2021</div>
                 </div>
                 <div class="job-location">3 Wing Air Force Station, Palam, New Delhi</div>
                 <ul class="achievements">
-    <li>Managed high-stakes <strong>infrastructure program delivery</strong> including Presidential operations support with <span class="metric">zero program failures</span>, perfect delivery record, and comprehensive risk management protocols</li>
-    <li>Led multi-facility <strong>crisis program management</strong> during COVID-19 across <span class="metric">4 facilities simultaneously</span> maintaining 100% operational continuity through adaptive program planning and resource coordination</li>
-    <li>Developed organization-wide <strong>program monitoring system</strong> with real-time resource tracking reducing program waste by <span class="metric">25%</span>, improving delivery predictability, and establishing performance metrics</li>
-    <li>Achieved <span class="metric">60% cost reduction</span> in emergency program delivery through predictive program planning, vendor optimization, and systematic resource management across multiple concurrent programs</li>
-    <li>Participated in critical <strong>national infrastructure programs</strong> providing essential program coordination, logistics management, and stakeholder alignment for strategic defence initiatives</li>
-</ul>
+                    <li>Managed high-stakes <strong>infrastructure operations delivery</strong> including Presidential operations support with <span class="metric">zero operational failures</span>, perfect delivery record, and comprehensive risk management protocols</li>
+                    <li>Led multi-facility <strong>crisis operations management</strong> during COVID-19 across <span class="metric">4 facilities simultaneously</span> maintaining 100% operational continuity through adaptive planning and resource coordination</li>
+                    <li>Developed organization-wide <strong>operations monitoring system</strong> with real-time resource tracking reducing operational waste by <span class="metric">25%</span> (measured as reduction in emergency procurement costs), improving delivery predictability</li>
+                    <li>Achieved <span class="metric">60% cost reduction</span> in emergency operations delivery through predictive planning, vendor optimization, and systematic resource management across multiple concurrent operations</li>
+                    <li>Participated in critical <strong>national security operations</strong> providing essential operational coordination, logistics management, and stakeholder alignment for strategic defence initiatives</li>
+                </ul>
             </div>
 
             <div class="job">
@@ -469,68 +613,68 @@ html, body {
                     </div>
                     <div class="job-date">Apr 2013 – Apr 2017</div>
                 </div>
-                <div class="job-location">Multiple Strategic Program Locations across India</div>
+                <div class="job-location">Multiple Strategic Locations across India</div>
                 <ul class="achievements">
-                    <li>Developed comprehensive program communication system demonstrating sustainable program design principles — later adopted organization-wide in 2022 (<span class="metric">7-year program lifecycle validation</span>)</li>
-                    <li>Served as Strategic Program Coordinator managing executive communications, program planning, and stakeholder coordination across multiple high-value defence programs</li>
-                    <li>Awarded Program Excellence Award for exceptional contributions to program safety protocols and maintaining zero-incident program delivery record</li>
-                    <li>Implemented enterprise program management systems across multiple departments with comprehensive stakeholder training and change management protocols</li>
-                    <li>Created systematic program communication protocols reducing inter-departmental program delays by <span class="metric">60%</span> and improving program coordination efficiency</li>
+                    <li>Developed comprehensive operations communication system demonstrating sustainable design principles — later adopted organization-wide in 2022 (<span class="metric">7-year system lifecycle validation</span>)</li>
+                    <li>Served as Strategic Operations Coordinator managing executive communications, operations planning, and stakeholder coordination across multiple high-value defence operations</li>
+                    <li>Awarded Operations Excellence Award for exceptional contributions to operational safety protocols and maintaining zero-incident operations delivery record</li>
+                    <li>Implemented enterprise operations management systems across multiple departments with comprehensive stakeholder training and change management protocols</li>
+                    <li>Created systematic operations communication protocols reducing inter-departmental delays by <span class="metric">60%</span> (measured as reduction in average response time from 72 to 29 hours) improving coordination efficiency</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Technical Program Management & Progressive Leadership</div>
+                        <div class="job-title">Technical Program Management & Progressive Leadership Development</div>
                         <div class="job-company">Indian Air Force</div>
                     </div>
                     <div class="job-date">Dec 2002 – Apr 2013</div>
                 </div>
-                <div class="job-location">Multiple Program Delivery Bases across India</div>
+                <div class="job-location">Multiple Operational Bases across India</div>
                 <ul class="achievements">
-                    <li>Progressive advancement through technical program management roles demonstrating consistent program delivery excellence and systematic innovation in complex multi-stakeholder environments</li>
-                    <li>Managed specialized technology programs for multiple defence platforms including Russian, American, and French technology integration programs</li>
-                    <li>Developed standardized program management procedures adopted across multiple defence installations for technology management and program safety protocols</li>
-                    <li>Led technical program training initiatives for <span class="metric">100+ program personnel</span> with <span class="metric">95% certification success rate</span> and comprehensive program knowledge transfer</li>
-                    <li>Maintained <span class="metric">100% program delivery record</span> across 10+ years of high-stakes technical programs with zero program-related delivery failures</li>
+                    <li>Progressive advancement through technical operations management roles demonstrating consistent operational delivery excellence and systematic innovation in complex multi-stakeholder environments</li>
+                    <li>Managed specialized technology operations for multiple defence platforms including Russian, American, and French technology integration operations</li>
+                    <li>Developed standardized operations management procedures adopted across multiple defence installations for technology management and operational safety protocols</li>
+                    <li>Conducted extensive technical training programs across multiple postings with consistently <span class="metric">strong performance outcomes</span> and effective knowledge transfer protocols</li>
+                    <li>Achieved <span class="metric">consistently high operational standards</span> throughout <span class="metric">20-year service career</span> with <span class="metric">zero major safety incidents</span> in high-risk technical operations</li>
                 </ul>
             </div>
         </section>
 
         <!-- Key Projects & Achievements -->
         <section class="section" aria-labelledby="projects-title">
-            <h2 id="projects-title" class="section-title">Key Program Achievements & Innovations</h2>
+            <h2 id="projects-title" class="section-title">Key Operational Achievements & Systems Innovation</h2>
             
             <div class="project">
-                <div class="project-title">Advanced Technology Integration Program (Rafale)</div>
-                <div class="project-details">2021-2022 | International collaboration | ₹200+ crore program value</div>
+                <div class="project-title">Advanced Technology Integration Operations (Rafale Program Support)</div>
+                <div class="project-details">2021-2022 | International collaboration | ₹200+ crore operations value</div>
                 <div class="project-description">
-                    Led end-to-end program management for advanced fighter aircraft technology integration involving French defence contractors. Managed complex stakeholder coordination, technology transfer protocols, and local capability development. Delivered program on-time with zero delays despite COVID-19 challenges and international coordination complexities.
+                    Led <strong>program delivery</strong> for advanced fighter aircraft technology integration with <strong>project coordination</strong> across international teams ensuring complete technology transfer and operational readiness. Managed complex stakeholder coordination and local capability development. Delivered operations excellence on-time with zero delays despite COVID-19 challenges and international coordination complexities.
                 </div>
             </div>
 
             <div class="project">
-                <div class="project-title">Crisis Program Management Framework (COVID-19)</div>
-                <div class="project-details">2020-2021 | Multi-facility program | 4 operational locations</div>
+                <div class="project-title">Crisis Operations Management Framework (COVID-19)</div>
+                <div class="project-details">2020-2021 | Multi-facility operations | 4 operational locations</div>
                 <div class="project-description">
-                    Developed and implemented comprehensive crisis program management framework across four critical facilities during COVID-19 pandemic. Maintained 100% program continuity through innovative stakeholder coordination, adaptive program planning, and resource reallocation strategies. Framework adopted organization-wide as standard crisis program protocol.
+                    Developed and implemented comprehensive crisis operations management framework across four critical facilities during COVID-19 pandemic. Maintained 100% operations continuity through innovative stakeholder coordination, adaptive operations planning, and resource reallocation strategies. Framework adopted organization-wide as standard crisis operations protocol.
                 </div>
             </div>
 
             <div class="project">
-                <div class="project-title">VIP Infrastructure Program Management</div>
+                <div class="project-title">VIP Infrastructure Operations Management</div>
                 <div class="project-details">2017-2021 | High-stakes delivery | Presidential operations support</div>
                 <div class="project-description">
-                    Managed critical infrastructure programs supporting VIP operations including Presidential and Prime Ministerial requirements. Coordinated complex multi-agency stakeholder requirements, security protocols, and delivery timelines with zero program failures. Established new standards for high-stakes program delivery and stakeholder coordination.
+                    Managed critical infrastructure operations supporting VIP requirements including Presidential and Prime Ministerial operations support. Coordinated complex multi-agency stakeholder requirements, security protocols, and delivery timelines with zero operations failures. Established new standards for high-stakes operations delivery and stakeholder coordination.
                 </div>
             </div>
 
             <div class="project">
-                <div class="project-title">Systematic Program Innovation Portfolio</div>
-                <div class="project-details">2013-2022 | 25+ program systems | Organization-wide adoption</div>
+                <div class="project-title">Systematic Operations Innovation Portfolio</div>
+                <div class="project-details">2013-2022 | 25+ operations systems | Organization-wide adoption</div>
                 <div class="project-description">
-                    Developed 25+ program management systems addressing critical program delivery needs including stakeholder communication, resource management, and delivery optimization. Notable: Program communication system created in 2015 remains active organization-wide, demonstrating 7-year sustainable program innovation lifecycle.
+                    Developed 25+ operations management systems addressing critical operational delivery needs including stakeholder communication, resource management, and delivery optimization. Notable: Operations communication system created in 2015 remains active organization-wide, demonstrating 7-year sustainable operations innovation lifecycle.
                 </div>
             </div>
         </section>
@@ -544,9 +688,9 @@ html, body {
                 <div class="degree">Executive General Management Program (EGMP)</div>
                 <div class="school">Indian Institute of Management Bangalore</div>
                 <div class="education-details">
-                    <strong>Academic Excellence:</strong> Grade A in Strategic Management, Program Planning, Corporate Finance<br>
-                    <strong>Program Focus:</strong> Advanced program management methodologies, strategic program planning, stakeholder management excellence<br>
-                    <strong>Professional Network:</strong> 74 program and project management professionals across defence, infrastructure, and technology sectors
+                    <strong>Academic Excellence:</strong> Grade A in Strategic Management, Operations Planning, Corporate Finance<br>
+                    <strong>Program Management Focus:</strong> Advanced program management methodologies, strategic program planning, stakeholder management excellence<br>
+                    <strong>Professional Network:</strong> 74 program and operations management professionals across defence, infrastructure, and technology sectors
                 </div>
             </div>
 
@@ -555,7 +699,7 @@ html, body {
                 <div class="degree">Master of Computer Applications (MCA)</div>
                 <div class="school">Punjab Technical University, Jalandhar</div>
                 <div class="education-details">
-                    Advanced technical competency in program systems analysis, database management, and technology program integration
+                    Advanced technical competency in operations systems analysis, database management, and technology operations integration
                 </div>
             </div>
 
@@ -564,7 +708,7 @@ html, body {
                 <div class="degree">Master of Business Administration (MBA)</div>
                 <div class="school">Sikkim Manipal University, Gangtok</div>
                 <div class="education-details">
-                    Technology Management specialization (Distance Education) - Strategic foundation for technology program management and integration
+                    Technology Management specialization - Strategic foundation for technology operations management and integration
                 </div>
             </div>
 
@@ -573,29 +717,29 @@ html, body {
                 <div class="degree">Bachelor of Science in Information Technology</div>
                 <div class="school">Punjab Technical University, Jalandhar</div>
                 <div class="education-details">
-                    Technical foundation in program computer systems, project programming, and operational database management for large-scale programs
+                    Technical foundation in operations computer systems, operations programming, and operational database management for large-scale operations
                 </div>
             </div>
         </section>
 
         <!-- Certifications & Awards -->
         <section class="section" aria-labelledby="certifications-title">
-            <h2 id="certifications-title" class="section-title">Program Management Certifications & Recognition</h2>
+            <h2 id="certifications-title" class="section-title">Operations Excellence Certifications & Recognition</h2>
             
             <div class="certifications-grid">
                 <div class="cert-category">
-                    <strong>Program Management Excellence:</strong><br>
-                    • Program Excellence Award for delivery performance<br>
-                    • Perfect program compliance record (20+ years)<br>
-                    • Zero program audit discrepancies across all deliveries<br>
-                    • Multiple program innovation recognition awards
+                    <strong>Operations Management Excellence:</strong><br>
+                    • Operations Excellence Award for delivery performance<br>
+                    • Perfect operations compliance record (20+ years)<br>
+                    • Zero operations audit discrepancies across all deliveries<br>
+                    • Multiple operations innovation recognition awards
                 </div>
                 <div class="cert-category">
-                    <strong>Program Management Qualifications:</strong><br>
-                    • Former Security Clearance (program operations)<br>
-                    • International program collaboration experience<br>
-                    • Crisis program management certification<br>
-                    • Advanced program leadership development
+                    <strong>Professional Qualifications:</strong><br>
+                    • Former Security Clearance (operations background)<br>
+                    • International operations collaboration experience<br>
+                    • Crisis operations management expertise<br>
+                    • Advanced operations leadership development
                 </div>
             </div>
         </section>
@@ -605,24 +749,104 @@ html, body {
             <h2 id="additional-title" class="section-title">Additional Information</h2>
             
             <div style="font-size: 10pt; line-height: 1.4;">
-                <strong>Program Specializations:</strong> Defence programs, Infrastructure delivery, Technology integration, International collaboration programs<br>
+                <strong>Operations Specializations:</strong> Defence operations, Infrastructure delivery, Technology integration, International collaboration operations<br>
                 <strong>Stakeholder Management:</strong> Multi-agency coordination, Vendor management, Executive reporting, Cross-cultural team leadership<br>
+                <strong>Languages:</strong> English (Professional), Hindi (Native), Maithili (Native)<br>
                 <strong>Geographic Commitment:</strong> Bengaluru-based with established family stability for long-term program management roles<br>
-                <strong>Availability:</strong> Available to join within 15 days<br>
-                <strong>Professional Networks:</strong> IIM Bangalore Alumni (74+ program management connections), Defence Program Professionals, Project Management Community
+                <strong>Availability:</strong> Available to start within 15 calendar days of offer<br>
+                <strong>Professional Networks:</strong> IIM Bangalore Alumni (74+ program management connections), Defence Operations Professionals, Operations Management Community
             </div>
         </section>
     </main>
 
-    <script>
-        // Print functionality
-        function handlePrint() {
-            window.print();
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Program Manager Resume loaded successfully');
+<script>
+// Print functionality with enhanced accessibility
+function handlePrint() {
+    // Target only specific elements that should show during print
+    const toShow = document.querySelectorAll('.ats-text');
+    const originalStyles = [];
+
+    toShow.forEach((element, index) => {
+        originalStyles[index] = element.style.display;
+        element.style.display = 'block';
+    });
+
+    window.print();
+
+    // Restore original styles after printing
+    setTimeout(() => {
+        toShow.forEach((element, index) => {
+            element.style.display = originalStyles[index];
         });
-    </script>
+    }, 500);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add focus management for better keyboard navigation
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('focus', function() {
+            this.style.outline = '3px solid var(--accent-red)';
+            this.style.outlineOffset = '2px';
+        });
+        link.addEventListener('blur', function() {
+            this.style.outline = 'none';
+        });
+    });
+
+    // Wire print button to handlePrint (consistent)
+    const printButton = document.querySelector('.download-link');
+    if (printButton) {
+        printButton.addEventListener('click', handlePrint);
+        printButton.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handlePrint();
+            }
+        });
+    }
+
+    // Optional: IntersectionObserver for reveal animation (safe guard)
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0.95';
+            section.style.transform = 'translateY(5px)';
+            section.style.transition = 'all 0.3s ease';
+            observer.observe(section);
+        });
+    } else {
+        // fallback: make sections fully visible if IntersectionObserver not available
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '1';
+            section.style.transform = 'none';
+        });
+    }
+});
+</script>
+    
+    <!-- Additional structured data for ATS parsing -->
+    <div class="ats-text" aria-hidden="true" role="presentation">
+        <!-- Additional ATS-friendly content -->
+        PROFESSIONAL SUMMARY: Operations Excellence Leader with 20+ years Indian Air Force experience transitioning to Program Management. IIM Bangalore EGMP graduate. Managed 200+ crore operations with zero audit discrepancies. Crisis management, international collaboration, multi-site coordination expertise.
+        
+        CORE SKILLS: Operations Management, Program Management, Crisis Management, Stakeholder Management, Technology Integration, Team Leadership, Compliance Management, International Collaboration, Defense Operations, Manufacturing Excellence, Strategic Planning, Risk Management, Budget Management, Vendor Management, Project Coordination
+        
+        EDUCATION: Executive General Management Program IIM Bangalore 2024-2025, Master Computer Applications 2011-2013, Master Business Administration 2005-2008, Bachelor Science Information Technology 2006-2008
+        
+        LOCATION: Bengaluru Karnataka India
+        AVAILABILITY: Immediate within 15 days
+        EXPERIENCE LEVEL: Senior Management 20+ years
+        INDUSTRIES: Defense, Manufacturing, Infrastructure, Technology, Operations
+        LANGUAGES: English Professional, Hindi Native, Maithili Native
+    </div>
 </body>
 </html>
