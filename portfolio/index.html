@@ -778,7 +778,24 @@
                 page-break-before: always;
             }
         }
+	/* Portfolio Button Styles */
+        .portfolio-btn {
+            background: var(--primary-red);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+            margin-top: 1rem;
+        }
 
+        .portfolio-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
         /* Focus Styles for Accessibility */
         :focus-visible {
             outline: 3px solid var(--accent-gold);
@@ -797,13 +814,27 @@
             transform: translateY(0);
         }
     </style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chandra Shekhar",
+  "jobTitle": "Operations Excellence Leader",
+  "alumniOf": "Indian Institute of Management Bangalore",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka"
+  }
+}
+</script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <div class="container">
         <!-- Print Button -->
-        <button class="print-btn no-print" onclick="window.print()" title="Print Portfolio" aria-label="Print portfolio">🖨️</button>
+        <button class="print-btn no-print" onclick="window.print()" title="Print Portfolio" aria-label="Print portfolio">Print</button>
 
         <!-- Header Section -->
         <header class="header" role="banner">
@@ -820,7 +851,7 @@
                 <div class="contact-grid">
                     <div class="contact-item">
                         <span aria-hidden="true">🎓</span>
-                        <span>IIM Bangalore Alumni</span>
+                        <span>IIM Bangalore Alumnus</span>
                     </div>
                     <div class="contact-item">
                         <span aria-hidden="true">🛡️</span>
@@ -843,12 +874,12 @@
                             <div style="font-size: 0.95rem; opacity: 0.9;">Years Experience</div>
                         </div>
                         <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">₹200+Cr</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">₹200+ Cr</div>
                             <div style="font-size: 0.95rem; opacity: 0.9;">Assets Managed</div>
                         </div>
                         <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.08); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">High</div>
-                            <div style="font-size: 0.95rem; opacity: 0.9;">Audit Performance</div>
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Zero</div>
+<div style="font-size: 0.95rem; opacity: 0.9;">Audit Discrepancies</div>
                         </div>
                     </div>
                     
@@ -872,17 +903,19 @@
         </header>
 
         <!-- Navigation -->
-        <nav class="nav no-print" role="navigation" aria-label="Portfolio sections">
-            <div class="nav-container">
-                <a href="#overview" class="nav-item active">Executive Summary</a>
-                <a href="#translation" class="nav-item">Value Translation</a>
-                <a href="#innovation" class="nav-item">Innovation</a>
-                <a href="#experience" class="nav-item">Experience</a>
-                <a href="#skills" class="nav-item">Skills</a>
-                <a href="#education" class="nav-item">Education</a>
-                <a href="#strategy" class="nav-item">Career Strategy</a>
-            </div>
-        </nav>
+        <!-- Navigation -->
+<nav class="nav no-print" role="navigation" aria-label="Portfolio sections">
+    <div class="nav-container">
+        <a href="#overview" class="nav-item active">Summary</a>
+        <a href="#translation" class="nav-item">Translation</a>
+        <a href="#innovation" class="nav-item">Innovation</a>
+        <a href="#case-studies" class="nav-item">Case Studies</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#strategy" class="nav-item">Strategy</a>
+    </div>
+</nav>
 
         <!-- Main Content -->
         <main id="main-content" class="main-content" role="main">
@@ -911,7 +944,7 @@
                     <div class="card reveal">
                         <div class="card-title">💡 Strategic Innovation</div>
                         <div class="card-content">
-                            <strong>Systems Development:</strong> 25+ systems created with organization-wide adoption. Mail follow-up system remains active 7+ years later. Focus on preventive rather than corrective solutions.
+                            <strong>Systems Development:</strong> 25+ systems created with organization-wide adoption. Mail follow-up system (2015) adopted organization-wide in 2022 - 7-year lifecycle validation. Focus on preventive rather than corrective solutions.
                             <br><br>
                             <strong>Applications:</strong> Process Excellence, Business Transformation, Change Management
                         </div>
@@ -929,7 +962,7 @@
                     <div class="card reveal">
                         <div class="card-title">⚡ Crisis Leadership</div>
                         <div class="card-content">
-                            <strong>Validated Performance:</strong> National security operations support, COVID-19 multi-office coordination, VIP operations with strong safety record.
+                            <strong>Validated Performance:</strong> National security operations support, COVID-19 crisis management (4 facilities simultaneously, 100% continuity), VIP operations with zero security incidents.
                             <br><br>
                             <strong>Unique Advantage:</strong> Ground-up military progression provides implementation insight
                         </div>
@@ -1124,6 +1157,37 @@
                     </div>
                 </div>
             </section>
+	    <!-- ADD NEW SECTION HERE -->
+<section id="case-studies" class="section page-break">
+    <div class="section-header">
+        <h2 class="section-title">Innovation Case Studies</h2>
+        <p class="section-subtitle">Deep-dive analysis of systematic frameworks with proven ROI</p>
+    </div>
+    
+    <div class="cards-grid">
+        <div class="card reveal">
+            <div class="card-title">🚀 Innovation Portfolio</div>
+            <div class="card-content">
+                Complete showcase of 25+ operational systems with 100% adoption rate and 7-year lifecycle validation.
+                <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <strong>Highlights:</strong> Mail follow-up system (2015-2022+), Resource optimization calculator, COVID crisis management
+                </div>
+            </div>
+            <a href="https://chandrashekhar-iaf.github.io/Portfolio/innovation-portfolio.html" class="portfolio-btn" target="_blank">View Innovation Systems</a>
+        </div>
+        
+        <div class="card reveal">
+            <div class="card-title">🎯 Zero-Error Framework</div>
+            <div class="card-content">
+                Military precision to business excellence - systematic methodology with 20-year validation and measurable ROI.
+                <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    <strong>Proven Results:</strong> 70% failure reduction, 25% efficiency improvement, 100% audit success
+                </div>
+            </div>
+            <a href="https://chandrashekhar-iaf.github.io/Portfolio/zero-error-framework.html" class="portfolio-btn" target="_blank">View Framework Case Study</a>
+        </div>
+    </div>
+</section>
 
             <!-- Experience Section -->
             <section id="experience" class="section page-break">
@@ -1142,8 +1206,8 @@
                                 <li><strong>Executive Education:</strong> Completed EGMP from IIM Bangalore with strong academic performance across strategic management, finance, and operations</li>
                                 <li><strong>Skill Development:</strong> Comprehensive certification program - multiple courses from IIM/IIT institutions focusing on business analytics and innovation</li>
                                 <li><strong>Network Building:</strong> Established professional connections through 74-member EGMP cohort across diverse industries</li>
-                                <li><strong>Market Preparation:</strong> Active job search focusing on operations excellence and program management roles in Bengaluru</li>
-                                <li><strong>Geographic Establishment:</strong> Successfully relocated and established stable family base in Bengaluru's professional ecosystem</li>
+                                <li><strong>Market Preparation:</strong> Comprehensive analysis of Bengaluru manufacturing operations landscape and strategic positioning for operations leadership roles with established professional network</li>
+                                <li><strong>Geographic Establishment:</strong> Successfully relocated and established stable Bengaluru presence for long-term professional commitment and industry engagement</li>
                             </ul>
                         </div>
                     </div>
@@ -1151,11 +1215,11 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2021-2022</div>
                         <div class="timeline-content">
-                            <h3>Senior Operations Specialist, Advanced Aircraft Operations</h3>
+                            <h3>Senior Operations Manager, Advanced Systems Integration</h3>
                             <p class="timeline-subtitle">Advanced Fighter Aircraft Operations | Hasimara, West Bengal</p>
                             <ul>
                                 <li><strong>Section Establishment:</strong> Single-handedly established new operations section for advanced aircraft systems</li>
-                                <li><strong>International Coordination:</strong> Direct collaboration with French technical teams during aircraft integration, managing technology transfer protocols</li>
+                                <li><strong>International Coordination:</strong> Led French Rafale integration with seamless technology transfer - direct collaboration with French technical teams ensuring complete knowledge transfer and training coordination</li>
                                 <li><strong>High-Value Management:</strong> ₹200+ crores inventory management with strong audit performance across specialized equipment</li>
                                 <li><strong>Team Leadership:</strong> Led team of 20+ technicians across three operational bases with strategic deployment optimization</li>
                                 <li><strong>Innovation Implementation:</strong> Developed predictive maintenance systems and multi-base resource allocation frameworks</li>
@@ -1166,14 +1230,14 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2017-2021</div>
                         <div class="timeline-content">
-                            <h3>Senior Operations Manager, VIP Operations & Crisis Management</h3>
+                            <h3>Operations Manager, VIP Programs & Crisis Operations</h3>
                             <p class="timeline-subtitle">Strategic Air Operations | New Delhi</p>
                             <ul>
                                 <li><strong>VIP Support Operations:</strong> High-stakes aviation operations for Presidential and Prime Ministerial flights with strong safety record</li>
                                 <li><strong>National Security Operations:</strong> Participated in critical operations supporting national security objectives</li>
                                 <li><strong>Crisis Leadership:</strong> COVID-19 pandemic management across 4 facilities simultaneously with innovative coordination systems</li>
                                 <li><strong>System Innovation:</strong> Created equipment monitoring system adopted organization-wide; resource calculator published on official platform</li>
-                                <li><strong>Advanced Technical Systems:</strong> Expertise with Boeing aircraft and specialized aviation support equipment</li>
+                                <li>Advanced technical systems expertise across American (Boeing C-17), Russian (IL-76, AN-32), and French (Rafale) aircraft platforms with specialized aviation support equipment</li>
                             </ul>
                         </div>
                     </div>
@@ -1195,7 +1259,7 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2013-2016</div>
                         <div class="timeline-content">
-                            <h3>Progressive Leadership Development</h3>
+                            <h3>Operations Coordinator & Strategic Systems Developer</h3>
                             <p class="timeline-subtitle">Wing Operations | Tamil Nadu</p>
                             <ul>
                                 <li><strong>Executive Support:</strong> Personal Assistant to Air Officer Commanding - managed strategic communications and coordination</li>
@@ -1209,11 +1273,10 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2002-2013</div>
                         <div class="timeline-content">
-                            <h3>Technical Leadership Foundation & Excellence</h3>
+                            <h3>Technical Operations & Progressive Leadership Development</h3>
                             <p class="timeline-subtitle">Multiple Strategic Military Postings</p>
                             <ul>
                                 <li><strong>Progressive Advancement:</strong> Ground-up promotion through merit from technical specialist to senior operations leader</li>
-                                <li><strong>Multi-System Excellence:</strong> Technical operations across Russian, American, and Indian aircraft systems</li>
                                 <li><strong>Educational Integration:</strong> Completed MBA and BSc IT degrees while maintaining full-time military service excellence</li>
                                 <li><strong>Leadership Recognition:</strong> Awarded "Best in Ground Service Training" among 2000 trainees demonstrating early excellence pattern</li>
                                 <li><strong>Operational Reliability:</strong> Maintained strong safety and compliance record across high-risk technical operations</li>
@@ -1384,15 +1447,26 @@
 
                     <div class="card reveal">
                         <div class="card-title">Master of Business Administration (MBA)</div>
-                        <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Sikkim Manipal University, Gangtok</div>
-                        <div class="card-content">
-                            <strong>Duration:</strong> 2005-2008<br>
-                            <strong>Specialization:</strong> Technology Management<br>
-                            <strong>Notable Achievement:</strong> Completed concurrently with full-time military service<br>
-                            <strong>Key Areas:</strong> Strategic Technology Management, ERP Systems, Project Management
-                        </div>
+<div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Sikkim Manipal University, Gangtok</div>
+<div class="card-content">
+    <strong>Duration:</strong> 2005-2008 (Part-time)<br>
+    <strong>Specialization:</strong> Technology Management<br>
+    <strong>Notable Achievement:</strong> Completed concurrently with BSc IT and full-time military service<br>
+    <strong>Key Areas:</strong> Strategic Technology Management, ERP Systems, Project Management
+</div>
                     </div>
                 </div>
+
+		<div class="card reveal">
+    <div class="card-title">Bachelor of Science in Information Technology</div>
+    <div style="color: var(--primary-red); font-weight: 600; margin-bottom: 1rem;">Punjab Technical University, Jalandhar</div>
+    <div class="card-content">
+        <strong>Duration:</strong> 2006-2008 (Lateral Entry)<br>
+        <strong>Concurrent Achievement:</strong> Completed alongside MBA while serving full-time<br>
+        <strong>Strategic Value:</strong> Technical foundation complementing business education<br>
+        <strong>Technical Foundation:</strong> Programming, database management, system architecture
+    </div>
+</div>
 
                 <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid var(--primary-red);">
                     <h3 style="margin-bottom: 1.5rem;">Recent Professional Certifications (2023-2025)</h3>
@@ -1444,7 +1518,7 @@
 
                 <div class="cards-grid">
                     <div class="card reveal">
-                        <div class="card-title">Layer 1: Immediate Market Entry (0-18 months)</div>
+                        <div class="card-title">Layer 1: Immediate Market Entry</div>
                         <div class="card-content">
                             <strong>Target Roles:</strong>
                             <ul style="margin: 0.5rem 0 0 1rem; color: var(--text-light);">
@@ -1455,26 +1529,26 @@
                             </ul>
                             <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
                                 <strong>Geographic Focus:</strong> Bengaluru and Karnataka region<br>
-                                <strong>Timeline:</strong> 6-month employment window
-                            </div>
+                                </div>
                         </div>
                     </div>
 
                     <div class="card reveal">
-                        <div class="card-title">Layer 2: Growth Trajectory (18+ months)</div>
-                        <div class="card-content">
-                            <strong>Target Roles:</strong>
-                            <ul style="margin: 0.5rem 0 0 1rem; color: var(--text-light);">
-                                <li>AI Implementation Specialist (Business Focus)</li>
-                                <li>Chief of Staff / Strategic Operations</li>
-                                <li>Executive Advisory & Consulting</li>
-                                <li>Digital Transformation Lead</li>
-                            </ul>
-                            <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                                <strong>Focus:</strong> Strategic operations and C-suite advisory<br>
-                                <strong>Approach:</strong> Building on systematic innovation track record
-                            </div>
-                        </div>
+                        <div class="card-title">Layer 2: Growth Trajectory</div>
+                        <!-- REPLACE Layer 2 content with: -->
+<div class="card-content">
+    <strong>Strategic Development Roles:</strong>
+    <ul style="margin: 0.5rem 0 0 1rem; color: var(--text-light);">
+        <li>Business Process Excellence Leadership</li>
+        <li>Strategic Operations & Change Management</li>
+        <li>Digital Transformation Implementation</li>
+        <li>Executive Advisory & Consulting</li>
+    </ul>
+    <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+        <strong>Approach:</strong> Building advanced capabilities through systematic skill development<br>
+        <strong>Foundation:</strong> Proven innovation track record with business education
+    </div>
+</div>
                     </div>
                 </div>
 
@@ -1541,7 +1615,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -1576,8 +1649,8 @@
                 </div>
                 
                 <div class="footer-disclaimer">
-                    This portfolio demonstrates proven capabilities and authentic achievements. All dates, statistics, and accomplishments are verifiable through official military records and educational transcripts. Portfolio designed for professional evaluation and hiring consideration.
-                </div>
+    <strong>Professional Verification:</strong> All achievements, metrics, and accomplishments are verifiable through official military records and educational transcripts. Operational details reviewed for security compliance with standard protocols. Portfolio designed for professional evaluation and hiring consideration.
+</div>
             </div>
         </footer>
     </div>
@@ -1655,7 +1728,7 @@
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
                     e.preventDefault();
-                    const sectionIds = ['overview', 'translation', 'innovation', 'experience', 'skills', 'education', 'strategy'];
+                    const sectionIds = ['overview', 'translation', 'innovation', 'case-studies', 'experience', 'skills', 'education', 'strategy'];
                     const currentActive = document.querySelector('.nav-item.active');
                     
                     if (currentActive) {
@@ -1776,4 +1849,5 @@
         })();
     </script>
 </body>
-</html>
+</html>                    
+                
