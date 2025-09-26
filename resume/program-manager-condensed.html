@@ -174,11 +174,37 @@
             .job-header { flex-direction: column; }
             .education-item { flex-direction: column; }
         }
+
+        .print-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #c41e3a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
+    z-index: 1000;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.print-btn:hover {
+    background: #8b1538;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(196, 30, 58, 0.4);
+}
+
+@media print {
+    .print-btn { display: none !important; }
+}
+
     </style>
 </head>
 <body>
-    <button class="no-print" onclick="window.print()" style="position:absolute;top:5px;right:5px;padding:4px;font-size:8pt;">🖨️ Print</button>
-
+    <button class="print-btn" onclick="window.print()">🖨️ Print/Download PDF</button>
     <header class="header">
         <h1 class="name">CHANDRA SHEKHAR</h1>
         <div class="tagline">Program Manager | Operations Excellence • Multi-Site Coordination • International Collaboration</div>
