@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandra Shekhar - Program Manager</title>
+    <style>
+        @page { size: A4; margin: 0.5in 0.7in; }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.15;
+            color: #2c3e50;
+            background: white;
+        }
+        
+        @media print {
+            .no-print { display: none !important; }
+            a[href*="linkedin"]:after { content: " (LinkedIn)"; }
+            a[href*="portfolio"]:after { content: " (Portfolio: " attr(href) ")"; }
+            body { color: black !important; }
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 8pt;
+            margin-bottom: 12pt;
+        }
+        
+        .name {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2pt;
+        }
+        
+        .tagline {
+            font-size: 10pt;
+            color: #c41e3a;
+            font-weight: 600;
+            margin-bottom: 4pt;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            line-height: 1.2;
+        }
+        
+        .contact a { color: #2c3e50; text-decoration: none; }
+        
+        .section {
+            margin-bottom: 10pt;
+        }
+        
+        .section-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 2pt;
+            margin-bottom: 6pt;
+            text-transform: uppercase;
+        }
+        
+        .summary {
+            font-size: 10pt;
+            text-align: justify;
+            line-height: 1.25;
+            margin-bottom: 8pt;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8pt;
+            font-size: 9pt;
+        }
+        
+        .skill-category {
+            margin-bottom: 4pt;
+        }
+        
+        .skill-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2pt;
+        }
+        
+        .job {
+            margin-bottom: 10pt;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2pt;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 10pt;
+            color: #2c3e50;
+        }
+        
+        .job-company {
+            font-weight: bold;
+            font-size: 9pt;
+            color: #c41e3a;
+        }
+        
+        .job-date {
+            font-size: 9pt;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+        
+        .achievements {
+            list-style: disc;
+            padding-left: 12pt;
+            margin: 4pt 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 2pt;
+            font-size: 9pt;
+            line-height: 1.2;
+        }
+        
+        .education-item {
+            margin-bottom: 6pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10pt;
+        }
+        
+        .school {
+            color: #c41e3a;
+            font-size: 9pt;
+        }
+        
+        .edu-date {
+            font-size: 9pt;
+            color: #7f8c8d;
+            min-width: 80px;
+            text-align: right;
+        }
+        
+        .bottom-info {
+            font-size: 8pt;
+            line-height: 1.2;
+            margin-top: 6pt;
+        }
+        
+        .metric { font-weight: bold; color: #c41e3a; }
+        
+        @media (max-width: 640px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+            .education-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <button class="no-print" onclick="window.print()" style="position:absolute;top:5px;right:5px;padding:4px;font-size:8pt;">🖨️ Print</button>
+
+    <header class="header">
+        <h1 class="name">CHANDRA SHEKHAR</h1>
+        <div class="tagline">Program Manager | Operations Excellence • Multi-Site Coordination • International Collaboration</div>
+        <div class="contact">
+            <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> | +91 99997 31406 | Bengaluru, India<br>
+            <a href="https://www.linkedin.com/in/chandraiaf">linkedin.com/in/chandraiaf</a> | <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/">Professional Portfolio</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            <strong>Program Manager</strong> with <span class="metric">20+ years</span> managing complex defense operations and <strong>IIM Bangalore Executive Management</strong> qualification. Managed high-value operations (<span class="metric">₹200+ crore assets</span>) with <span class="metric">zero audit discrepancies</span>, led crisis coordination across multiple sites during COVID-19, and international stakeholder management with French defense teams. Proven systematic approach with efficiency improvements up to <span class="metric">70%</span> reduction in critical system failures.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-title">PROGRAM MANAGEMENT</div>
+                Strategic Planning • Risk Management • Change Management • Team Leadership • Budget Management • Timeline Management • Performance Optimization
+            </div>
+            <div class="skill-category">
+                <div class="skill-title">OPERATIONS COORDINATION</div>
+                Multi-site Coordination • Resource Allocation • Process Optimization • Crisis Management • Vendor Management • Quality Assurance
+            </div>
+            <div class="skill-category">
+                <div class="skill-title">STAKEHOLDER MANAGEMENT</div>
+                Client Relations • Cross-functional Teams • International Collaboration • Executive Reporting • Communication Planning • Vendor Coordination
+            </div>
+            <div class="skill-category">
+                <div class="skill-title">DEFENSE & INFRASTRUCTURE</div>
+                Defense Operations • Technology Integration • Security Protocols • Compliance Management • Government Relations • Infrastructure Support
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Strategic Career Development & Executive Education</div>
+                    <div class="job-company">IIM Bangalore EGMP Graduate</div>
+                </div>
+                <div class="job-date">Jan 2023 — Present</div>
+            </div>
+            <ul class="achievements">
+                <li>Completed <strong>Executive General Management Program (EGMP) at IIM Bangalore</strong> with Grade A in Strategic Management and Operations Planning</li>
+                <li>Established professional network of <span class="metric">74+ management professionals</span> across defense, manufacturing, and technology sectors</li>
+                <li>Applied EGMP methodologies to assess operational processes, identifying systematic improvement opportunities through structured analysis</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Selected Military Program Management Highlights</div>
+                    <div class="job-company">Indian Air Force</div>
+                </div>
+                <div class="job-date">2002-2022</div>
+            </div>
+            <ul class="achievements">
+                <li>Managed <span class="metric">₹200+ crore</span> aircraft operations from integration to deployment with <strong>international collaboration</strong> (French defense teams) ensuring complete technology transfer</li>
+                <li><strong>Led crisis operations during COVID-19</strong> across 4 facilities maintaining 100% continuity through adaptive planning and resource coordination</li>
+                <li>Reduced critical operational risks by <span class="metric">70%</span> and emergency procurement costs by <span class="metric">60%</span> through predictive planning and vendor optimization</li>
+                <li>Managed <strong>high-stakes VIP operations</strong> including Presidential support with <span class="metric">zero operational failures</span> and perfect compliance record</li>
+                <li>Developed organization-wide communication system (2015) adopted organization-wide in 2022, demonstrating <span class="metric">7-year lifecycle validation</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-item">
+            <div>
+                <div class="degree">Executive General Management Program (EGMP)</div>
+                <div class="school">Indian Institute of Management Bangalore</div>
+            </div>
+            <div class="edu-date">Mar 2024 — Jan 2025</div>
+        </div>
+        
+        <div class="education-item">
+            <div>
+                <div class="degree">Master of Computer Applications (MCA)</div>
+                <div class="school">Punjab Technical University</div>
+            </div>
+            <div class="edu-date">2011 — 2013</div>
+        </div>
+        
+        <div class="education-item">
+            <div>
+                <div class="degree">MBA — Technology Management</div>
+                <div class="school">Sikkim Manipal University</div>
+            </div>
+            <div class="edu-date">2005 — 2008</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Key Projects & Recognition</h2>
+        <div style="font-size: 9pt; line-height: 1.2;">
+            <strong>Rafale Technology Integration:</strong> Led international program delivery with French teams • <strong>Crisis Management Framework:</strong> COVID-19 multi-facility coordination • <strong>VIP Infrastructure Operations:</strong> Presidential support with zero failures • <strong>Recognition:</strong> Operations Excellence Awards, perfect compliance record, zero audit discrepancies
+        </div>
+    </section>
+
+    <div class="bottom-info">
+        <strong>Specializations:</strong> Defense Operations, Technology Integration, International Collaboration, Multi-site Coordination • <strong>Languages:</strong> English, Hindi, Maithili • <strong>Availability:</strong> Immediate interviews, 15-day notice • <strong>Location:</strong> Bengaluru-established with long-term commitment
+    </div>
+
+    <!-- CONDENSATION AUDIT -->
+    <!-- REMOVED: Detailed project descriptions, extensive education details, multiple role breakdowns
+    COMPRESSED: 20-year military career into umbrella program management highlights, merged similar achievements
+    KEYWORDS: Program management, operations coordination, stakeholder management, international collaboration -->
+
+</body>
+</html>

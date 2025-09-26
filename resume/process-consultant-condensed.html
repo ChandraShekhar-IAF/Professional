@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandra Shekhar - Process Excellence Leader</title>
+    <style>
+        @page { size: A4; margin: 0.5in 0.7in; }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.15;
+            color: #2c3e50;
+            background: white;
+        }
+        
+        @media print {
+    .no-print { display: none !important; }
+    a[href*="linkedin"]:after { content: " (LinkedIn)"; }
+    a[href*="portfolio"]:after { content: " (Portfolio: " attr(href) ")"; }
+    body { color: black !important; }
+}
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 8pt;
+            margin-bottom: 12pt;
+        }
+        
+        .name {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2pt;
+        }
+        
+        .tagline {
+            font-size: 10pt;
+            color: #c41e3a;
+            font-weight: 600;
+            margin-bottom: 4pt;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            line-height: 1.2;
+        }
+        
+        .contact a { color: #2c3e50; text-decoration: none; }
+        
+        .section {
+            margin-bottom: 10pt;
+        }
+        
+        .section-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 2pt;
+            margin-bottom: 6pt;
+            text-transform: uppercase;
+        }
+        
+        .summary {
+            font-size: 10pt;
+            text-align: justify;
+            line-height: 1.25;
+            margin-bottom: 8pt;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8pt;
+            font-size: 9pt;
+        }
+        
+        .skill-category {
+            margin-bottom: 4pt;
+        }
+        
+        .skill-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 2pt;
+        }
+        
+        .job {
+            margin-bottom: 10pt;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2pt;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 10pt;
+            color: #2c3e50;
+        }
+        
+        .job-company {
+            font-weight: bold;
+            font-size: 9pt;
+            color: #c41e3a;
+        }
+        
+        .job-date {
+            font-size: 9pt;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+        
+        .achievements {
+            list-style: disc;
+            padding-left: 12pt;
+            margin: 4pt 0;
+        }
+        
+        .achievements li {
+            margin-bottom: 2pt;
+            font-size: 9pt;
+            line-height: 1.2;
+        }
+        
+        .education-item {
+            margin-bottom: 6pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10pt;
+        }
+        
+        .school {
+            color: #c41e3a;
+            font-size: 9pt;
+        }
+        
+        .edu-date {
+            font-size: 9pt;
+            color: #7f8c8d;
+            min-width: 80px;
+            text-align: right;
+        }
+        
+        .bottom-info {
+            font-size: 8pt;
+            line-height: 1.2;
+            margin-top: 6pt;
+        }
+        
+        .metric { font-weight: bold; color: #c41e3a; }
+        
+        @media (max-width: 640px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+            .education-item { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <button class="no-print" onclick="window.print()" style="position:absolute;top:5px;right:5px;padding:4px;font-size:8pt;">🖨️ Print</button>
+
+    <header class="header">
+        <h1 class="name">CHANDRA SHEKHAR</h1>
+        <div class="tagline">Process Excellence Leader | Operations Optimization • Change Management • Systems Innovation</div>
+        <div class="contact">
+            <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> | +91 99997 31406 | Bengaluru, India<br>
+            <a href="https://www.linkedin.com/in/chandraiaf">linkedin.com/in/chandraiaf</a> | <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/">Professional Portfolio</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            Operations excellence leader with <strong>20+ years military service</strong> and <strong>IIM Bangalore executive education</strong> transitioning to process consulting. Proven systematic innovator with <span class="metric">25+ implemented systems</span> and track record managing <span class="metric">multi-crore operational programs</span> with perfect compliance record. Specializes in process optimization, crisis management, and sustainable system design with validated long-term adoption.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-title">PROCESS OPTIMIZATION</div>
+                Business Process Improvement • Workflow Optimization • Continuous Improvement • Performance Metrics Design • Standard Operating Procedures
+            </div>
+            <div class="skill-category">
+                <div class="skill-title">CHANGE MANAGEMENT</div>
+                Organizational Change Leadership • Digital Transformation • Training Development • Stakeholder Engagement • Adoption Strategy
+            </div>
+            <div class="skill-category">
+                <div class="skill-title">SYSTEMATIC INNOVATION</div>
+                Systems Design • Innovation Frameworks • Solution Engineering • Knowledge Management • Best Practice Creation
+            </div>
+            <div class="skill-category">
+                <div class="skill-title">OPERATIONS EXCELLENCE</div>
+                Operations Management • Quality Management • Crisis Management • Multi-site Coordination • International Collaboration
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Process Excellence Specialist — Career Development</div>
+                    <div class="job-company">IIM Bangalore EGMP Graduate</div>
+                </div>
+                <div class="job-date">Jan 2023 — Present</div>
+            </div>
+            <ul class="achievements">
+                <li>Completed <strong>Executive General Management Program (EGMP) at IIM Bangalore</strong> achieving Grade A in Strategic Management and Business Process Architecture</li>
+                <li>Built professional network of <span class="metric">74+ transformation specialists</span> across consulting, manufacturing, and technology sectors</li>
+                <li>Mentored <span class="metric">8+ ex-servicemen</span> in successful corporate transitions through systematic process excellence approaches</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Selected Military Highlights — Operations & Innovation Leadership</div>
+                    <div class="job-company">Indian Air Force</div>
+                </div>
+                <div class="job-date">2002-2022</div>
+            </div>
+            <ul class="achievements">
+                <li><strong>Reduced critical process failures by 70%</strong> through innovative improvement methodologies implemented across 3 operational units managing <span class="metric">multi-crore asset portfolios</span></li>
+                <li><strong>Maintained 100% operational continuity during COVID-19 crisis</strong> across 4 facilities through comprehensive business continuity transformation</li>
+                <li>Created communication system with <strong>7-year lifecycle validation</strong> — adopted organization-wide in 2022 demonstrating sustainable process design principles</li>
+                <li>Led international technology integration with French technical teams ensuring complete knowledge transfer and local process capability development</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-item">
+            <div>
+                <div class="degree">Executive General Management Program (EGMP)</div>
+                <div class="school">Indian Institute of Management Bangalore</div>
+            </div>
+            <div class="edu-date">Mar 2024 — Jan 2025</div>
+        </div>
+        
+        <div class="education-item">
+            <div>
+                <div class="degree">Master of Computer Applications (MCA)</div>
+                <div class="school">Punjab Technical University</div>
+            </div>
+            <div class="edu-date">2011 — 2013</div>
+        </div>
+        
+        <div class="education-item">
+            <div>
+                <div class="degree">MBA — Technology Management</div>
+                <div class="school">Sikkim Manipal University</div>
+            </div>
+            <div class="edu-date">2005 — 2008</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Key Projects & Recognition</h2>
+        <div style="font-size: 9pt; line-height: 1.2;">
+            <strong>Zero-Error Operations Framework:</strong> Perfect operational compliance across 20+ years • <strong>Crisis Business Continuity:</strong> 100% continuity during pandemic • <strong>Innovation Framework:</strong> 25+ systems with sustained adoption • <strong>Recognition:</strong> Military Process Excellence Awards, zero audit discrepancies
+        </div>
+    </section>
+
+    <div class="bottom-info">
+        <strong>Specializations:</strong> Process Improvement, Change Management, Digital Transformation, Systematic Innovation • <strong>Languages:</strong> English, Hindi, Maithili • <strong>Availability:</strong> Immediate interviews, 15-day notice period • <strong>Location:</strong> Bengaluru-established
+    </div>
+
+    <!-- CONDENSATION AUDIT -->
+    <!-- REMOVED: Detailed project descriptions, multiple education details, extensive certifications
+    COMPRESSED: 20-year military career into umbrella highlights, merged similar skill categories  
+    KEYWORDS: Process optimization, change management, digital transformation, business continuity -->
+
+</body>
+</html>
