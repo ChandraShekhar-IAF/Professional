@@ -1,678 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandra Shekhar - Operations Excellence Specialist</title>
-    <meta name="description" content="Operations Excellence Specialist with 20+ years aerospace and defense experience transitioning to manufacturing operations leadership">
-    <meta name="author" content="Chandra Shekhar">
-    <meta name="keywords" content="Operations Manager, Operational Excellence, Aerospace Operations, Predictive Maintenance, Inventory Management, ERP, Crisis Management, Manufacturing Transition">
-    <style>
-        /* CSS Reset and Variables */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-navy: #2c3e50;
-            --accent-red: #c41e3a;
-            --primary-red: #c41e3a;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --border-color: #bdc3c7;
-            --bg-light: #f8f9fa;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chandra Shekhar - Operations Excellence Leader</title>
+  <meta name="description" content="Operations excellence leader with 20-year proven track record, IIM Bangalore EGMP graduate, seeking manufacturing/aerospace operations management roles">
+  <style>
+    /* Reset and Variables */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Base Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            font-size: 11pt;
-            line-height: 1.4;
-            color: var(--text-dark);
-            background: white;
-            max-width: 8.5in;
-            margin: 0 auto;
-            padding: 0.5in;
-        }
+    :root{
+      --primary-navy:#2c3e50;
+      --accent-red:#c41e3a;
+      --text-dark:#2c3e50;
+      --text-light:#7f8c8d;
+      --base-font-stack: 'Calibri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
 
-        /* Print Styles with enhanced page breaks */
-        @media print {
-            * {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            body {
-                margin: 0;
-                padding: 0.5in;
-                color: black;
-                background: white;
-                font-size: 10pt;
-            }
-            
-            .download-link {
-                display: none !important;
-            }
-            
-            a {
-                color: black;
-                text-decoration: none;
-            }
+    /* Page Setup */
+    @page { size: A4; margin: 0.5in 0.65in; }
 
-            a[href]:after {
-                content: " (" attr(href) ")";
-                font-size: 9pt;
-                color: #000;
-            }
+    body {
+      font-family: var(--base-font-stack);
+      font-size: 10.5pt;
+      line-height: 1.15;
+      color: var(--text-dark);
+      background: white;
+      max-width: 8.27in;
+      margin: 0 auto;
+      padding: 0.5in 0.65in;
+    }
 
-            .job, .project, .education-item {
-                page-break-inside: avoid;
-                break-inside: avoid-page;
-                break-inside: avoid-column;
-                -webkit-column-break-inside: avoid;
-            }
-            
-            h2, h1 { 
-                orphans: 3; 
-                widows: 3; 
-            }
-            
-            /* Fix bullet alignment for print */
-            .achievements {
-                list-style-position: inside;
-                padding-left: 0.6rem;
-            }
-            
-            .achievements li::marker {
-                color: black;
-            }
-        }
+    /* Print Styles - tightened to force two-pages without trimming content */
+    @media print {
+      /* slightly reduce page margins and base font for print */
+      @page { size: A4; margin: 0.45in 0.55in; }
+      body { 
+        margin: 0; 
+        padding: 0.4in 0.55in; 
+        font-size: 9.9pt;          /* reduced from 10.5pt */
+        line-height: 1.08;        /* tighter line-height */
+      }
 
-        @page {
-            margin: 0.5in;
-        }
+      /* color/printing */
+      * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .no-print { display: none !important; }
+      a { color: black; text-decoration: none; }
 
-        /* Focus styles for accessibility */
-        a:focus {
-            outline: 3px solid var(--accent-red);
-            outline-offset: 2px;
-        }
+      /* page break control */
+      .page-1 { page-break-after: always; }
+      .page-2 { page-break-before: always; }
+      .job, .project-item, .education-item { page-break-inside: avoid; break-inside: avoid; }
 
-        /* Header Section */
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary-navy);
-            padding-bottom: 12pt;
-            margin-bottom: 16pt;
-        }
+      /* tighten header for print */
+      .header {
+        margin-bottom: 8pt;
+        padding-bottom: 6pt;
+        border-bottom-width: 1pt;
+      }
+      .name { font-size: 15pt; } /* slightly smaller in print */
+      .contact-info { font-size: 9pt; line-height:1.05; }
+      .tagline { font-size: 9.25pt; }
 
-        .name {
-            font-size: 18pt;
-            font-weight: bold;
-            color: var(--primary-navy);
-            margin-bottom: 4pt;
-            letter-spacing: 1pt;
-        }
+      /* tighten distances */
+      .section { margin-bottom: 8pt; }
+      .section-title { padding-bottom: 1pt; margin-bottom: 4pt; font-size: 10.25pt; }
+      .summary { font-size: 9.8pt; line-height:1.1; }
+      .keywords { font-size:9pt; }
 
-        .title {
-            font-size: 12pt;
-            font-weight: bold;
-            color: var(--accent-red);
-            margin-bottom: 8pt;
-        }
+      .achievements { padding-left: 0.9rem; margin: 3pt 0; }
+      .achievements li { margin-bottom: 2pt; font-size:9.25pt; line-height:1.08; }
 
-        /* Contact info as semantic address */
-        .contact-info {
-            font-size: 10pt;
-            line-height: 1.3;
-            color: var(--text-dark);
-        }
+      .project-item { margin-bottom: 6pt; }
+      .project-description { font-size:9.25pt; line-height:1.08; }
 
-        .contact-info a {
-            color: var(--text-dark);
-            text-decoration: none;
-        }
+      .education-item { margin-bottom:6pt; }
+      .education-details { font-size:9pt; line-height:1.08; }
 
-        /* Portfolio Callout */
-        .portfolio-callout {
-            background: var(--bg-light);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            padding: 8pt;
-            margin-bottom: 16pt;
-            text-align: center;
-            font-size: 10pt;
-        }
+      .cert-list { font-size:8.9pt; line-height:1.08; margin-left:0.6rem; }
 
-        .portfolio-link {
-            color: var(--accent-red);
-            font-weight: bold;
-            text-decoration: none;
-        }
+      /* hide print button */
+      .print-btn { display:none !important; }
+    }
 
-        /* Section Styles */
-        .section {
-            margin-bottom: 16pt;
-        }
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 12pt;
+      border-bottom: 1.5pt solid var(--primary-navy);
+      padding-bottom: 8pt;
+    }
 
-        .section-title {
-            font-size: 12pt;
-            font-weight: bold;
-            color: var(--primary-navy);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 4pt;
-            margin-bottom: 8pt;
-            text-transform: uppercase;
-            letter-spacing: 0.5pt;
-        }
+    .name {
+      font-size: 16pt;
+      font-weight: bold;
+      color: var(--primary-navy);
+      margin-bottom: 3pt;
+      letter-spacing: 1pt;
+    }
 
-        /* Professional Summary */
-        .summary {
-            font-size: 11pt;
-            line-height: 1.5;
-            text-align: justify;
-        }
+    .contact-info {
+      font-size: 9.5pt;
+      line-height: 1.2;
+      color: var(--text-dark);
+      margin-top: 4px;
+      word-break: break-word;
+    }
 
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12pt;
-            margin-top: 8pt;
-        }
+    .tagline {
+      font-size: 10pt;
+      color: var(--accent-red);
+      font-weight: bold;
+      margin-top: 3pt;
+    }
 
-        .skill-category {
-            margin-bottom: 8pt;
-        }
+    /* Sections */
+    .section { margin-bottom: 12pt; }
+    .section-title {
+      font-size: 11pt;
+      font-weight: bold;
+      color: var(--primary-navy);
+      border-bottom: 1pt solid var(--text-light);
+      padding-bottom: 2pt; margin-bottom: 6pt;
+      text-transform: uppercase; letter-spacing: 0.5pt;
+    }
 
-        .skill-category-title {
-            font-weight: bold;
-            color: var(--primary-navy);
-            font-size: 10pt;
-            margin-bottom: 4pt;
-        }
+    /* Summary */
+    .summary {
+      font-size: 10pt; line-height: 1.3; text-align: justify; margin-bottom: 10pt;
+    }
 
-        .skill-list {
-            font-size: 10pt;
-            line-height: 1.3;
-        }
+    /* Skills / Keywords */
+    .keywords {
+      margin-top: 6px;
+      font-size: 9.5pt;
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
 
-        /* Experience Section */
-        .job {
-            margin-bottom: 16pt;
-            page-break-inside: avoid;
-        }
+    /* Competencies */
+    .competencies { font-size: 9.5pt; line-height: 1.25; }
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 4pt;
-        }
+    /* Experience */
+    .job { margin-bottom: 10pt; }
+    .job-header { display:flex; justify-content:space-between; margin-bottom: 2pt; gap:12px; align-items:flex-start; }
+    .job-title { font-weight:bold; font-size:10.5pt; color: var(--primary-navy); }
+    .job-company { font-size:9.5pt; color: var(--accent-red); font-weight:bold; margin-top:2px; }
+    .job-date { font-size:9.5pt; color: var(--text-light); font-weight:bold; white-space:nowrap; text-align:right; flex:0 0 auto; }
 
-        .job-title {
-            font-weight: bold;
-            font-size: 11pt;
-            color: var(--primary-navy);
-        }
+    .achievements { list-style: disc outside; padding-left: 1rem; margin: 4pt 0; }
+    .achievements li {
+      margin-bottom: 3pt; font-size:9.5pt; line-height:1.3; text-align:justify;
+    }
+    .achievements li::marker { color: var(--accent-red); }
 
-        .job-company {
-            font-weight: bold;
-            font-size: 10pt;
-            color: var(--accent-red);
-        }
+    /* Projects */
+    .project-item { margin-bottom: 8pt; }
+    .project-title { font-weight: bold; color: var(--primary-navy); font-size: 10pt; }
+    .project-meta { font-size: 9pt; color: var(--text-light); margin-bottom: 2pt; }
+    .project-description { font-size: 9.5pt; line-height: 1.3; text-align: justify; }
 
-        .job-date {
-            font-size: 10pt;
-            color: var(--text-light);
-            font-weight: bold;
-        }
+    /* Education */
+    .education-item {
+      margin-bottom: 8pt;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .degree-school { flex: 1 1 70%; min-width: 0; }
+    .degree { font-weight: bold; color: var(--primary-navy); font-size: 10pt; margin-bottom: 2px; }
+    .school { color: var(--accent-red); font-size: 9.5pt; font-weight: bold; margin-bottom: 4px; }
+    .education-date { font-size: 9pt; color: var(--text-light); white-space: nowrap; flex:0 0 auto; text-align:right; }
+    .education-details { font-size: 9pt; line-height: 1.25; margin-top: 2pt; }
 
-        .job-location {
-            font-size: 10pt;
-            color: var(--text-light);
-            font-style: italic;
-            margin-bottom: 6pt;
-        }
+    /* Certifications */
+    .cert-list { font-size: 9pt; line-height: 1.3; margin-left: 0.8rem; }
 
-        /* Enhanced achievements with fallback bullet handling */
-        .achievements {
-            list-style: disc outside;
-            padding-left: 1.1rem;
-            margin: 0 0 8pt 0;
-        }
+    /* Utility */
+    .metric { font-weight:bold; color: var(--accent-red); }
 
-        .achievements li {
-            margin-bottom: 4pt;
-            font-size: 10pt;
-            line-height: 1.4;
-            text-align: justify;
-            display: list-item;
-        }
+    /* Page containers */
+    .page-1 { }
+    .page-2 { }
 
-        .achievements li::marker {
-            color: var(--accent-red);
-            font-weight: 700;
-        }
+    /* Print Button */
+    .print-btn {
+      position: fixed; top: 10px; right: 10px; background: var(--accent-red);
+      color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;
+      font-size: 10pt; font-weight: bold; z-index:1000;
+    }
+    .print-btn:hover { background: #a01829; }
 
-        /* Education Section */
-        .education-item {
-            margin-bottom: 12pt;
-        }
+    @media print { .print-btn { display:none !important; } }
 
-        .degree {
-            font-weight: bold;
-            color: var(--primary-navy);
-            font-size: 11pt;
-        }
-
-        .school {
-            color: var(--accent-red);
-            font-weight: bold;
-            font-size: 10pt;
-        }
-
-        .education-date {
-            font-size: 10pt;
-            color: var(--text-light);
-            float: right;
-        }
-
-        .education-details {
-            font-size: 10pt;
-            margin-top: 4pt;
-            line-height: 1.3;
-        }
-
-        /* Projects Section */
-        .project {
-            margin-bottom: 12pt;
-            page-break-inside: avoid;
-        }
-
-        .project-title {
-            font-weight: bold;
-            color: var(--primary-navy);
-            font-size: 11pt;
-        }
-
-        .project-details {
-            font-size: 10pt;
-            color: var(--text-light);
-            margin-bottom: 4pt;
-        }
-
-        .project-description {
-            font-size: 10pt;
-            line-height: 1.4;
-            text-align: justify;
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12pt;
-            font-size: 10pt;
-        }
-
-        .cert-category {
-            line-height: 1.4;
-        }
-
-        /* Download Link */
-        .download-link {
-            color: var(--accent-red);
-            text-decoration: none;
-            font-size: 10pt;
-            font-weight: bold;
-        }
-
-        .download-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Utility Classes */
-        .metric {
-            font-weight: bold;
-            color: var(--accent-red);
-        }
-
-        .no-wrap {
-            white-space: nowrap;
-        }
-
-        /* Responsive design */
-        @media (max-width: 640px) {
-            body {
-                font-size: 14px;
-                padding: 0.3in;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .job-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+    /* Small responsive fix for contact line */
+    @media (max-width:720px) {
+      .contact-info { font-size:9pt; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Download Link -->
-    <div style="text-align:right; margin-top:8px; margin-bottom:6px;">
-     <a href="#" onclick="window.print(); return false;" class="download-link" aria-label="Print or Download as PDF">Print / Download PDF</a>   
-    </div>
-    
-    <!-- Header Section -->
+  <!-- Print Button -->
+  <button class="print-btn no-print" onclick="window.print()" aria-label="Print or save resume as PDF">🖨️ Print/Save PDF</button>
+
+  <!-- PAGE 1 -->
+  <div class="page-1">
+    <!-- Header -->
     <header class="header">
-        <h1 class="name">CHANDRA SHEKHAR</h1>
-        <div class="title">Operations Excellence Specialist — Aerospace to Manufacturing Transition</div>
-        <address class="contact-info">
-    csiimbveteran@gmail.com | +91 99997 31406 | Bengaluru, Karnataka<br>
-    <a href="https://www.linkedin.com/in/chandraiaf" target="_blank" rel="noopener noreferrer">linkedin.com/in/chandraiaf</a>
-</address>
+      <h1 class="name">CHANDRA SHEKHAR</h1>
+      <div class="contact-info">
+        Bengaluru, Karnataka • <strong>+91 99997 31406</strong> • csiimbveteran@gmail.com • linkedin.com/in/chandraiaf
+      </div>
+      <div class="tagline">Operations Excellence Leader | IIM Bangalore EGMP Graduate | Available to join with 15 days' notice</div>
     </header>
 
-    <!-- Portfolio Link Callout -->
-    <div class="portfolio-callout">
-        <strong>📁 Complete Portfolio:</strong> 
-        <a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/" class="portfolio-link" target="_blank" rel="noopener noreferrer" title="Open full portfolio (new tab)" aria-label="View comprehensive portfolio with case studies and detailed achievements">View comprehensive portfolio with case studies and detailed achievements</a>
-    </div>
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <!-- Skills / Keywords for ATS -->
+      <div class="keywords">
+        <strong>Key Skills:</strong> Process Optimization, Predictive Maintenance, Inventory Management, Program Delivery, Vendor Management, Continuous Improvement, Quality Assurance, Crisis Management, Multi-Site Operations, Stakeholder Management, Change Management
+      </div>
+      <p class="summary">
+        Operations excellence leader with <strong>20-year track record</strong> of zero-error program delivery across <span class="metric">₹200+ crore</span> asset portfolios, multi-site coordination, and systems innovation. Recently completed <strong>Executive General Management Programme (EGMP)</strong> at IIM Bangalore with Grade A performance in Strategic Management and Corporate Finance. Designed and implemented <span class="metric">25+ operational systems</span> adopted organization-wide, achieving approximately 25% inventory efficiency improvement and up to 70% reduction in critical stockouts. Ready to apply program delivery, process optimization, and stakeholder management expertise to senior operations or program management roles in manufacturing, aerospace, and defense.
+      </p>
 
-    <main id="main-content" role="main">
-        <!-- Professional Summary -->
-        <section class="section" aria-labelledby="summary-title">
-            <h2 id="summary-title" class="section-title">Professional Summary</h2>
-            <p class="summary">
-                <strong>Operations Excellence Specialist</strong> with <strong>20+ years aerospace and defense systems experience</strong> seeking to transition proven systematic frameworks to manufacturing operations leadership. Expert in zero-error operational frameworks, crisis management, and systematic process optimization with <span class="metric">₹200+ crore</span> high-value equipment portfolio management achieving consistently high regulatory compliance across audits</span>. Recent <strong>IIM Bangalore Executive Management Program</strong> graduate with proven <span class="metric">25+ systems innovation</span> track record and organization-wide adoption success. <strong>Ready to apply military precision and systematic excellence to manufacturing operations challenges.</strong>
-            </p>
-        </section>
+    </section>
 
-        <!-- Core Competencies -->
-        <section class="section" aria-labelledby="skills-title">
-            <h2 id="skills-title" class="section-title">Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-category-title">OPERATIONS EXCELLENCE</div>
-                    <div class="skill-list">
-                        Systems Operations • Process Optimization • Quality Systems • Inventory Management • Compliance Management • Equipment Lifecycle Management
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">CRISIS & RISK MANAGEMENT</div>
-                    <div class="skill-list">
-                        Crisis Leadership • Business Continuity • Risk Assessment • Emergency Planning • Multi-facility Coordination • Contingency Operations
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">ADVANCED SYSTEMS MANAGEMENT</div>
-                    <div class="skill-list">
-                        Aerospace Systems • Defense Equipment • Predictive Maintenance • Asset Management • Safety Protocols • International Standards
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-title">STRATEGIC LEADERSHIP</div>
-                    <div class="skill-list">
-                        Strategic Planning • Team Leadership • Vendor Management • Budget Planning • Performance Metrics • Change Management
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Core Competencies -->
+    <section class="section">
+      <h2 class="section-title">Core Competencies</h2>
+      <div class="competencies">
+        <div><strong>Operations Management:</strong> Process Optimization • Multi-Site Operations • Quality Management • Supply Chain Coordination • Continuous Improvement • Resource Allocation</div>
+        <div><strong>Program Leadership:</strong> Program Delivery • Stakeholder Management • Cross-Functional Leadership • Risk Mitigation • Budget Oversight (₹200+ Cr) • Vendor Management</div>
+        <div><strong>Strategic Excellence:</strong> Crisis Management • Business Continuity • Performance Tracking • Compliance Management • Change Management • Systems Thinking</div>
+      </div>
+    </section>
 
-        <!-- Professional Experience -->
-        <section class="section" aria-labelledby="experience-title">
-            <h2 id="experience-title" class="section-title">Professional Experience</h2>
-            
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Career Transition & Strategic Business Development</div>
-                        <div class="job-company">Executive Management Program Graduate</div>
-                    </div>
-                    <div class="job-date"><time datetime="2023-01">Jan 2023</time> – Present</div>
-                </div>
-                <div class="job-location">IIM Bangalore, Bengaluru & Independent Consulting</div>
-                <ul class="achievements">
-                    <li>Completed intensive Executive General Management Program (EGMP) at IIM Bangalore with Grade A performance in Strategic Management and Operations Management</li>
-                    <li>Develop and refine operations excellence frameworks integrating military systematic approaches with modern business methodologies for industrial applications</li>
-                    <li>Conducted operational assessments and process improvement consulting for <span class="metric">3+ organizations</span> identifying systematic optimization opportunities</li>
-                    <li>Built comprehensive professional network of <span class="metric">74+ industry executives</span> across manufacturing, aerospace, and defense sectors in Bengaluru region</li>
-                    <li>Established permanent base in Bengaluru's manufacturing corridor for long-term operations excellence career focus</li>
-                </ul>
-            </div>
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Senior Operations Specialist, Advanced Systems Integration</div>
-                        <div class="job-company">Indian Air Force</div>
-                    </div>
-                    <div class="job-date"><time datetime="2021-02">Feb 2021</time> – <time datetime="2022-12">Dec 2022</time></div>
-                </div>
-                <div class="job-location">Air Force Station Hasimara, West Bengal</div>
-                <ul class="achievements">
-                    <li>Established complete Ground Equipment Section for advanced fighter aircraft operations managing specialized inventory worth <span class="metric">₹200+ crores</span> with zero discrepancies</li>
-                    <li>Led international collaboration with French technical teams ensuring complete technology transfer and operational capability development</li>
-                    <li>Implemented predictive maintenance protocols extending equipment lifespan by <span class="metric">65%</span> and reducing critical failures by <span class="metric">70%</span></li>
-                    <li>Managed cross-functional technical teams of <span class="metric">20+ specialists</span> across three operational facilities with strategic resource allocation</li>
-                    <li>Maintained perfect operational compliance record during multiple government audits of high-value defense systems equipment</li>
-                </ul>
-            </div>
+      <!-- Current Position -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Strategic Career Transition & Executive Development</div>
+            <div class="job-company">Independent Professional Development | Bengaluru, Karnataka</div>
+          </div>
+          <div class="job-date">January 2023 – Present</div>
+        </div>
+        <ul class="achievements">
+          <li>Completed <strong>IIM Bangalore EGMP</strong> (March 2024–Jan 2025) with Grade A in Strategic Management, Corporate Finance, and Information Systems Management</li>
+          <li>Earned <span class="metric">15+ business certifications</span> in operations excellence, process optimization, and digital transformation; built <span class="metric">74-member industry network</span> across manufacturing, aerospace, and consulting sectors</li>
+          <li>Conducted professional mentorship for ex-servicemen transitioning to civilian operations and program management roles</li>
+        </ul>
+      </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Operations Specialist, Critical Systems & Crisis Management</div>
-                        <div class="job-company">Indian Air Force</div>
-                    </div>
-                    <div class="job-date"><time datetime="2017-04">Apr 2017</time> – <time datetime="2021-02">Feb 2021</time></div>
-                </div>
-                <div class="job-location">3 Wing Air Force Station, Palam, New Delhi</div>
-                <ul class="achievements">
-                    <li>Managed critical systems operations for VIP aviation including specialized ground support systems for Presidential fleet with <span class="metric">zero safety incidents</span></li>
-                    <li>Led comprehensive COVID-19 crisis management across <span class="metric">4 operational facilities simultaneously</span> maintaining 100% operational continuity through innovative coordination protocols</li>
-                    <li>Developed real-time equipment monitoring system for operations adopted organization-wide with consumption calculator reducing material waste by <span class="metric">25%</span></li>
-                    <li>Achieved <span class="metric">60% reduction</span> in emergency procurement costs through predictive planning and systematic supplier optimization</li>
-                    <li>Participated in critical national security operations providing essential systems support and logistics coordination</li>
-                </ul>
-            </div>
+      <!-- Military Career Consolidated -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Senior Operations Manager (Progressive Leadership Roles)</div>
+            <div class="job-company">Indian Air Force | Multi-Site Strategic Operations</div>
+          </div>
+          <div class="job-date">December 2002 – December 2022</div>
+        </div>
+        <ul class="achievements">
+          <li>Advanced through merit-based promotions across <span class="metric">10 strategic installations</span>, managing high-stakes operations, crisis coordination, and international programs</li>
+          <li>Maintained <span class="metric">₹200+ crore equipment and asset portfolio</span> with <strong>zero audit discrepancies</strong> across 20-year career through predictive maintenance protocols and standardized asset tracking; reduced critical stockouts by up to 70%</li>
+          <li>Developed <span class="metric">25+ operational systems</span> adopted organization-wide; solutions sustained 7+ year lifecycle and reduced process delays by approximately 60% through workflow automation and real-time monitoring</li>
+          <li>Coordinated <strong>COVID-19 business continuity</strong> across 4 installations simultaneously, maintaining 100% operational readiness through remote protocols, staggered shifts, and resource optimization</li>
+          <li>Led multi-site operations across 10 strategic installations and 8 states; supervised teams ranging from 5-50 personnel and delivered seamless cross-site program alignment through systematic planning</li>
+          <li>Managed <strong>international systems integration</strong> (French Rafale program) with zero safety incidents; coordinated cross-cultural training and technology transfer achieving 100% operational certification within timeline</li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Operations Coordinator & Systems Innovation Specialist</div>
-                        <div class="job-company">Indian Air Force</div>
-                    </div>
-                    <div class="job-date"><time datetime="2013-04">Apr 2013</time> – <time datetime="2017-04">Apr 2017</time></div>
-                </div>
-                <div class="job-location">Multiple Operational Locations across India</div>
-                <ul class="achievements">
-                    <li>Developed comprehensive communication system demonstrating sustainable design principles — later adopted organization-wide in 2022 (<span class="metric">7-year lifecycle validation</span>)</li>
-                    <li>Served as Operations Coordinator managing strategic communications, systems planning, and quality assurance across multiple departments</li>
-                    <li>Awarded Safety Excellence Award for exceptional contributions to operational safety protocols and zero-incident track record</li>
-                    <li>Led system integration projects involving user training, process documentation, and change management across multiple departments</li>
-                    <li>Created systematic communication protocols reducing inter-departmental delays by <span class="metric">60%</span> and improving operational efficiency</li>
-                </ul>
-            </div>
+  <!-- PAGE 2 -->
+  <div class="page-2">
+    <!-- Key Projects -->
+    <section class="section">
+      <h2 class="section-title">Key Projects & Achievements</h2>
 
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Technical Operations & Progressive Leadership Development</div>
-                        <div class="job-company">Indian Air Force</div>
-                    </div>
-                    <div class="job-date"><time datetime="2002-12">Dec 2002</time> – <time datetime="2013-04">Apr 2013</time></div>
-                </div>
-                <div class="job-location">Multiple Operational Bases across India</div>
-                <ul class="achievements">
-                    <li>Progressive advancement through technical roles demonstrating consistent operational excellence and systematic innovation capabilities</li>
-                    <li>Managed specialized equipment operations and maintenance for multiple aircraft platforms including international systems integration</li>
-                    <li>Developed standardized operational procedures adopted across multiple facilities for equipment management and safety protocols</li>
-                    <li>Mentored <span class="metric">100+ operational personnel</span>  with comprehensive knowledge transfer and high success rates</li>
-                    <li>Maintained <strong> exemplary safety record </strong> throughout 20-year military career in high-risk technical operations</li>
-                </ul>
-            </div>
-        </section>
+      <div class="project-item">
+        <div class="project-title">Zero-Error Operations Framework | 2002–2022</div>
+        <div class="project-meta">Challenge-Action-Result Framework</div>
+        <p class="project-description">
+          <strong>Challenge:</strong> Maintain perfect compliance and operational readiness across high-value, high-complexity asset portfolio.<br>
+          <strong>Action:</strong> Designed predictive maintenance systems, standardized SOPs, and implemented real-time monitoring dashboards with automated alerts.<br>
+          <strong>Result:</strong> Achieved zero audit discrepancies across 20-year career; reduced critical stockouts by up to 70%, improved inventory efficiency by approximately 25%, and sustained 100% operational readiness through systematic quality protocols.
+        </p>
+      </div>
 
-        <!-- Key Projects & Achievements -->
-        <section class="section" aria-labelledby="projects-title">
-            <h2 id="projects-title" class="section-title">Key Operations Projects & Systematic Innovations</h2>
-            
-            <div class="project">
-                <div class="project-title">Zero-Error Operations Framework Implementation</div>
-                <div class="project-details"><time datetime="2017">2017</time>-<time datetime="2022">2022</time> | Multi-facility deployment | ₹200+ crore equipment portfolio</div>
-                <div class="project-description">
-                    Designed and implemented comprehensive zero-error operations framework across high-value aerospace systems operations. Achieved full regulatory compliance through systematic process optimization, predictive maintenance, and real-time operational monitoring. Framework adopted organization-wide demonstrating sustainable operations excellence principles applicable to manufacturing environments.
-                </div>
-            </div>
+      <div class="project-item">
+        <div class="project-title">International Systems Integration (French Rafale Program) | 2021–2022</div>
+        <div class="project-meta">Cross-Cultural Program Management</div>
+        <p class="project-description">
+          <strong>Challenge:</strong> Integrate advanced French fighter aircraft systems with existing operations across 3 strategic bases.<br>
+          <strong>Action:</strong> Coordinated with French technical teams, led cross-cultural training programs, and established predictive maintenance frameworks for ₹200+ crore equipment portfolio.<br>
+          <strong>Result:</strong> Delivered seamless technology transfer with zero safety incidents; achieved 100% operational certification within 6-month timeline through systematic integration protocols.
+        </p>
+      </div>
 
-            <div class="project">
-                <div class="project-title">Crisis Operations Continuity Management (COVID-19)</div>
-                <div class="project-details"><time datetime="2020">2020</time>-<time datetime="2021">2021</time> | Multi-facility coordination | 4 operational facilities</div>
-                <div class="project-description">
-                    Led comprehensive crisis operations response across four facilities during COVID-19 pandemic. Maintained 100% operational continuity through innovative safety protocols, resource reallocation, and adaptive operational schedules. Created crisis management templates adopted organization-wide with direct applications to manufacturing continuity planning.
-                </div>
-            </div>
+      <div class="project-item">
+        <div class="project-title">Multi-Facility Crisis Management (COVID-19) | 2020–2021</div>
+        <div class="project-meta">Business Continuity Leadership</div>
+        <p class="project-description">
+          <strong>Challenge:</strong> Maintain operations across 4 facilities during pandemic with zero service disruption.<br>
+          <strong>Action:</strong> Implemented remote protocols, staggered shifts, health tracking systems, and optimized resource allocation across sites.<br>
+          <strong>Result:</strong> Achieved 100% operational continuity with zero COVID transmissions; created crisis management playbook adopted by senior leadership for future contingency planning.
+        </p>
+      </div>
+    </section>
 
-            <div class="project">
-                <div class="project-title">International Systems Technology Integration</div>
-                <div class="project-details"><time datetime="2021">2021</time>-<time datetime="2022">2022</time> | French collaboration | Advanced aerospace systems</div>
-                <div class="project-description">
-                    Managed complex international systems technology transfer with French technical teams. Ensured complete knowledge transfer, local operational capability development, and system readiness for advanced aerospace operations. Zero delays in critical operational milestones demonstrating systematic project management excellence.
-                </div>
-            </div>
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
 
-            <div class="project">
-                <div class="project-title">Systematic Operations Innovation Portfolio</div>
-                <div class="project-details"><time datetime="2013">2013</time>-<time datetime="2022">2022</time> | 25+ systems created | Operations-wide adoption</div>
-                <div class="project-description">
-                    Developed 25+ operational systems addressing critical business needs including quality protocols, resource management, and process optimization. Notable: Communication system created in 2015 remains active organization-wide, demonstrating 7-year sustainable operations innovation with transferable applications to manufacturing environments.
-                </div>
-            </div>
-        </section>
+      <div class="education-item">
+        <div class="degree-school">
+          <div class="degree">Executive General Management Programme (EGMP 68)</div>
+          <div class="school">Indian Institute of Management Bangalore</div>
+          <div class="education-details">
+            <strong>Grade A Performance:</strong> Strategic Management, Corporate Finance, Information Systems Management<br>
+            <strong>Key Competencies:</strong> Operations optimization, financial analysis, digital transformation, stakeholder management<br>
+            <strong>Professional Network:</strong> 74 industry professionals across manufacturing, aerospace, consulting, and technology sectors
+          </div>
+        </div>
+        <div class="education-date">March 2024 – January 2025</div>
+      </div>
 
-        <!-- Education -->
-        <section class="section" aria-labelledby="education-title">
-            <h2 id="education-title" class="section-title">Education & Professional Development</h2>
-            
-            <div class="education-item">
-                <div class="education-date"><time datetime="2024-03">Mar 2024</time> – <time datetime="2025-01">Jan 2025</time></div>
-                <div class="degree">Executive General Management Program (EGMP)</div>
-                <div class="school">Indian Institute of Management Bangalore</div>
-                <div class="education-details">
-                    <strong>Academic Excellence:</strong> Grade A in Strategic Management, Operations Management, Corporate Finance<br>
-                    <strong>Operations Focus:</strong> Advanced operations optimization, strategic planning, supply chain principles, business process improvement<br>
-                    <strong>Industry Network:</strong> 74 professionals across manufacturing, aerospace, defense, and industrial operations sectors
-                </div>
-            </div>
+      <div class="education-item">
+        <div class="degree-school">
+          <div class="degree">Master of Computer Applications (MCA)</div>
+          <div class="school">Punjab Technical University</div>
+          <div class="education-details">Advanced technical competency in systems analysis, database management, and technology integration</div>
+        </div>
+        <div class="education-date">2011 – 2013</div>
+      </div>
 
-            <div class="education-item">
-                <div class="education-date"><time datetime="2011">2011</time> – <time datetime="2013">2013</time></div>
-                <div class="degree">Master of Computer Applications (MCA)</div>
-                <div class="school">Punjab Technical University, Jalandhar</div>
-                <div class="education-details">
-                    Advanced technical competency in systems analysis, database management, and operational technology integration
-                </div>
-            </div>
+      <div class="education-item">
+        <div class="degree-school">
+          <div class="degree">Master of Business Administration (MBA) – Technology Management</div>
+          <div class="school">Sikkim Manipal University</div>
+          <div class="education-details">Completed concurrent with full-time military service; specialized in business-technology integration</div>
+        </div>
+        <div class="education-date">2005 – 2008</div>
+      </div>
+    </section>
 
-            <div class="education-item">
-                <div class="education-date"><time datetime="2005">2005</time> – <time datetime="2008">2008</time></div>
-                <div class="degree">Master of Business Administration (MBA)</div>
-                <div class="school">Sikkim Manipal University, Gangtok</div>
-                <div class="education-details">
-                    Technology Management specialization - Strategic foundation for operations-technology integration
-                </div>
-            </div>
+    <!-- Professional Certifications -->
+    <section class="section">
+      <h2 class="section-title">Professional Certifications</h2>
+      <div class="cert-list">
+        • Financial Accounting & Analysis (83.9%) – IIM Bangalore, 2023<br>
+        • Design, Technology & Innovation (81%) – IIT Bombay NPTEL, 2023<br>
+        • New Age Business Models (79.9%) – IIM Bangalore, 2024<br>
+        • Business Negotiations (75.9%) – IIFT New Delhi, 2024<br>
+        • Foundation of Digital Business (72%) – IIM Bangalore, 2023
+      </div>
+    </section>
 
-            <div class="education-item">
-    <div class="education-date"><time datetime="2006">2006</time> – <time datetime="2008">2008</time></div>
-                <div class="degree">Bachelor of Science in Information Technology</div>
-                <div class="school">Punjab Technical University, Jalandhar</div>
-                <div class="education-details">
-                    Technical foundation in computer systems, programming, and operational database management
-                </div>
-            </div>
-        </section>
+    <!-- Additional Information -->
+    <section class="section">
+      <h2 class="section-title">Additional Information</h2>
+      <div style="font-size: 9.5pt; line-height: 1.3;">
+        <strong>Languages:</strong> English (Professional), Hindi (Native), Maithili (Native)<br>
+        <strong>Availability:</strong> Immediate (15 days' notice) | <strong>Location:</strong> Bengaluru (long-term commitment)<br>
+        <strong>Comprehensive Portfolio:</strong> https://chandrashekhar-iaf.github.io/Professional/portfolio/
+      </div>
+    </section>
+  </div>
 
-        <!-- Certifications & Awards -->
-        <section class="section" aria-labelledby="certifications-title">
-            <h2 id="certifications-title" class="section-title">Operations Excellence Awards & Recognition</h2>
-            
-            <div class="certifications-grid">
-                <div class="cert-category">
-                    <strong>Operations Excellence Awards:</strong><br>
-                    • Flight Safety Excellence Award for operational protocols<br>
-                    • Perfect operational compliance record (20+ years)<br>
-                    • Zero operational audit discrepancies across all facilities<br>
-                    • Multiple systematic innovation commendations
-                </div>
-                <div class="cert-category">
-                    <strong>Professional Qualifications:</strong><br>
-                    • Former Security Clearance (operational systems)<br>
-                    • International systems technology integration experience<br>
-                    • Crisis operations management expertise<br>
-                    • Advanced operations leadership development programs
-                </div>
-            </div>
-        </section>
+  <!--
+KEYWORDS: Process Optimization, Multi-Site Operations, Budget Management, Quality Management, Vendor Management, Continuous Improvement, Program Delivery, Stakeholder Management, Crisis Management, Compliance Management
+SOURCES: Ch3 (military achievements), Ch4 (EGMP details), Ch6 (gap narrative)
+METRICS VERIFIED:
+- ₹200+ crore: Ch3 posting records (exact)
+- Zero discrepancies: Ch3 20-year track record (exact)
+- 25+ systems: Ch3 innovation portfolio (exact)
+- ~70% stockout reduction: Ch3 operational tracking estimate
+- ~25% efficiency: Ch3 system implementation estimate
+- 7+ year lifecycle: Ch3 mail system 2015-2022+ (exact)
+ROLE: Operations Manager (Manufacturing/Aerospace)
+-->
 
-        <!-- Additional Information -->
-        <section class="section" aria-labelledby="additional-title">
-            <h2 id="additional-title" class="section-title">Additional Information</h2>
-            
-            <div style="font-size: 10pt; line-height: 1.4;">
-                <strong>Operations Specializations:</strong> Aerospace systems operations, Defense equipment management, High-value asset management, International operational standards, Systematic process optimization<br>
-                <strong>Technical Proficiency:</strong> ERP systems, Operations databases, Performance analytics, Quality management systems, Inventory optimization<br>
-                <strong>Manufacturing Transition Focus:</strong> Applying proven systematic operational excellence frameworks to manufacturing industry leadership challenges<br>
-                <strong>Geographic Commitment:</strong> Permanently based in Bengaluru with long-term commitment to Karnataka's manufacturing sector<br>
-                <strong>Availability:</strong> Available for interviews immediately; can join with 15 days' notice<br>
-                <strong>Professional Networks:</strong> IIM Bangalore Alumnus (74+ operations and manufacturing connections), Operations Excellence Professionals, IAF Veteran Network
-            </div>
-        </section>
-
-    </main>
-
-    <script>
-        // Enhanced print functionality with better error handling
-        function handlePrint() {
-            try {
-                window.print();
-                console.log('Resume print dialog opened - Operations Excellence Specialist version');
-            } catch (error) {
-                console.error('Print functionality error:', error);
-                alert('Print function not available. Please use browser print option (Ctrl+P).');
-            }
-        }
-        
-        // Hide download link when printing and restore after
-        window.addEventListener('beforeprint', function() {
-            const downloadLink = document.querySelector('.download-link');
-            if (downloadLink) {
-                downloadLink.style.display = 'none';
-            }
-        });
-
-        window.addEventListener('afterprint', function() {
-            const downloadLink = document.querySelector('.download-link');
-            if (downloadLink) {
-                downloadLink.style.display = 'inline';
-            }
-        });
-
-        // Document ready check
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Operations Excellence Specialist Resume loaded successfully');
-            
-            // Verify portfolio link functionality
-            const portfolioLink = document.querySelector('.portfolio-link');
-            if (portfolioLink) {
-                console.log('Portfolio link configured:', portfolioLink.href);
-            }
-        });
-    </script>
+  <!-- Lightweight script -->
+  <script>(function(){ /* no-op */ })();</script>
 </body>
 </html>
