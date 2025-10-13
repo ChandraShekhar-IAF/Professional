@@ -1,308 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chandra Shekhar – Process Consultant</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chandra Shekhar - Process Consultant</title>
+  <meta name="description" content="Process consultant with 20-year proven track record, IIM Bangalore EGMP graduate, AI-ready strategist for digital transformation">
+  <meta name="author" content="Chandra Shekhar" />
+<meta name="subject" content="Process Consultant Resume – Business Process Optimization, AI Implementation Strategy, IIM Bangalore EGMP" />
+<meta name="keywords" content="Process Consultant, Business Process Optimization, Digital Transformation, AI Implementation Strategy, System Innovation, Excel VBA, Change Management, 25+ systems, Generative AI, IIM Bangalore EGMP, Manufacturing, Defense, Bengaluru" />
   <style>
-    /* Page & print settings */
-    @page { size: A4; margin: 0.5in 0.65in; }
-    :root{
-      --primary-red: #c41e3a;
-      --primary-dark: #8b1538;
-      --accent-navy: #1b2b3a;
-      --muted: #7f8c8d;
-      --text: #2c3e50;
-      --bg: #ffffff;
-      --card-bg: #fbfcfd;
-      --radius: 10px;
-      --shadow: 0 6px 18px rgba(0,0,0,0.06);
-      --font-sans: "Calibri", "Arial", sans-serif;
-    }
-    html,body { height:100%; }
+  /* Reset and Variables */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root{
+    --primary-navy:#2c3e50;
+    --accent-red:#c41e3a;
+    --text-dark:#2c3e50;
+    --text-light:#7f8c8d;
+    --base-font-stack: 'Calibri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* Page Setup */
+  @page { size: A4; margin: 0.5in 0.65in; }
+
+  body {
+    font-family: var(--base-font-stack);
+    font-size: 10.5pt;
+    line-height: 1.15;
+    color: var(--text-dark);
+    background: white;
+    max-width: 8.27in;
+    margin: 0 auto;
+    padding: 0.5in 0.65in;
+  }
+
+  /* Print Styles - tightened to force two-pages */
+  @media print {
+    /* --- Two-Page Print Optimization (Surgical-Compliant) --- */
+    @page { size: A4; margin: 0.4in 0.55in; }
     body {
-      font-family: var(--font-sans);
-      font-size: 10.5pt;
-      line-height: 1.15;
-      color: var(--text);
       margin: 0;
-      padding: 0;
-      background: #f6f7f9;
+      padding: 0.35in 0.55in;
+      font-size: 9.6pt;
+      line-height: 1.05;
     }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .no-print { display: none !important; }
+    a { color: black; text-decoration: none; }
 
-    .container {
-      max-width: 900px;
-      margin: 18px auto;
-      background: var(--bg);
-      box-shadow: var(--shadow);
-      border-radius: 12px;
-      overflow: hidden;
+    /* page break control */
+    .page-1 { page-break-after: always; }
+    .page-2 { page-break-before: always; }
+    .job, .project-item, .education-item { page-break-inside: avoid; break-inside: avoid; }
+
+    /* tighten header for print */
+    .header {
+      margin-bottom: 6pt;
+      padding-bottom: 5pt;
+      border-bottom-width: 1pt;
     }
+    .name { font-size: 14.8pt; }
+    .contact-info { font-size: 8.8pt; line-height:1.05; }
+    .tagline { font-size: 9pt; }
 
-    .print-btn {
-      position: fixed;
-      top: 14px;
-      right: 14px;
-      z-index: 1200;
-      background: var(--primary-red);
-      color: #fff;
-      border: none;
-      padding: 10px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 6px 14px rgba(196,30,58,0.18);
-      font-weight: 600;
-    }
-    .print-btn:hover { background: #a0122e; }
-    @media print { .print-btn{display:none !important;} }
+    /* tighten distances */
+    .section { margin-bottom: 6pt; }
+    .section-title { padding-bottom: 1pt; margin-bottom: 3pt; font-size: 10pt; }
+    .summary { font-size: 9.3pt; line-height:1.05; text-align: justify; margin-bottom: 6pt; }
+    .keywords { font-size:9.3pt; line-height:1.05; padding:6pt; margin-bottom:6pt; }
 
-    .header { text-align:center; padding: 18px 22px 8px 22px; background: linear-gradient(135deg, rgba(196,30,58,0.06), rgba(27,43,58,0.02)); }
-    .header h1 { font-size: 22px; margin: 6px 0 4px 0; letter-spacing: 0.6px; font-weight:700; color: var(--primary-dark); }
-    .header .contact { font-size: 10pt; color: var(--text); margin: 0 0 4px 0; }
-    .header .avail { font-size: 10pt; color: var(--muted); margin: 0 0 10px 0; }
+    .achievements { padding-left: 0.9rem; margin: 2pt 0; }
+    .achievements li { margin-bottom: 2pt; font-size:9.3pt; line-height:1.05; }
 
-    .content { padding: 14px 20px 28px 20px; box-sizing:border-box; }
+    .project-item { margin-bottom: 4pt; }
+    .project-description { font-size:9.3pt; line-height:1.05; text-align: justify; }
 
-    h2 { font-size: 12pt; margin: 12px 0 8px 0; color: var(--accent-navy); text-transform:none; border-bottom:1px solid rgba(44,62,80,0.06); padding-bottom:6px; }
-    h3 { font-size: 11pt; margin: 6px 0; color: var(--text); }
+    .education-item { margin-bottom:4pt; }
+    .education-details { font-size:9.3pt; line-height:1.05; }
 
-    p, ul { margin: 0 0 8px 0; }
-    ul { padding-left: 18px; }
+    .cert-list { font-size:9.0pt; line-height:1.05; margin-left:0.6rem; }
 
-    .competencies { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 10px; }
-    .comp-col { background: var(--card-bg); padding: 10px; border-radius: 8px; border:1px solid rgba(44,62,80,0.03); box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
-    .comp-col strong{display:block; margin-bottom:6px; color:var(--primary-dark); font-weight:700; }
-    @media (max-width:800px) { .competencies { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width:520px) { .competencies { grid-template-columns: 1fr; } }
-    @media print { .competencies { grid-template-columns: 1fr; } }
+    .print-btn { display:none !important; }
+  }
 
-    .role { margin-bottom: 12px; padding: 10px; border-left: 4px solid rgba(196,30,58,0.06); border-radius:6px; background: #fff; }
-    .role h3 { margin: 0 0 2px 0; font-size: 11pt; color: var(--primary-dark); }
-    .dates { color: var(--muted); font-size: 10pt; margin-bottom: 6px; }
-    .role ul { margin-top: 6px; }
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 12pt;
+    border-bottom: 1.5pt solid var(--primary-navy);
+    padding-bottom: 8pt;
+  }
 
-    .card { background: var(--card-bg); padding: 12px; border-radius: 10px; border:1px solid rgba(44,62,80,0.03); margin-bottom: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-    .projects .card { padding: 10px 12px; }
+  .name {
+    font-size: 16pt;
+    font-weight: bold;
+    color: var(--primary-navy);
+    margin-bottom: 3pt;
+    letter-spacing: 1pt;
+  }
 
-    .education .card-row { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; margin-bottom:8px; }
-    .education .card-row div { flex:1; }
-    .education .dates { text-align:right; white-space:nowrap; }
+  .contact-info {
+    font-size: 9.5pt;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-top: 4px;
+    word-break: break-word;
+  }
 
-    .small { font-size:9.5pt; color:var(--muted); line-height:1.2; }
+  .tagline {
+    font-size: 10pt;
+    color: var(--accent-red);
+    font-weight: bold;
+    margin-top: 3pt;
+  }
 
-    footer { text-align:center; font-size:9pt; color:var(--muted); padding:10px; }
+  /* Sections */
+  .section { margin-bottom: 12pt; }
+  .section-title {
+    font-size: 11pt;
+    font-weight: bold;
+    color: var(--primary-navy);
+    border-bottom: 1pt solid var(--text-light);
+    padding-bottom: 2pt; 
+    margin-bottom: 6pt;
+    text-transform: uppercase; 
+    letter-spacing: 0.5pt;
+  }
 
-    @media print {
-      * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
-      body { background: #fff !important; color: #000 !important; font-size: 11pt; line-height:1.25; }
-      .container { box-shadow: none !important; max-width: none !important; border-radius: 0; }
-      .print-btn, .no-print { display: none !important; }
-      h2 { border-bottom:1px solid #ddd; padding-bottom:4px; }
-      .card, .role, .timeline-item { page-break-inside: avoid; }
-    }
-  </style>
+  /* Summary */
+  .summary {
+    font-size: 10pt; 
+    line-height: 1.3; 
+    text-align: justify; 
+    margin-bottom: 10pt;
+  }
+
+  /* Skills / Keywords */
+  .keywords {
+    margin-top: 6px;
+    font-size: 9.5pt;
+    line-height: 1.3;
+    background: #f8f9fa;
+    padding: 6pt;
+    border-radius: 4px;
+    margin-bottom: 8pt;
+  }
+
+  /* Experience */
+  .job {
+    margin-bottom: 10pt;
+  }
+
+  .job-title {
+    font-weight: bold;
+    font-size: 10.5pt;
+    color: var(--primary-navy);
+  }
+
+  .job-meta {
+    font-size: 9.5pt;
+    color: var(--text-light);
+    margin-bottom: 4pt;
+  }
+
+  .achievements {
+    list-style: disc;
+    padding-left: 1.1rem;
+    margin: 4pt 0;
+  }
+
+  .achievements li {
+    font-size: 10pt;
+    line-height: 1.25;
+    margin-bottom: 3pt;
+  }
+
+  /* Projects */
+  .project-item {
+    margin-bottom: 8pt;
+  }
+
+  .project-title {
+    font-weight: bold;
+    font-size: 10pt;
+    color: var(--primary-navy);
+    margin-bottom: 2pt;
+  }
+
+  .project-description {
+    font-size: 10pt;
+    line-height: 1.25;
+    text-align: justify;
+  }
+
+  /* Education */
+  .education-item {
+    margin-bottom: 8pt;
+  }
+
+  .degree {
+    font-weight: bold;
+    font-size: 10pt;
+    color: var(--primary-navy);
+  }
+
+  .school {
+    font-size: 9.5pt;
+    color: var(--text-light);
+    margin-bottom: 2pt;
+  }
+
+  .education-details {
+    font-size: 9.5pt;
+    line-height: 1.25;
+  }
+
+  /* Certifications */
+  .cert-list {
+    list-style: disc;
+    padding-left: 1rem;
+    margin: 4pt 0;
+  }
+
+  .cert-list li {
+    font-size: 9.5pt;
+    line-height: 1.2;
+    margin-bottom: 2pt;
+  }
+
+  /* Utility */
+  .metric { 
+    font-weight: bold; 
+    color: var(--accent-red); 
+  }
+
+  /* Print Button */
+  .print-btn {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    background: var(--accent-red);
+    color: white; 
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    cursor: pointer;
+    font-size: 10pt; 
+    font-weight: bold; 
+    z-index:1000;
+  }
+  .print-btn:hover { background: #a01829; }
+
+  @media (max-width:720px) {
+    .contact-info { font-size:9pt; }
+  }
+</style>
+
 </head>
 <body>
-  <!-- 
-  KEYWORDS: Process Transformation, Process Optimization, Systems Thinking, Change Management, Continuous Improvement, Quality Management, Vendor Management, Risk Mitigation, Program Delivery, Stakeholder Management 
-  
-  SOURCES: Ch3 (achievements, metrics), Ch4 (EGMP/certs), Ch5 (skills matrix), Ch6 (gap narrative)
-  
-  METRICS VERIFIED:
-  - ₹200+ crore: Ch3 posting records (exact)
-  - Zero discrepancies: Ch3 20-year track record (exact)
-  - 25+ systems: Ch3 innovation portfolio count (exact)
-  - ~70% stockout reduction: Ch3 operational tracking estimate
-  - ~25% efficiency improvement: Ch3 system implementation data
-  - 7+ year lifecycle: Ch3 mail system 2015-2022+ (exact)
-  - 8+ mentees: Ch6 transition mentorship (exact)
-  
-  CERTIFICATIONS: Only verified scores from Ch4 included
-  -->
+  <!-- Print Button -->
+  <button class="print-btn no-print" onclick="window.print()" aria-label="Print or save resume as PDF">🖨️ Print/Save PDF</button>
 
-  <button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+  <!-- PAGE 1 -->
+  <div class="page-1">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">CHANDRA SHEKHAR</h1>
+      <div class="contact-info">
+        Bengaluru, Karnataka • <strong>+91 99997 31406</strong> • <a href="mailto:csiimbveteran@gmail.com" style="color:inherit;">csiimbveteran@gmail.com</a> • <a href="https://linkedin.com/in/chandraiaf"
+   style="color:inherit; font-weight:bold;">linkedin.com/in/chandraiaf</a>
+      </div>
+      <div class="tagline">Process Consultant | AI-Ready Strategist | IIM Bangalore EGMP Graduate | Available: 15 Days</div>
+    </header>
 
-  <div class="container" role="main">
-    <div class="header" role="banner">
-      <h1>CHANDRA SHEKHAR</h1>
-      <div class="contact">Bengaluru, Karnataka • +91-9999731406 • csiimbveteran@gmail.com • linkedin.com/in/chandraiaf</div>
-      <div class="avail">Process Consultant | IIM Bangalore EGMP Graduate | Available: 15 days</div>
-    </div>
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="keywords">
+        <strong>Key Skills:</strong> Business Process Optimization, Process Automation, Digital Transformation, Change Management, Excel VBA Development, System Innovation, AI Implementation Strategy, Process Mining, Workflow Design, Continuous Improvement, Data Analytics, ROI Analysis, Training & Development
+      </div>
+      <p class="summary">
+        Process consultant with <strong>20-year track record</strong> of zero-error program delivery across <span class="metric">₹200+ crore</span> asset portfolio. <strong>AI-ready strategist</strong> (IIM Bangalore GenAI, 9+ workshops) positioned for digital transformation and process automation consulting. Designed and implemented <span class="metric">25+ operational systems</span> using <strong>Excel VBA automation</strong> (self-taught) adopted organization-wide with proven 7+ year lifecycle sustainability. Expert in process mapping, workflow optimization, and business transformation across manufacturing, defense, and aerospace sectors achieving ~25% efficiency improvement and ~70% stockout reduction.
+      </p>
+    </section>
 
-    <div class="content">
-      <!-- ===== PAGE 1 ===== -->
-      <div class="page-1" style="page-break-after: always; min-height: 10in; max-height: 10.5in;">
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
 
-        <section aria-label="Professional Summary">
-          <h2>Professional Summary</h2>
-          <p>
-            Process consultant with a 20-year track record of zero-error program delivery across a ₹200+ crore asset portfolio, multi-site coordination, and systems innovation. Recently completed the Executive General Management Programme (EGMP) at IIM Bangalore with Grade A performance in Strategic Management and Corporate Finance. Designed and implemented 25+ operational systems adopted organization-wide, achieving approximately 25% inventory efficiency improvement and up to 70% reduction in critical stockouts. Ready to apply process transformation, systems thinking, and stakeholder management expertise to senior process consulting, operations, or program management roles.
-          </p>
-        </section>
+      <div class="job">
+        <div class="job-title">Executive General Management Programme (EGMP 68)</div>
+        <div class="job-meta">Indian Institute of Management Bangalore • Mar 2024 – Jan 2025</div>
+        <ul class="achievements">
+          <li>Completed 12-month residential programme with focus on <strong>strategic management</strong>, operations excellence, digital transformation, and leadership development; achieved Grade A in Corporate Finance, Information Systems Management, and Business Law; Grade B in Strategic Management</li>
+          <li>Achieved <strong>AI business implementation certification</strong> (IIM Bangalore Generative AI course) and attended 9+ AI seminars/workshops; developed AI strategy frameworks for process optimization and operational transformation</li>
+          <li>Built professional network of <span class="metric">74 senior executives</span> across manufacturing, aerospace, defense, consulting, and technology industries for strategic collaboration</li>
+        </ul>
+      </div>
 
-        <section aria-label="Core Competencies" style="margin-top:10px;">
-          <h2>Core Competencies</h2>
-          <div class="competencies" role="list">
-            <div class="comp-col" role="listitem">
-              <strong>Process & Delivery</strong>
-              <ul>
-                <li>Process optimization</li>
-                <li>Process transformation & redesign</li>
-                <li>Program delivery & timeline management</li>
-              </ul>
-            </div>
-            <div class="comp-col" role="listitem">
-              <strong>Governance & Risk</strong>
-              <ul>
-                <li>Quality management & compliance</li>
-                <li>Risk mitigation & audits</li>
-                <li>Budget oversight (₹200+ Cr)</li>
-              </ul>
-            </div>
-            <div class="comp-col" role="listitem">
-              <strong>Systems & People</strong>
-              <ul>
-                <li>Systems thinking & innovation management</li>
-                <li>Vendor & stakeholder management</li>
-                <li>Change management & training</li>
-              </ul>
-            </div>
+      <div class="job">
+        <div class="job-title">IAF Veteran – Operations & Systems Innovation Leadership</div>
+        <div class="job-meta">Indian Air Force • Feb 2002 – May 2022 (20 years)</div>
+        <ul class="achievements">
+          <li>Managed <span class="metric">₹200+ crore</span> asset portfolio with <strong>zero audit discrepancies</strong> over 20 years through systematic process controls, compliance excellence, and risk mitigation frameworks</li>
+          <li>Led multi-site operations coordination across 4-6 facilities with 200-500 personnel; implemented <strong>standardized processes</strong> achieving ~70% stockout reduction and ~25% efficiency improvement</li>
+          <li>Pioneered <span class="metric">25+ operational systems</span> using <strong>Excel VBA programming (self-taught)</strong> and advanced automation adopted organization-wide; solutions sustained 7+ year lifecycle including COVID-19 coordination dashboard (VBA macros, <span class="metric">500 users</span>, 4 departments, real-time tracking), mail follow-up system (100 officers), and consumption calculators (50 equipment types, predictive analytics)</li>
+          <li>Directed crisis management operations during COVID-19 pandemic coordinating 500+ personnel across 4 departments; developed real-time tracking system enabling 100% operational continuity and strategic resource allocation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section class="section">
+      <h2 class="section-title">Key Projects – Innovation Portfolio</h2>
+      
+      <div class="project-item">
+        <div class="project-title">Systems Innovation & Process Automation</div>
+        <p class="project-description">
+          <strong>Context:</strong> 20-year operational environment requiring efficient resource management across multiple facilities. <strong>Action:</strong> Self-taught Excel VBA programming; developed mail follow-up system (100 officers, 2-week development, 7+ year lifecycle), COVID-19 coordination dashboard (VBA macros, 500 users, 4 departments), consumption calculators (50 equipment types), and 20+ additional solutions. <strong>Result:</strong> Organization-wide adoption, ~25% efficiency improvement, ~70% stockout reduction, zero-error accuracy, multi-year sustainability.
+        </p>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">Zero-Error Operational Framework</div>
+        <p class="project-description">
+          <strong>Context:</strong> Managing ₹200+ crore defense assets requiring absolute accuracy. <strong>Action:</strong> Designed comprehensive verification frameworks with multi-level checks, real-time reconciliation, automated error detection, and standardized documentation protocols. <strong>Result:</strong> Maintained <strong>zero audit discrepancies</strong> over 20-year career; developed replicable frameworks adopted across facilities.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page-2">
+    
+    <!-- Emerging Technology -->
+    <section class="section">
+      <h2 class="section-title">Emerging Technology Competencies</h2>
+      <p style="font-size:9.5pt; line-height:1.3; margin-bottom:4pt;">
+        <strong>AI for Business Applications:</strong> IIM Bangalore Generative AI Certification • AI-Powered Strategy (NPTEL) • 9+ AI workshops attended
+      </p>
+      <p style="font-size:9.5pt; line-height:1.3;">
+        <strong>Focus Areas:</strong> Business process automation with AI • Operational AI implementation (not technical development) • AI-driven decision systems • Digital transformation strategy • Process mining and optimization • Intelligent workflow automation
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="education-item">
+        <div>
+          <div class="degree">Executive General Management Programme (EGMP 68)</div>
+          <div class="school">Indian Institute of Management Bangalore • Mar 2024 – Jan 2025</div>
+          <div class="education-details">
+            Grade A Performance: Corporate Finance, Information Systems Management, Business Law • Grade B: Strategic Management<br>
+            Key Focus: Process Excellence, Digital Transformation, Operations Management, Change Leadership<br>
+            AI Certification: Generative AI for Business Strategy (Nov 2024) • Network: 74 professionals
           </div>
-        </section>
-
-        <section aria-label="Experience" style="margin-top:8px;">
-          <h2>Professional Experience</h2>
-
-          <div class="role">
-            <h3>Strategic Transition & Executive Development – Independent</h3>
-            <div class="dates">January 2023 – Present | Bengaluru, India</div>
-            <ul>
-              <li>Completed IIM Bangalore EGMP (Mar 2024 – Jan 2025) with Grade A in Strategic Management, Corporate Finance, and Information Systems.</li>
-              <li>Earned 15+ business certifications and built a 74-member professional cohort network across manufacturing, aerospace and consulting.</li>
-              <li>Provided mentorship and transition coaching for 8+ ex-servicemen moving into civilian process and program roles; developed practical translation materials and workshop modules for rapid onboarding.</li>
-              <li>Conducted market analysis of Bengaluru aerospace sector, identifying process transformation opportunities in defense manufacturing and operations excellence.</li>
-            </ul>
-          </div>
-
-          <div class="role">
-            <h3>Senior Operations Manager – Indian Air Force (selected highlights)</h3>
-            <div class="dates">Dec 2002 – Dec 2022</div>
-            <ul>
-              <li>Maintained ₹200+ crore equipment and asset portfolio across multiple installations with zero audit discrepancies over 20 years by implementing predictive maintenance and standardized asset tracking.</li>
-              <li>Developed 25+ operational systems (mail follow-up, resource optimization, real-time dashboards) adopted organization-wide; longest system lifecycle validated at 7+ years.</li>
-              <li>Reduced critical stockouts by up to 70% through inventory forecasting and automated ordering triggers; achieved approximately 25% efficiency gains in targeted processes.</li>
-              <li>Led multi-site operations across 10 strategic installations and coordinated international systems integration projects, delivering certification and zero safety incidents.</li>
-            </ul>
-          </div>
-
-        </section>
-      </div> <!-- end page-1 -->
-
-      <!-- ===== PAGE 2 ===== -->
-      <div class="page-2" style="page-break-before: always;">
-        <section class="projects" aria-label="Key Projects & Achievements">
-          <h2>Key Projects & Achievements</h2>
-
-          <div class="card">
-            <h3>Zero-Error Operations Framework | 2002–2022</h3>
-            <ul>
-              <li><strong>Challenge:</strong> Ensure compliance and readiness across high-value, dispersed assets.</li>
-              <li><strong>Action:</strong> Designed predictive maintenance programs, standardized SOPs, and real-time dashboards with automated alerts.</li>
-              <li><strong>Result:</strong> Zero audit discrepancies across 20 years; reduced critical stockouts by up to 70% and improved inventory efficiency by approximately 25%.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>International Systems Integration (French Rafale Program) | 2021–2022</h3>
-            <ul>
-              <li><strong>Challenge:</strong> Integrate advanced aircraft systems across 3 bases.</li>
-              <li><strong>Action:</strong> Coordinated with foreign technical teams, led cross-cultural training and set up predictive maintenance and certification processes.</li>
-              <li><strong>Result:</strong> Delivered technology transfer with zero safety incidents and achieved 100% operational certification within 6 months.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>COVID-19 Multi-Facility Continuity | 2020–2021</h3>
-            <ul>
-              <li><strong>Challenge:</strong> Maintain operations across four facilities during pandemic constraints.</li>
-              <li><strong>Action:</strong> Implemented remote protocols, staggered shifts and resource optimization dashboards.</li>
-              <li><strong>Result:</strong> 100% operational continuity with zero on-site transmissions reported during the period.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="education" aria-label="Education" style="margin-top:8px;">
-          <h2>Education</h2>
-          <div class="card-row">
-            <div>
-              <h3>Executive General Management Programme (EGMP)</h3>
-              <div class="small">Indian Institute of Management Bangalore – Grade A performance in Strategic Management, Corporate Finance, Information Systems. Cohort network: 74 professionals.</div>
-            </div>
-            <div class="dates">Mar 2024 – Jan 2025</div>
-          </div>
-
-          <div class="card-row">
-            <div>
-              <h3>Master of Computer Applications (MCA)</h3>
-              <div class="small">Punjab Technical University – Advanced technical competency in systems analysis and database management</div>
-            </div>
-            <div class="dates">2011 – 2013</div>
-          </div>
-
-          <div class="card-row">
-            <div>
-              <h3>MBA – Technology Management</h3>
-              <div class="small">Sikkim Manipal University – Completed concurrent with full-time military service</div>
-            </div>
-            <div class="dates">2005 – 2008</div>
-          </div>
-        </section>
-
-        <section class="certs" aria-label="Professional Certifications" style="margin-top:8px;">
-          <h2>Professional Certifications</h2>
-          <div class="card">
-            <ul>
-              <li>Financial Accounting & Analysis (83.9%) – IIM Bangalore, 2023</li>
-              <li>Design, Technology & Innovation (81%) – IIT Bombay NPTEL, 2023</li>
-              <li>New Age Business Models (79.9%) – IIM Bangalore, 2024</li>
-              <li>Business Negotiations (75.9%) – IIFT New Delhi, 2024</li>
-              <li>Foundation of Digital Business (72%) – IIM Bangalore, 2023</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="additional" aria-label="Additional Information" style="margin-top:8px;">
-          <h2>Additional Information</h2>
-          <p class="small">
-            <strong>Languages:</strong> English (Professional) • Hindi (Native) • Maithili (Native)<br>
-            <strong>Availability:</strong> Immediate (15 days) • <strong>Location:</strong> Bengaluru<br>
-            <strong>Portfolio:</strong> https://chandrashekhar-iaf.github.io/Professional/portfolio/
-          </p>
-        </section>
-
-        <section style="margin-top:8px;">
-          <h2>Consulting & Immediate Engagements</h2>
-          <div class="card">
-            <p class="small">
-              Available for short consulting engagements: process audits (1-week), compliance readiness (2-4 weeks) and leadership workshops (2 days). Typical engagement pricing: ₹25–40k (audit), ₹50–75k (compliance project), ₹40–60k (2-day workshop).
-            </p>
-          </div>
-        </section>
-
-        <div style="margin-top:14px; font-size:9pt;" class="no-print">
-          <strong>TEST PROCEDURE:</strong>
-          <ol>
-            <li>Open this file in Chrome or Edge.</li>
-            <li>Press Ctrl+P (Windows) or Cmd+P (Mac) and confirm A4 size. Verify exactly 2 pages in print preview.</li>
-            <li>Ensure page 1 ends after the Experience section and page 2 contains Projects/Education/Certs/Additional info.</li>
-            <li>Verify contact details: +91-9999731406, csiimbveteran@gmail.com, linkedin.com/in/chandraiaf.</li>
-          </ol>
         </div>
+      </div>
 
-      </div> <!-- end page-2 -->
-    </div> <!-- content -->
+      <div class="education-item">
+        <div>
+          <div class="degree">Master of Computer Applications (MCA)</div>
+          <div class="school">Punjab Technical University • 2011 – 2013</div>
+          <div class="education-details">
+            Advanced technical competency in systems analysis, database management, software development methodologies
+          </div>
+        </div>
+      </div>
 
-    <footer>Portfolio: https://chandrashekhar-iaf.github.io/Professional/portfolio/ | Updated: October 2025</footer>
-  </div> <!-- container -->
+      <div class="education-item">
+        <div>
+          <div class="degree">MBA – Technology Management</div>
+          <div class="school">Sikkim Manipal University • 2005 – 2008</div>
+          <div class="education-details">
+            Completed concurrent with full-time military service; focus on technology integration and business process management
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title">Professional Certifications</h2>
+      <ul class="cert-list">
+        <li><strong>Generative AI for Business Strategy</strong> – IIM Bangalore, November 2024</li>
+        <li><strong>AI-Powered Strategy with ChatGPT</strong> – NPTEL/PES University, January 2025</li>
+        <li>Financial Accounting & Analysis (83.9%) – IIM Bangalore, 2023</li>
+        <li>Design, Technology & Innovation (81%) – IIT Bombay NPTEL, 2023</li>
+        <li>New Age Business Models (79.9%) – IIM Bangalore, 2024</li>
+        <li>Business Negotiations (75.9%) – IIFT New Delhi, 2024</li>
+        <li>Foundation of Digital Business (72%) – IIM Bangalore, 2023</li>
+      </ul>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title">Technical Skills & Tools</h2>
+      <p style="font-size:9.5pt; line-height:1.3;">
+        <strong>Advanced:</strong> Microsoft Excel (VBA Macros, Advanced Formulas, Pivot Tables, Data Modeling, Dashboard Creation), Database Management (Microsoft Access, RDBMS design), Business Process Automation, Workflow Design<br>
+        <strong>Proficient:</strong> Data Analytics, Business Intelligence Tools, ERP Systems, Project Management Software, Process Mapping Tools, Statistical Analysis<br>
+        <strong>Emerging:</strong> Generative AI for Business Applications, Digital Transformation Technologies, AI Implementation Strategy, Process Mining Tools
+      </p>
+    </section>
+
+    <!-- Additional Information -->
+    <section class="section">
+      <h2 class="section-title">Additional Information</h2>
+      <p style="font-size:9.5pt; line-height:1.3;">
+        <strong>Languages:</strong> English (Professional) • Hindi (Native) • Maithili (Native)<br>
+        <strong>Availability:</strong> Immediate (15 days) • <strong>Location:</strong> Bengaluru<br>
+        <strong>Portfolio:</strong>
+<a href="https://chandrashekhar-iaf.github.io/Professional/portfolio/"
+   target="_blank"
+   style="color:#c41e3a; font-weight:bold; text-decoration:none;">
+   chandrashekhar-iaf.github.io/Professional/portfolio/
+</a>
+<br>
+        <strong>Military-Civilian Translation:</strong> 8+ military professionals mentored in civilian transition
+      </p>
+    </section>
+
+  </div>
 </body>
 </html>
