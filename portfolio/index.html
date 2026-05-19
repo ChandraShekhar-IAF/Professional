@@ -10,6 +10,12 @@
     <meta property="og:description" content="Operations Setup and Programme Leader. IIM Bangalore EGMP. Anthropic AI Fluency. Lean Six Sigma Expert. 25 operational systems built across 23 years. Based in Bengaluru.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://chandrashekhar-iaf.github.io/Professional/portfolio/">
+    <meta property="og:site_name" content="Chandra Shekhar — Professional Portfolio">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image" content="https://chandrashekhar-iaf.github.io/Professional/portfolio/og-banner.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- REBUILD v1.0 (April 2026)
     Full rebuild from v10. Changes:
@@ -105,10 +111,11 @@
 
         /* ===== HEADER ===== */
         .header {
-            background: linear-gradient(160deg, var(--primary) 0%, #0f2440 100%);
-            color: white;
+            background: linear-gradient(160deg, #f4f7fa 0%, #e7eef5 100%);
+            color: var(--text);
             padding: 3.5rem 2.5rem 3rem;
             position: relative;
+            border-bottom: 1px solid var(--border);
         }
 
         .header-inner {
@@ -125,26 +132,30 @@
 
         .header-initials {
             width: 100px; height: 100px;
-            background: linear-gradient(135deg, var(--accent), #b8941f);
+            background: linear-gradient(135deg, var(--primary), #0f2440);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 2.2rem; font-weight: 700; color: var(--primary);
-            border: 3px solid rgba(255,255,255,0.2);
+            font-size: 2.2rem; font-weight: 700; color: var(--accent);
+            border: 3px solid rgba(26,54,93,0.15);
             flex-shrink: 0;
+            box-shadow: var(--shadow-md);
         }
 
         .header-text h1 {
             font-size: 2.6rem; font-weight: 700; margin-bottom: 0.4rem;
             letter-spacing: -0.5px;
+            color: var(--primary);
         }
 
         .header-text .role {
-            font-size: 1.25rem; opacity: 0.92; font-weight: 300;
+            font-size: 1.25rem; font-weight: 400;
             margin-bottom: 0.6rem; line-height: 1.4;
+            color: var(--text-secondary);
         }
 
         .header-text .tagline {
-            font-size: 1.05rem; opacity: 0.78; font-style: italic;
+            font-size: 1.05rem; font-style: italic;
+            color: var(--text-light);
         }
 
         .header-credentials {
@@ -153,12 +164,14 @@
         }
 
         .credential {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.15);
+            background: var(--bg-white);
+            border: 1px solid var(--border);
             padding: 0.5rem 1rem;
             border-radius: 6px;
             font-size: 0.9rem;
-            backdrop-filter: blur(8px);
+            color: var(--primary);
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
         }
 
         .header-metrics {
@@ -170,18 +183,19 @@
         .metric {
             text-align: center;
             padding: 1.2rem 0.8rem;
-            background: rgba(255,255,255,0.06);
+            background: var(--bg-white);
             border-radius: var(--radius);
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
         }
 
         .metric-value {
             font-size: 2rem; font-weight: 700;
-            color: var(--accent); margin-bottom: 0.3rem;
+            color: var(--primary); margin-bottom: 0.3rem;
         }
 
         .metric-label {
-            font-size: 0.85rem; opacity: 0.8;
+            font-size: 0.85rem; color: var(--text-secondary);
         }
 
         /* ===== NAVIGATION ===== */
@@ -584,20 +598,21 @@
 
         /* ===== FOOTER ===== */
         .footer {
-            background: #0f2440;
-            color: rgba(255,255,255,0.8);
+            background: linear-gradient(160deg, #f4f7fa 0%, #e7eef5 100%);
+            color: var(--text-secondary);
             padding: 2.5rem 2rem;
             text-align: center;
             font-size: 0.9rem;
+            border-top: 1px solid var(--border);
         }
 
         .footer-name {
-            color: var(--accent); font-size: 1.2rem;
-            font-weight: 600; margin-bottom: 0.3rem;
+            color: var(--primary); font-size: 1.2rem;
+            font-weight: 700; margin-bottom: 0.3rem;
         }
 
         .footer-sub {
-            opacity: 0.7; font-style: italic; margin-bottom: 1.5rem;
+            color: var(--text-light); font-style: italic; margin-bottom: 1.5rem;
         }
 
         .footer-links {
@@ -606,14 +621,19 @@
         }
 
         .footer-links span strong {
-            display: block; color: var(--accent); font-size: 0.8rem;
-            margin-bottom: 0.2rem;
+            display: block; color: var(--primary); font-size: 0.8rem;
+            margin-bottom: 0.2rem; letter-spacing: 0.5px;
         }
 
         .footer-note {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid var(--border);
             padding-top: 1.2rem;
-            font-size: 0.8rem; opacity: 0.5;
+            font-size: 0.8rem; color: var(--text-light);
+        }
+
+        .footer-updated {
+            font-size: 0.78rem; color: var(--text-light);
+            margin-top: 0.6rem;
         }
 
         /* ===== PRINT ===== */
@@ -682,7 +702,7 @@
                     <div class="header-text">
                         <h1>Chandra Shekhar</h1>
                         <p class="role">Operations Setup & Programme Leader</p>
-                        <p class="tagline">Building systems that outlive the assignment — from greenfield to steady-state</p>
+                        <p class="tagline">Building systems that outlive the assignment</p>
                     </div>
                 </div>
 
@@ -738,7 +758,7 @@
                 </div>
 
                 <div class="value-block">
-                    Operations and programme leader with 20 years building and running high-accountability systems in aerospace and defence. Core pattern: <strong>enter undefined or broken situations, diagnose the root problem, design a system that outlives the assignment, transfer the knowledge</strong>. Executed this across greenfield fighter aircraft integration with French OEM teams, crisis workforce management during COVID-19, supply chain forecasting, and process documentation — each time under zero tolerance for failure. Career progression from technical systems specialist to quality and process architect (<strong>Lean Six Sigma Expert</strong>) to strategic operations leader (<strong>IIM Bangalore EGMP, 2024-25</strong>).
+                    Operations and programme leader who helps organisations find the 3&ndash;5 places AI genuinely improves their operations &mdash; and builds the SOPs and systems that make those improvements stick. Core pattern: <strong>enter undefined or broken situations, diagnose the root problem, design a system that outlives the assignment, transfer the knowledge</strong>. Education stack behind both tracks: <strong>IIM Bangalore EGMP (2024-25)</strong> &middot; <strong>Anthropic AI Fluency</strong> &middot; <strong>Lean Six Sigma Expert (Anexas Europe)</strong> &middot; GenAI Strategy (IIMB) &middot; Business Analytics (IIT Kharagpur) &middot; Design Thinking (IIT Bombay). Twenty years applying the same discipline across greenfield fighter aircraft integration with French OEM teams, crisis workforce management during COVID-19, supply chain forecasting, and process documentation &mdash; each under zero tolerance for failure. 25+ operational systems built, documented, transferred &mdash; the longest one absorbed into an enterprise ERP serving 10,000+ users seven years later.
                 </div>
 
                 <div class="grid grid-3">
@@ -1188,7 +1208,10 @@
                 </div>
 
                 <div class="value-block">
-                    Alongside the job pipeline, an active consulting practice: helping Indian businesses and international SMEs identify the 3–5 places AI genuinely improves their operations — and building the systems and SOPs that make those improvements stick. IIM Bangalore EGMP · Anthropic AI Fluency · Lean Six Sigma Expert.
+                    Alongside the job pipeline, an active consulting practice: helping Indian businesses (&#8377;5Cr&ndash;&#8377;200Cr) and international SMEs (US / UK / Singapore / UAE / Australia, 11&ndash;200 employees) identify the 3&ndash;5 places AI genuinely improves their operations &mdash; and building the systems and SOPs that make those improvements stick. IIM Bangalore EGMP &middot; Anthropic AI Fluency &middot; Lean Six Sigma Expert.
+                    <div style="margin-top: 1.2rem;">
+                        <a href="/Professional/portfolio/artifact-01-ai-framework.html" style="display:inline-block;background:var(--primary);color:white;padding:0.55rem 1.2rem;border-radius:6px;text-decoration:none;font-size:0.9rem;font-weight:600;">Read the AI-for-Operations framework &rarr;</a>
+                    </div>
                 </div>
                 <div class="value-block">
                     20 years of building zero-failure systems in aerospace and defence. An IIM Bangalore executive programme to bridge operational expertise with corporate strategy. Lean Six Sigma Expert certification to formalise the quality methodology. The investment phase is complete. The operational proof is documented. The next chapter applies this combination — greenfield setup, process transformation, or programme leadership — in environments where precision is non-negotiable and accountability is personal.
@@ -1198,19 +1221,21 @@
                     <div class="direction-block reveal">
                         <h3>Strongest Fit</h3>
                         <ul>
-                            <li>Operations Setup Lead — greenfield or turnaround mandate with independent unit ownership</li>
-                            <li>Senior Programme Manager — complex, multi-stakeholder delivery with build-and-run model</li>
-                            <li>Process Excellence / Quality Head — Lean Six Sigma driven transformation</li>
-                            <li>Executive Operations Manager — reporting to Country Head / MD with clear mandate</li>
+                            <li>AI-for-Operations advisory engagements &mdash; Indian SME (&#8377;5&ndash;50Cr) and international SME (11&ndash;200 employees) seeking practical AI integration in operations</li>
+                            <li>Operations Setup Lead &mdash; greenfield or turnaround mandate with independent unit ownership</li>
+                            <li>Senior Programme Manager &mdash; complex, multi-stakeholder delivery with build-and-run model</li>
+                            <li>Process Excellence / Quality Head &mdash; Lean Six Sigma driven transformation</li>
+                            <li>Executive Operations Manager &mdash; reporting to Country Head / MD with clear mandate</li>
                         </ul>
                     </div>
                     <div class="direction-block reveal">
                         <h3>Industries Where Background Translates Directly</h3>
                         <ul>
-                            <li>Aerospace and defence manufacturing — zero translation needed</li>
-                            <li>Regulated industries — compliance, quality, and documentation rigour</li>
-                            <li>GCC operations — structured processes, global standards</li>
-                            <li>Manufacturing — asset management, supply chain, quality systems</li>
+                            <li>Manufacturing &mdash; asset management, supply chain, quality systems</li>
+                            <li>Regulated industries &mdash; compliance, quality, and documentation rigour</li>
+                            <li>GCC and shared services operations &mdash; structured processes, global standards</li>
+                            <li>International SMEs (US / UK / Singapore / UAE / Australia, 11&ndash;200 employees) &mdash; AI integration with documented SOPs</li>
+                            <li>Aerospace and defence manufacturing &mdash; zero translation needed</li>
                         </ul>
                     </div>
                 </div>
@@ -1266,6 +1291,7 @@
             </div>
             <div class="footer-note">
                 Professional portfolio. All outcomes represent verifiable operational results from documented service and educational credentials.
+                <div class="footer-updated">Last updated: May 2026</div>
             </div>
         </footer>
     </div>
