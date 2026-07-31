@@ -1,6 +1,6 @@
 # Chandra Shekhar — Professional
 
-Operations Setup & Programme Leader. 20 years in aerospace and defence. IIM Bangalore EGMP. Lean Six Sigma Expert. Bengaluru.
+Operations, Documentation & Quality Systems. Principal Consultant, SarathiKram — audit-ready SOPs, quality systems and inventory logic for aerospace, defence and manufacturing MSMEs. 20 years in aerospace and defence. IIM Bangalore EGMP · Lean Six Sigma (Certified). Bengaluru.
 
 **Live site:** https://chandrashekhar-iaf.github.io/Professional/
 
